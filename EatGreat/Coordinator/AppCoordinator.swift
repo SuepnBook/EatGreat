@@ -16,8 +16,7 @@ class AppCoordinator {
     }
     
     func start() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .red
+        let vc = OnBoardingViewController()
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }

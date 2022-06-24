@@ -5,12 +5,20 @@ PODS:
     - Reusable/View (= 4.1.2)
   - Reusable/Storyboard (4.1.2)
   - Reusable/View (4.1.2)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - IQKeyboardManager
   - Reusable
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
   - SnapKit (~> 5.0.0)
   - SVProgressHUD
 
@@ -18,15 +26,21 @@ SPEC REPOS:
   trunk:
     - IQKeyboardManager
     - Reusable
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - SnapKit
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 241cc94ccabc9deb8f8bd7d12f00d73288d13ecc
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 5808e35f2ffabea7d262528466f4d61136f9ad54
+PODFILE CHECKSUM: 1c2245e6af9f4fcd5b653d1153dd4299c3acb9ed
 
 COCOAPODS: 1.11.2

@@ -13,6 +13,11 @@
 		FD00934B2865F66E007FA97A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0093492865F66E007FA97A /* LaunchScreen.storyboard */; };
 		FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0093552865F781007FA97A /* AppCoordinator.swift */; };
 		FD00935B2865F8AF007FA97A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00935A2865F8AF007FA97A /* UIColorExtension.swift */; };
+		FD00936028661103007FA97A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00935F28661103007FA97A /* BaseViewController.swift */; };
+		FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0093612866115C007FA97A /* OnBoardingViewController.swift */; };
+		FD009368286611D6007FA97A /* ThemeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD009365286611D6007FA97A /* ThemeButton.swift */; };
+		FD00936B28661508007FA97A /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00936A28661508007FA97A /* UIFontExtension.swift */; };
+		FD00936D2866189B007FA97A /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00936C2866189B007FA97A /* UIControlExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		FD00934C2865F66E007FA97A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0093552865F781007FA97A /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FD00935A2865F8AF007FA97A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FD00935F28661103007FA97A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FD0093612866115C007FA97A /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		FD009365286611D6007FA97A /* ThemeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeButton.swift; sourceTree = "<group>"; };
+		FD00936A28661508007FA97A /* UIFontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		FD00936C2866189B007FA97A /* UIControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +143,9 @@
 		FD0093592865F8A2007FA97A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FD00936C2866189B007FA97A /* UIControlExtension.swift */,
 				FD00935A2865F8AF007FA97A /* UIColorExtension.swift */,
+				FD00936A28661508007FA97A /* UIFontExtension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -141,6 +153,8 @@
 		FD00935C2865FA0A007FA97A /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				FD00935E28661103007FA97A /* ViewController */,
+				FD009363286611D6007FA97A /* Button */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -148,8 +162,25 @@
 		FD00935D2865FA1D007FA97A /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				FD0093612866115C007FA97A /* OnBoardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FD00935E28661103007FA97A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD00935F28661103007FA97A /* BaseViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FD009363286611D6007FA97A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				FD009365286611D6007FA97A /* ThemeButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
+				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
 				FD00933F2865F66C007FA97A /* AppDelegate.swift in Sources */,
+				FD00936B28661508007FA97A /* UIFontExtension.swift in Sources */,
 				FD00935B2865F8AF007FA97A /* UIColorExtension.swift in Sources */,
+				FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */,
+				FD009368286611D6007FA97A /* ThemeButton.swift in Sources */,
+				FD00936D2866189B007FA97A /* UIControlExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

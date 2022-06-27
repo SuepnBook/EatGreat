@@ -11,13 +11,16 @@ class AppCoordinator {
     
     private var window: UIWindow?
     
+    private var onboardingCoordinator:OnBoardingCoordinator?
+    
     init(window: UIWindow?) {
         self.window = window
     }
     
     func start() {
-        let vc = OnBoardingViewController()
-        self.window?.rootViewController = vc
+        onboardingCoordinator = OnBoardingCoordinator()
+        let startCoordinator = onboardingCoordinator
+        self.window?.rootViewController = startCoordinator
         self.window?.makeKeyAndVisible()
     }
 }

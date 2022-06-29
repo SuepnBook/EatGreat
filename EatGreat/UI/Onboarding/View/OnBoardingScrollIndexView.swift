@@ -17,6 +17,7 @@ class OnBoardingScrollIndexView: UIView {
     
     private let imageView:UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -54,9 +55,8 @@ class OnBoardingScrollIndexView: UIView {
         
         imageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.width.equalTo(140)
-            make.height.equalTo(210)
-//            make.width.equalTo(UIScreen().bounds.width).multipliedBy(1/3)
+            let width = UIScreen.main.bounds.width / 3
+            make.height.width.equalTo(width)
             make.centerX.equalToSuperview()
         }
         

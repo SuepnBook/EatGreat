@@ -9,9 +9,10 @@ import UIKit
 
 class OnBoardingCoordinator:UINavigationController {
     public init() {
-        let rootVC = OnBoardingViewController()
+//        let rootVC = OnBoardingViewController()
+        let rootVC = TestViewController()
         super.init(rootViewController: rootVC)
-        rootVC.delegate = self
+//        rootVC.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -19,8 +20,27 @@ class OnBoardingCoordinator:UINavigationController {
     }
 }
 
+// MARK: - OnBoardingViewControllerDelegate
 extension OnBoardingCoordinator:OnBoardingViewControllerDelegate {
     func selectStart(vc: OnBoardingViewController) {
+        let vc = TestViewController()
+        vc.delegate = self
+        pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - TestViewControllerDelegate
+extension OnBoardingCoordinator:TestViewControllerDelegate {
+    func selectNext(vc: TestViewController) {
+        let vc = ProfileViewController()
+        vc.delegate = self
+        pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - ProfileViewControllerDelegate
+extension OnBoardingCoordinator:ProfileViewControllerDelegate {
+    func selectNext(vc: ProfileViewController) {
         
     }
 }

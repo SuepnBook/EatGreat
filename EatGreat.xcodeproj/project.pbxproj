@@ -20,13 +20,17 @@
 		FD00936D2866189B007FA97A /* UIControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD00936C2866189B007FA97A /* UIControlExtension.swift */; };
 		FD0A2445286A120C00BBF8EC /* OnBoardingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2444286A120C00BBF8EC /* OnBoardingScrollView.swift */; };
 		FD0A2447286A136100BBF8EC /* OnBoardingScrollIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2446286A136100BBF8EC /* OnBoardingScrollIndexView.swift */; };
-		FD0A2449286A177D00BBF8EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2448286A177D00BBF8EC /* ArrayExtension.swift */; };
 		FD0A244C286A186800BBF8EC /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A244B286A186800BBF8EC /* UIScrollViewExtension.swift */; };
 		FD0A244E286A191000BBF8EC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A244D286A191000BBF8EC /* UIViewExtension.swift */; };
 		FD0A2453286A22C800BBF8EC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2451286A22C800BBF8EC /* Coordinator.swift */; };
 		FD0A2454286A22C800BBF8EC /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2452286A22C800BBF8EC /* BaseCoordinator.swift */; };
 		FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2457286A22FF00BBF8EC /* NavigationRouter.swift */; };
 		FD0A245A286A231F00BBF8EC /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2459286A231F00BBF8EC /* OnBoardingCoordinator.swift */; };
+		FD0A245D286C6D2600BBF8EC /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A244A286A178200BBF8EC /* ArrayExtension.swift */; };
+		FD0A2460286C6EE100BBF8EC /* TestProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A245F286C6EE100BBF8EC /* TestProgressView.swift */; };
+		FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2463286C713500BBF8EC /* ProfileViewController.swift */; };
+		FD0A2467286C721300BBF8EC /* ProcessLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = FD0A2466286C721300BBF8EC /* ProcessLottie.json */; };
+		FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +52,6 @@
 		FD00936C2866189B007FA97A /* UIControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlExtension.swift; sourceTree = "<group>"; };
 		FD0A2444286A120C00BBF8EC /* OnBoardingScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScrollView.swift; sourceTree = "<group>"; };
 		FD0A2446286A136100BBF8EC /* OnBoardingScrollIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingScrollIndexView.swift; sourceTree = "<group>"; };
-		FD0A2448286A177D00BBF8EC /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = ../../../../../../../../../../Downloads/ArrayExtension.swift; sourceTree = "<group>"; };
 		FD0A244A286A178200BBF8EC /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		FD0A244B286A186800BBF8EC /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
 		FD0A244D286A191000BBF8EC /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -56,6 +59,10 @@
 		FD0A2452286A22C800BBF8EC /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FD0A2457286A22FF00BBF8EC /* NavigationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		FD0A2459286A231F00BBF8EC /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		FD0A245F286C6EE100BBF8EC /* TestProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProgressView.swift; sourceTree = "<group>"; };
+		FD0A2463286C713500BBF8EC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FD0A2466286C721300BBF8EC /* ProcessLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProcessLottie.json; sourceTree = "<group>"; };
+		FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,8 +158,10 @@
 		FD0093572865F7BF007FA97A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FDF9E0D72868B32200104CDC /* Test */,
 				FD00935D2865FA1D007FA97A /* Onboarding */,
+				FDF9E0D72868B32200104CDC /* Test */,
+				FD0A2461286C710400BBF8EC /* Profile */,
+				FD0A2462286C711600BBF8EC /* Tab */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -169,10 +178,10 @@
 		FD0093592865F8A2007FA97A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */,
 				FD00936C2866189B007FA97A /* UIControlExtension.swift */,
 				FD00935A2865F8AF007FA97A /* UIColorExtension.swift */,
 				FD00936A28661508007FA97A /* UIFontExtension.swift */,
-				FD0A2448286A177D00BBF8EC /* ArrayExtension.swift */,
 				FD0A244B286A186800BBF8EC /* UIScrollViewExtension.swift */,
 				FD0A244D286A191000BBF8EC /* UIViewExtension.swift */,
 			);
@@ -182,6 +191,7 @@
 		FD00935C2865FA0A007FA97A /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				FD0A2466286C721300BBF8EC /* ProcessLottie.json */,
 				FD00935E28661103007FA97A /* ViewController */,
 				FD009363286611D6007FA97A /* Button */,
 			);
@@ -255,10 +265,42 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		FD0A245E286C6ED000BBF8EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD0A245F286C6EE100BBF8EC /* TestProgressView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FD0A2461286C710400BBF8EC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FD0A2463286C713500BBF8EC /* ProfileViewController.swift */,
+				FD0A2468286C9C1A00BBF8EC /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FD0A2462286C711600BBF8EC /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		FD0A2468286C9C1A00BBF8EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FDF9E0D72868B32200104CDC /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				FDF9E0D82868B34D00104CDC /* TestViewController.swift */,
+				FD0A245E286C6ED000BBF8EC /* View */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -325,6 +367,7 @@
 			files = (
 				FD00934B2865F66E007FA97A /* LaunchScreen.storyboard in Resources */,
 				FD0093482865F66E007FA97A /* Assets.xcassets in Resources */,
+				FD0A2467286C721300BBF8EC /* ProcessLottie.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,10 +422,13 @@
 			files = (
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
+				FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */,
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
+				FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */,
+				FD0A245D286C6D2600BBF8EC /* ArrayExtension.swift in Sources */,
 				FD0A2453286A22C800BBF8EC /* Coordinator.swift in Sources */,
 				FD00933F2865F66C007FA97A /* AppDelegate.swift in Sources */,
-				FD0A2449286A177D00BBF8EC /* ArrayExtension.swift in Sources */,
+				FD0A2460286C6EE100BBF8EC /* TestProgressView.swift in Sources */,
 				FD0A244E286A191000BBF8EC /* UIViewExtension.swift in Sources */,
 				FD0A2447286A136100BBF8EC /* OnBoardingScrollIndexView.swift in Sources */,
 				FD00936B28661508007FA97A /* UIFontExtension.swift in Sources */,

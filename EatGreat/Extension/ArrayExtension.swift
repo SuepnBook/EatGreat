@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+extension Array {
+    func isOutOfRange(index: Int) -> Bool {
+        index > self.count - 1
+    }
+
+    func isEnd(index: Int) -> Bool {
+        index >= self.count - 1
+    }
+}

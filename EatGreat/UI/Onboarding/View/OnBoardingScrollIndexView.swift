@@ -26,7 +26,7 @@ class OnBoardingScrollIndexView: UIView {
         label.textColor = .themePrimary
         label.textAlignment = .center
         label.numberOfLines = 1
-        label.font = .SFProDisplay700?.withSize(20)
+        label.font = .headline
         return label
     }()
     
@@ -35,7 +35,7 @@ class OnBoardingScrollIndexView: UIView {
         label.textColor = .grey4
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = .SFProDisplay400?.withSize(17)
+        label.font = .body
         return label
     }()
     

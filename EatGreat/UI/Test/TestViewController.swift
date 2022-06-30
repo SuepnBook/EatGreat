@@ -15,8 +15,9 @@ class TestViewController: BaseViewController {
     
     weak var delegate:TestViewControllerDelegate?
     
-    private let progressView:TestProgressView = {
+    private lazy var progressView:TestProgressView = {
         let view = TestProgressView()
+        view.delegate = self
         return view
     }()
     
@@ -25,11 +26,17 @@ class TestViewController: BaseViewController {
         tableView.backgroundColor = .themeBackground1
         return tableView
     }()
-
+    
+    private lazy var viewModel:TestViewModel = {
+        let viewModel = TestViewModel()
+        viewModel.delegate = self
+        return viewModel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        updateFrame()
+        viewModel.setup()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,18 +63,32 @@ extension TestViewController {
             make.leading.trailing.bottom.equalToSuperview()
         }
     }
+}
+
+// MARK: - TestProgressViewDelegate
+extension TestViewController:TestProgressViewDelegate {
+    func selectSection(view: TestProgressView, category: TestProgressView.Category) {
+        switch category {
+        case .life:
+            viewModel.selectSection(category: .life)
+        case .head:
+            viewModel.selectSection(category: .head)
+        case .digestion:
+            viewModel.selectSection(category: .digestion)
+        case .trunk:
+            viewModel.selectSection(category: .trunk)
+        case .all:
+            viewModel.selectSection(category: .all)
+        }
+    }
+}
+
+extension TestViewController:TestViewModelDelegate {
+    func reloadTableView(testQuestions: [TestQuestion]) {
+        tableView.reloadData()
+    }
     
-    private func updateFrame() {
-        
-        let viewObject:TestProgressView.Object =
-            .init(section1: .init(completionRatio: 1,
-                                  isFocus: false),
-                  section2: .init(completionRatio: 1,
-                                  isFocus: false),
-                  section3: .init(completionRatio: 1,
-                                  isFocus: false),
-                  section4: .init(completionRatio: 0.5,
-                                  isFocus: true))
+    func updateProgressView(viewObject: TestProgressView.Object) {
         progressView.updateFrame(viewObject: viewObject)
     }
 }

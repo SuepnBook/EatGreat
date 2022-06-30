@@ -38,7 +38,7 @@ class ThemeButton: UIButton {
 
     private func initView() {
         layer.cornerRadius = 8
-        titleLabel?.font = .SFProDisplay700?.withSize(17)
+        titleLabel?.font = .button
     }
 
     private func updateTheme(type: ThemeType) {

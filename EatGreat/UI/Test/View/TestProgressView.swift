@@ -6,23 +6,64 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 protocol TestProgressViewDelegate:AnyObject {
-    func selectSection(view:TestProgressView, index:Int)
+    func selectSection(view:TestProgressView, category:TestProgressView.Category)
 }
 
 class TestProgressView: UIView {
     
-    struct Object{
-        var section1:Section
-        var section2:Section
-        var section3:Section
-        var section4:Section
+    enum Category {
+        case life
+        case head
+        case digestion
+        case trunk
+        case all
+        
+        var title:String {
+            switch self {
+            case .life:
+                return "生活型態"
+            case .head:
+                return "頭部"
+            case .digestion:
+                return "消化系統"
+            case .trunk:
+                return "軀幹"
+            case .all:
+                return "全部位"
+            }
+        }
+        
+        var image:String {
+            switch self {
+            case .life:
+                return "BodySection1"
+            case .head:
+                return "BodySection1"
+            case .digestion:
+                return "BodySection1"
+            case .trunk:
+                return "BodySection1"
+            case .all:
+                return "BodySection1"
+            }
+        }
     }
     
-    struct Section {
-        var completionRatio:Float
-        var isFocus:Bool
+    struct Object{
+        var life:Section = .init(isFocus:true)
+        var head:Section = .init()
+        var digestion:Section = .init()
+        var trunk:Section = .init()
+        var all:Section = .init()
+        
+        struct Section {
+            var completionRatio:Float = 0
+            var isFocus:Bool = false
+        }
     }
     
     weak var delegate:TestProgressViewDelegate?
@@ -35,19 +76,24 @@ class TestProgressView: UIView {
         return scrollView
     }()
     
-    private let section1Button:SectionButton = SectionButton(title: "腹部", image: "BodySection1")
+    private let lifeButton:SectionButton = SectionButton(category: .life)
     private let progress2Line:ProgressBarView = ProgressBarView()
-    private let section2Button:SectionButton = SectionButton(title: "腹部", image: "BodySection1")
+    private let headButton:SectionButton = SectionButton(category: .head)
     private let progress3Line:ProgressBarView = ProgressBarView()
-    private let section3Button:SectionButton = SectionButton(title: "腹部", image: "BodySection1")
+    private let digestionButton:SectionButton = SectionButton(category: .digestion)
     private let progress4Line:ProgressBarView = ProgressBarView()
-    private let section4Button:SectionButton = SectionButton(title: "腹部", image: "BodySection1")
-
+    private let trunkButton:SectionButton = SectionButton(category: .trunk)
+    private let progress5Line:ProgressBarView = ProgressBarView()
+    private let allButton:SectionButton = SectionButton(category: .all)
+    
+    private var disposeBag:DisposeBag = DisposeBag()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
+        reactiveX()
     }
-    
+        
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -62,61 +108,103 @@ class TestProgressView: UIView {
             make.height.equalTo(68)
         }
         
-        scrollView.addSubview(section1Button)
+        scrollView.addSubview(lifeButton)
         scrollView.addSubview(progress2Line)
-        scrollView.addSubview(section2Button)
+        scrollView.addSubview(headButton)
         scrollView.addSubview(progress3Line)
-        scrollView.addSubview(section3Button)
+        scrollView.addSubview(digestionButton)
         scrollView.addSubview(progress4Line)
-        scrollView.addSubview(section4Button)
+        scrollView.addSubview(trunkButton)
+        scrollView.addSubview(progress5Line)
+        scrollView.addSubview(allButton)
         
-        section1Button.snp.makeConstraints { make in
+        lifeButton.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
             make.top.bottom.equalToSuperview()
         }
         progress2Line.snp.makeConstraints { make in
-            make.leading.equalTo(section1Button.imageView.snp.trailing)
-            make.centerY.equalTo(section1Button.imageView.snp.centerY)
-            make.trailing.equalTo(section2Button.imageView.snp.leading)
+            make.leading.equalTo(lifeButton.imageView.snp.trailing)
+            make.centerY.equalTo(lifeButton.imageView.snp.centerY)
+            make.trailing.equalTo(headButton.imageView.snp.leading)
         }
-        section2Button.snp.makeConstraints { make in
+        headButton.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
         }
         progress3Line.snp.makeConstraints { make in
-            make.leading.equalTo(section2Button.imageView.snp.trailing)
-            make.centerY.equalTo(section2Button.imageView.snp.centerY)
-            make.trailing.equalTo(section3Button.imageView.snp.leading)
+            make.leading.equalTo(headButton.imageView.snp.trailing)
+            make.centerY.equalTo(headButton.imageView.snp.centerY)
+            make.trailing.equalTo(digestionButton.imageView.snp.leading)
         }
-        section3Button.snp.makeConstraints { make in
+        digestionButton.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
         }
         progress4Line.snp.makeConstraints { make in
-            make.leading.equalTo(section3Button.imageView.snp.trailing)
-            make.centerY.equalTo(section3Button.imageView.snp.centerY)
-            make.trailing.equalTo(section4Button.imageView.snp.leading)
+            make.leading.equalTo(digestionButton.imageView.snp.trailing)
+            make.centerY.equalTo(digestionButton.imageView.snp.centerY)
+            make.trailing.equalTo(trunkButton.imageView.snp.leading)
         }
-        section4Button.snp.makeConstraints { make in
+        trunkButton.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+        }
+        progress5Line.snp.makeConstraints { make in
+            make.leading.equalTo(trunkButton.imageView.snp.trailing)
+            make.centerY.equalTo(trunkButton.imageView.snp.centerY)
+            make.trailing.equalTo(allButton.imageView.snp.leading)
+        }
+        allButton.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
         }
     }
     
+    private func reactiveX() {
+        lifeButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.delegate?.selectSection(view: self, category: .life)
+            }.disposed(by: disposeBag)
+        headButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.delegate?.selectSection(view: self, category: .head)
+            }.disposed(by: disposeBag)
+        digestionButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.delegate?.selectSection(view: self, category: .digestion)
+            }.disposed(by: disposeBag)
+        trunkButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.delegate?.selectSection(view: self, category: .trunk)
+            }.disposed(by: disposeBag)
+        allButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.delegate?.selectSection(view: self, category: .all)
+            }.disposed(by: disposeBag)
+    }
+    
     func updateFrame(viewObject:Object) {
         
-        let section1 = viewObject.section1
-        section1Button.updateFrame(isComplete: section1.completionRatio >= 1,
-                                   isSelected: section1.isFocus)
-        let section2 = viewObject.section2
-        section2Button.updateFrame(isComplete: section2.completionRatio >= 1,
-                                   isSelected: section2.isFocus)
-        progress2Line.updateFrame(completionRatio: section2.completionRatio)
-        let section3 = viewObject.section3
-        section3Button.updateFrame(isComplete: section3.completionRatio >= 1,
-                                   isSelected: section3.isFocus)
-        progress3Line.updateFrame(completionRatio: section3.completionRatio)
-        let section4 = viewObject.section4
-        section4Button.updateFrame(isComplete: section4.completionRatio >= 1,
-                                   isSelected: section4.isFocus)
-        progress4Line.updateFrame(completionRatio: section4.completionRatio)
+        let life = viewObject.life
+        lifeButton.updateFrame(isComplete: life.completionRatio >= 1,
+                                   isSelected: life.isFocus)
+        let head = viewObject.head
+        headButton.updateFrame(isComplete: head.completionRatio >= 1,
+                                   isSelected: head.isFocus)
+        progress2Line.updateFrame(completionRatio: head.completionRatio)
+        let digestion = viewObject.digestion
+        digestionButton.updateFrame(isComplete: digestion.completionRatio >= 1,
+                                   isSelected: digestion.isFocus)
+        progress3Line.updateFrame(completionRatio: digestion.completionRatio)
+        let trunk = viewObject.trunk
+        trunkButton.updateFrame(isComplete: trunk.completionRatio >= 1,
+                                   isSelected: trunk.isFocus)
+        progress4Line.updateFrame(completionRatio: trunk.completionRatio)
+        let all = viewObject.all
+        allButton.updateFrame(isComplete: all.completionRatio >= 1,
+                              isSelected: all.isFocus)
+        progress5Line.updateFrame(completionRatio: all.completionRatio)
     }
 }
 
@@ -131,7 +219,7 @@ private class SectionButton:UIControl {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .themePrimary
-        label.font = .SFProDisplay400?.withSize(13)
+        label.font = .footnote
         return label
     }()
     
@@ -145,10 +233,10 @@ private class SectionButton:UIControl {
     
     private var image:UIImage?
     
-    init(title:String?,image:String) {
+    init(category:TestProgressView.Category) {
         super.init(frame: .zero)
-        self.image = UIImage(named: image)
-        titleLabel.text = title
+        self.image = UIImage(named: category.image)
+        titleLabel.text = category.title
         imageView.image = self.image
         initView()
     }
@@ -190,6 +278,7 @@ private class SectionButton:UIControl {
         imageView.image = isComplete ? UIImage(named: "SectionComplete") : image
         titleLabel.textColor = isComplete ? .themePrimary : .white
         focusLine.isHidden = !isSelected
+        isEnabled = isComplete
     }
 }
 
@@ -216,7 +305,7 @@ private class ProgressBarView:UIView {
         addSubview(highlightView)
         
         self.snp.makeConstraints { make in
-            make.width.equalTo(46)
+            make.width.equalTo(60)
             make.height.equalTo(2)
         }
         
@@ -235,7 +324,11 @@ private class ProgressBarView:UIView {
         highlightView.snp.remakeConstraints { make in
             make.top.bottom.equalToSuperview()
             make.leading.equalToSuperview().offset(-1)
-            make.trailing.equalTo(self.snp.centerX).multipliedBy(multiplied)
+            if multiplied > 0 {
+                make.trailing.equalTo(self.snp.centerX).multipliedBy(multiplied)
+            } else {
+                make.width.equalTo(0)
+            }
         }
     }
 }

@@ -44,7 +44,7 @@ class OnBoardingScrollView: UIView {
                                                                     index: "了解體質成因與相關知識了解體質成因與相關知識"),
                                                               .init(image: "OnBoardingIndexImage1",
                                                                     title: "了解自我體質成因",
-                                                                    index: "了解體質成因與相關知識了解體質成因與相關知識")]
+                                                                    index: "您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。")]
     
     private let timerRunning: BehaviorRelay<Bool> = BehaviorRelay(value: true)
 

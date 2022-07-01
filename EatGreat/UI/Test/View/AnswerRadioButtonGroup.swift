@@ -29,7 +29,7 @@ class AnswerRadioButtonGroup: UIView {
         stackView.distribution = .equalSpacing
         return stackView
     }()
-
+    
     private var radioButtonGroup:[RadioButton] = [RadioButton(),
                                                   RadioButton(),
                                                   RadioButton(),
@@ -37,7 +37,7 @@ class AnswerRadioButtonGroup: UIView {
                                                   RadioButton()]
     
     private var disposeBag:DisposeBag = DisposeBag()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -64,6 +64,9 @@ class AnswerRadioButtonGroup: UIView {
             make.top.equalTo(titleLabel.snp.bottom).offset(12)
             make.left.right.bottom.equalToSuperview()
         }
+        
+        radioButtonGroup.first?.titleLabel.text = "低"
+        radioButtonGroup.last?.titleLabel.text = "高"
     }
     
     private func reactiveX(){
@@ -79,10 +82,12 @@ class AnswerRadioButtonGroup: UIView {
     }
     
     private func selectRadioButton(button:RadioButton) {
-        for button in radioButtonGroup {
+        
+        for button in self.radioButtonGroup {
             button.isSelect = false
         }
         button.isSelect = true
+        
     }
     
     func updateFrame(level:Int?) {
@@ -96,13 +101,31 @@ class AnswerRadioButtonGroup: UIView {
     }
 }
 
-private class RadioButton:UIButton {
+private class RadioButton:UIControl {
     
     var isSelect:Bool = false {
         didSet {
             updateFrame()
         }
     }
+    
+    private let circleView:UIView = {
+        let view = UIView()
+        view.layer.borderColor = UIColor.grey2.cgColor
+        view.layer.cornerRadius = 14
+        view.layer.borderWidth = 2
+        view.isUserInteractionEnabled = false
+        return view
+    }()
+    
+    let titleLabel:UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .grey2
+        label.font = .button
+        label.isUserInteractionEnabled = false
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -114,17 +137,25 @@ private class RadioButton:UIButton {
     }
     
     private func initView() {
-        layer.borderColor = UIColor.grey2.cgColor
-        layer.cornerRadius = 14
-        layer.borderWidth = 2
         
-        self.snp.makeConstraints { make in
+        addSubview(circleView)
+        addSubview(titleLabel)
+        
+        circleView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalToSuperview()
             make.width.height.equalTo(28)
+        }
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(circleView.snp.bottom).offset(12)
+            make.centerX.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(20)
+            make.bottom.equalToSuperview().inset(1)
         }
     }
     
     func updateFrame() {
-        backgroundColor = isSelect ? .themePrimary : .themeBackground1
-        layer.borderWidth = isSelect ? 0 : 2
+        circleView.backgroundColor = isSelect ? .themePrimary : .themeBackground1
+        circleView.layer.borderWidth = isSelect ? 0 : 2
     }
 }

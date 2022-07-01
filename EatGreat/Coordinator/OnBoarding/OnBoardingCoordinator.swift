@@ -9,10 +9,9 @@ import UIKit
 
 class OnBoardingCoordinator:UINavigationController {
     public init() {
-//        let rootVC = OnBoardingViewController()
-        let rootVC = TestViewController()
+        let rootVC = OnBoardingViewController()
         super.init(rootViewController: rootVC)
-//        rootVC.delegate = self
+        rootVC.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {

@@ -23,6 +23,7 @@ protocol TestViewModelDelegate:AnyObject {
     func reloadTableView(testQuestions:[TestQuestion])
     func scrollToIndexPath(index:Int)
     func updateNextButton(title:String,isEnable:Bool)
+    func gotoNextView()
 }
 
 class TestViewModel: BaseViewModel {
@@ -102,6 +103,7 @@ class TestViewModel: BaseViewModel {
         case .trunk:
             nextCategory = .all
         case .all:
+            delegate?.gotoNextView()
             return
         }
         selectSection(category: nextCategory)

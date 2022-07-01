@@ -23,6 +23,7 @@ class TestViewController: BaseViewController {
     
     private lazy var tableView:UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(cellType: TestQuestionTableViewCell.self)
@@ -129,6 +130,10 @@ extension TestViewController:TestViewModelDelegate {
         } else {
             nextButton.type = .disable
         }
+    }
+    
+    func gotoNextView() {
+        delegate?.selectNext(vc: self)
     }
 }
 

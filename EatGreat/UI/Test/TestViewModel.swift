@@ -115,7 +115,7 @@ extension TestViewModel {
     
     private func updateTestQuestion() {
         var testQuestions:[TestQuestion] = []
-        for i in 0...3 {
+        for i in 0...5 {
             testQuestions.append(.init(title: "\(i).題目？"))
         }
         testObject.life.testQuestions = testQuestions

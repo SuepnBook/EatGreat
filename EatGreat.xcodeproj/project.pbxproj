@@ -32,6 +32,9 @@
 		FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */; };
 		FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */; };
 		FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */; };
+		FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */; };
+		FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */; };
+		FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRadioButtonGroup.swift; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				FD0A245F286C6EE100BBF8EC /* TestProgressView.swift */,
+				FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */,
+				FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -300,10 +308,19 @@
 		FD0A246D286E3B4B00BBF8EC /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
+				FD9E9AA1286F03B30068CADD /* TableViewCell */,
 				FD00935F28661103007FA97A /* BaseViewController.swift */,
 				FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */,
 			);
 			path = BaseObject;
+			sourceTree = "<group>";
+		};
+		FD9E9AA1286F03B30068CADD /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		FDF9E0D72868B32200104CDC /* Test */ = {
@@ -433,8 +450,10 @@
 				FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */,
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
 				FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */,
+				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
 				FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */,
+				FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */,
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
 				FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */,
 				FD0A245D286C6D2600BBF8EC /* ArrayExtension.swift in Sources */,
@@ -453,6 +472,7 @@
 				FD00936D2866189B007FA97A /* UIControlExtension.swift in Sources */,
 				FD0A2454286A22C800BBF8EC /* BaseCoordinator.swift in Sources */,
 				FD0A245A286A231F00BBF8EC /* OnBoardingCoordinator.swift in Sources */,
+				FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

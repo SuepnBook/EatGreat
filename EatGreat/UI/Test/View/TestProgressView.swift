@@ -275,10 +275,14 @@ private class SectionButton:UIControl {
     }
     
     func updateFrame(isComplete:Bool,isSelected:Bool) {
-        imageView.image = isComplete ? UIImage(named: "SectionComplete") : image
-        titleLabel.textColor = isComplete ? .themePrimary : .white
-        focusLine.isHidden = !isSelected
-        isEnabled = isComplete
+        UIView.transition(with: self,
+                          duration: 0.5,
+                          options: .transitionCrossDissolve) {
+            self.imageView.image = isComplete ? UIImage(named: "SectionComplete") : self.image
+            self.titleLabel.textColor = isComplete ? .themePrimary : .white
+            self.focusLine.isHidden = !isSelected
+            self.isEnabled = isComplete
+        }
     }
 }
 
@@ -321,13 +325,17 @@ private class ProgressBarView:UIView {
             multiplied = 2
         }
         
-        highlightView.snp.remakeConstraints { make in
-            make.top.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(-1)
-            if multiplied > 0 {
-                make.trailing.equalTo(self.snp.centerX).multipliedBy(multiplied)
-            } else {
-                make.width.equalTo(0)
+        UIView.transition(with: self,
+                          duration: 0.5,
+                          options: .curveLinear) {
+            self.highlightView.snp.remakeConstraints { make in
+                make.top.bottom.equalToSuperview()
+                make.leading.equalToSuperview().offset(-1)
+                if multiplied > 0 {
+                    make.trailing.equalTo(self.snp.centerX).multipliedBy(multiplied)
+                } else {
+                    make.width.equalTo(0)
+                }
             }
         }
     }

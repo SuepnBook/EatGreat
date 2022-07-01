@@ -18,8 +18,11 @@ struct TestQuestion {
 }
 
 protocol TestViewModelDelegate:AnyObject {
-    func reloadTableView(testQuestions:[TestQuestion])
     func updateProgressView(viewObject:TestProgressView.Object)
+    func updateDataSource(testQuestions:[TestQuestion])
+    func reloadTableView(testQuestions:[TestQuestion])
+    func scrollToIndexPath(index:Int)
+    func updateNextButton(title:String,isEnable:Bool)
 }
 
 class TestViewModel: BaseViewModel {
@@ -29,43 +32,135 @@ class TestViewModel: BaseViewModel {
     private var testObject:TestObject = .init()
     
     func setup() {
-        let testQuestions = testObject.life.testQuestions
-        delegate?.reloadTableView(testQuestions: testQuestions)
+        updateTestQuestion()
         selectSection(category: .life)
+        reloadTableView()
     }
     
     func selectSection(category:Category) {
-        testObject.life.isFocus = category == .life
-        testObject.head.isFocus = category == .head
-        testObject.digestion.isFocus = category == .digestion
-        testObject.trunk.isFocus = category == .trunk
-        testObject.all.isFocus = category == .all
-        
-        switch category {
+        testObject.currentCategory = category
+        updateProgressView()
+        reloadTableView()
+        updateNextButton()
+    }
+    
+    func selectFrequency(index:Int, level: Int) {
+        switch testObject.currentCategory {
         case .life:
-            delegate?.reloadTableView(testQuestions: testObject.life.testQuestions)
+            testObject.life.testQuestions[index].frequency = level
         case .head:
-            delegate?.reloadTableView(testQuestions: testObject.head.testQuestions)
+            testObject.head.testQuestions[index].frequency = level
         case .digestion:
-            delegate?.reloadTableView(testQuestions: testObject.digestion.testQuestions)
+            testObject.digestion.testQuestions[index].frequency = level
         case .trunk:
-            delegate?.reloadTableView(testQuestions: testObject.trunk.testQuestions)
+            testObject.trunk.testQuestions[index].frequency = level
         case .all:
-            delegate?.reloadTableView(testQuestions: testObject.all.testQuestions)
+            testObject.all.testQuestions[index].frequency = level
         }
+        updateProgressView()
+        updateDataSource()
+        updateNextButton()
+    }
+    
+    func selectSerious(index:Int, level: Int) {
         
+        switch testObject.currentCategory {
+        case .life:
+            testObject.life.testQuestions[index].serious = level
+        case .head:
+            testObject.head.testQuestions[index].serious = level
+        case .digestion:
+            testObject.digestion.testQuestions[index].serious = level
+        case .trunk:
+            testObject.trunk.testQuestions[index].serious = level
+        case .all:
+            testObject.all.testQuestions[index].serious = level
+        }
+            
+        updateProgressView()
+        updateDataSource()
+        updateNextButton()
+        
+        let isFrequencyDone = testObject.currentSection.testQuestions[index].frequency != nil
+        if isFrequencyDone {
+            let nextIndex = index + 1
+            if nextIndex < testObject.currentSection.testQuestions.count {
+                delegate?.scrollToIndexPath(index: nextIndex)
+            }
+        }
+    }
+    
+    func selectNextButton() {
+        let nextCategory:Category
+        switch testObject.currentCategory {
+        case .life:
+            nextCategory = .head
+        case .head:
+            nextCategory = .digestion
+        case .digestion:
+            nextCategory = .trunk
+        case .trunk:
+            nextCategory = .all
+        case .all:
+            return
+        }
+        selectSection(category: nextCategory)
+    }
+}
+
+// MARK: - Private Function
+extension TestViewModel {
+    
+    private func updateTestQuestion() {
+        var testQuestions:[TestQuestion] = []
+        for i in 0...3 {
+            testQuestions.append(.init(title: "\(i).題目？"))
+        }
+        testObject.life.testQuestions = testQuestions
+        testObject.head.testQuestions = testQuestions
+        testObject.digestion.testQuestions = testQuestions
+        testObject.trunk.testQuestions = testQuestions
+        testObject.all.testQuestions = testQuestions
+    }
+    
+    private func updateProgressView() {
+        let category = testObject.currentCategory
         let viewObject:TestProgressView.Object =
             .init(life: .init(completionRatio: testObject.life.completionRatio,
-                              isFocus: testObject.life.isFocus),
+                              isFocus: category == .life),
                   head: .init(completionRatio: testObject.head.completionRatio,
-                              isFocus: testObject.head.isFocus),
+                              isFocus: category == .head),
                   digestion: .init(completionRatio: testObject.digestion.completionRatio,
-                                   isFocus: testObject.digestion.isFocus),
+                                   isFocus: category == .digestion),
                   trunk: .init(completionRatio: testObject.trunk.completionRatio,
-                               isFocus: testObject.trunk.isFocus),
+                               isFocus: category == .trunk),
                   all: .init(completionRatio: testObject.all.completionRatio,
-                             isFocus: testObject.all.isFocus))
+                             isFocus: category == .all))
         delegate?.updateProgressView(viewObject: viewObject)
+    }
+    
+    private func reloadTableView() {
+        let testQuestions = testObject.currentSection.testQuestions
+        delegate?.reloadTableView(testQuestions: testQuestions)
+        if !testQuestions.isEmpty {
+            delegate?.scrollToIndexPath(index: 0)
+        }
+    }
+    
+    private func updateDataSource() {
+        let testQuestions = testObject.currentSection.testQuestions
+        delegate?.updateDataSource(testQuestions: testQuestions)
+    }
+    
+    private func updateNextButton() {
+        let isEnable = testObject.currentSection.completionRatio >= 1
+        let title:String
+        if testObject.currentCategory == .all && isEnable{
+            title = "完成"
+        } else {
+            title = "下一步"
+        }
+        delegate?.updateNextButton(title: title, isEnable: isEnable)
     }
 }
 
@@ -79,7 +174,22 @@ extension TestViewModel {
     }
     
     struct TestObject{
-        var life:Section = .init(isFocus:true)
+        var currentCategory: Category = .life
+        var currentSection:Section {
+            switch currentCategory {
+            case .life:
+                return life
+            case .head:
+                return head
+            case .digestion:
+                return digestion
+            case .trunk:
+                return trunk
+            case .all:
+                return all
+            }
+        }
+        var life:Section = .init()
         var head:Section = .init()
         var digestion:Section = .init()
         var trunk:Section = .init()
@@ -90,7 +200,7 @@ extension TestViewModel {
             var completionRatio:Float {
                 let totalCount:Float = Float(testQuestions.count)
                 if totalCount == 0 {
-                    return 0
+                    return 1
                 }
                 var finishCount:Float = 0
                 testQuestions.forEach({
@@ -100,7 +210,6 @@ extension TestViewModel {
                 })
                 return finishCount / totalCount
             }
-            var isFocus:Bool = false
         }
     }
 }

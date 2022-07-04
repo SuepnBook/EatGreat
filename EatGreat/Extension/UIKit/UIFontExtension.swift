@@ -15,5 +15,6 @@ extension UIFont {
     static let button:UIFont = .systemFont(ofSize: 17, weight: .bold)
     static let body:UIFont = .systemFont(ofSize: 15, weight: .regular)
     static let subTitle:UIFont = .systemFont(ofSize: 15, weight: .bold)
+    static let subHead:UIFont = .systemFont(ofSize: 15, weight: .regular)
     static let footnote:UIFont = .systemFont(ofSize: 13, weight: .regular)
 }

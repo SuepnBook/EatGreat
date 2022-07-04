@@ -32,6 +32,7 @@
 		FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */; };
 		FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */; };
 		FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */; };
+		FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE128733FA700A216EC /* ProfileInputView.swift */; };
 		FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */; };
 		FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */; };
 		FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */; };
@@ -68,6 +69,7 @@
 		FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		FD47DAE128733FA700A216EC /* ProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputView.swift; sourceTree = "<group>"; };
 		FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRadioButtonGroup.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		FD0A2468286C9C1A00BBF8EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD47DAE128733FA700A216EC /* ProfileInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */,
+				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
 				FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */,
 				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,

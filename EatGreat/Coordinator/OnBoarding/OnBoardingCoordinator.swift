@@ -9,7 +9,8 @@ import UIKit
 
 class OnBoardingCoordinator:UINavigationController {
     public init() {
-        let rootVC = OnBoardingViewController()
+//        let rootVC = OnBoardingViewController()
+        let rootVC = ProfileViewController()
         super.init(rootViewController: rootVC)
         rootVC.delegate = self
     }

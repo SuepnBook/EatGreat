@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManager
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupSDK()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         coordinator.start()
         return true
+    }
+    
+    private func setupSDK() {
+        IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "完成"
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
     }
 
 }

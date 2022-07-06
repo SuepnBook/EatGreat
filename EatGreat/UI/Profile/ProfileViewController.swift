@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol ProfileViewControllerDelegate:AnyObject {
     func selectNext(vc:ProfileViewController)
@@ -53,42 +54,51 @@ class ProfileViewController: BaseViewController {
         return stackView
     }()
     
-    private let nickNameView:ProfileInputView = {
+    private lazy var nickNameView:ProfileInputView = {
         let view = ProfileInputView()
+        view.delegate = self
         view.titleLabel.text = "暱稱"
-        view.textField.placeholder = "最多輸入 8 字元"
+        view.textField.placeholder = "最多您的暱稱"
         return view
     }()
     
-    private let genderView:ProfileInputView = {
+    private lazy var genderView:ProfileInputView = {
         let view = ProfileInputView()
+        view.delegate = self
         view.titleLabel.text = "性別"
         view.isDropDownStyle = true
         view.textField.placeholder = "請選擇"
+        view.pickerDataSource = viewModel.genderDataSource()
         return view
     }()
     
-    private let heightView:ProfileInputView = {
+    private lazy var heightView:ProfileInputView = {
         let view = ProfileInputView()
+        view.delegate = self
         view.titleLabel.text = "身高（公分）"
         view.isDropDownStyle = true
         view.textField.placeholder = "請選擇"
+        view.pickerDataSource = viewModel.heightDataSource()
         return view
     }()
     
-    private let weightView:ProfileInputView = {
+    private lazy var weightView:ProfileInputView = {
         let view = ProfileInputView()
+        view.delegate = self
         view.titleLabel.text = "體重（公斤）"
         view.isDropDownStyle = true
         view.textField.placeholder = "請選擇"
+        view.pickerDataSource = viewModel.weightDataSource()
         return view
     }()
     
-    private let bornView:ProfileInputView = {
+    private lazy var bornView:ProfileInputView = {
         let view = ProfileInputView()
+        view.delegate = self
         view.titleLabel.text = "出生年分（西元）"
         view.isDropDownStyle = true
         view.textField.placeholder = "請選擇"
+        view.pickerDataSource = viewModel.bornDataSource()
         return view
     }()
     
@@ -98,10 +108,13 @@ class ProfileViewController: BaseViewController {
         button.type = .disable
         return button
     }()
+    
+    private let viewModel:ProfileViewModel = ProfileViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        reactiveX()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -160,6 +173,42 @@ extension ProfileViewController {
             make.bottom.equalToSuperview().inset(24)
         }
     }
+    
+    private func reactiveX() {
+        nextButton.rxControlEvent()
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.gotoNext()
+            }.disposed(by: disposeBag)
+    }
+    
+    private func gotoNext() {
+        self.viewModel.updateProfile(nickName: nickNameView.textField.text,
+                                     gender: genderView.textField.text,
+                                     height: heightView.textField.text,
+                                     weight: weightView.textField.text,
+                                     born: bornView.textField.text)
+        .observe(on: MainScheduler.instance)
+        .subscribe { [weak self] _ in
+            guard let self = self else { return }
+            ProgressManager.showSuccessHUD(withStatus: nil)
+            self.delegate?.selectNext(vc: self)
+        } onFailure: { error in
+            ErrorHandler.handle(error: error)
+        }.disposed(by: disposeBag)
+    }
+    
+    private func updateNextButtonStatus() {
+        if nickNameView.textField.text?.isEmpty == false,
+           genderView.textField.text?.isEmpty == false,
+           heightView.textField.text?.isEmpty == false,
+           weightView.textField.text?.isEmpty == false,
+           bornView.textField.text?.isEmpty == false {
+            nextButton.type = .enable
+        } else {
+            nextButton.type = .disable
+        }
+    }
 }
 
 // MARK: - ScrollViewDelegate
@@ -172,5 +221,12 @@ extension ProfileViewController: UIScrollViewDelegate {
         } else {
             setNavigationBar(title: nil, backgroundColor: .themeBackground2)
         }
+    }
+}
+
+// MARK: - ProfileInputViewDelegate
+extension ProfileViewController:ProfileInputViewDelegate {
+    func textFieldUpdate(_ view: ProfileInputView) {
+        updateNextButtonStatus()
     }
 }

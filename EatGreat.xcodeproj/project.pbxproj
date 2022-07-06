@@ -33,6 +33,12 @@
 		FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */; };
 		FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */; };
 		FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE128733FA700A216EC /* ProfileInputView.swift */; };
+		FD47DAE4287537CC00A216EC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE3287537CC00A216EC /* ProfileViewModel.swift */; };
+		FD47DAE728753EBD00A216EC /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */; };
+		FD47DAEB287544B300A216EC /* ProfileDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAEA287544B300A216EC /* ProfileDomainObject.swift */; };
+		FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAED287547CA00A216EC /* ErrorHandler.swift */; };
+		FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAEE287547CA00A216EC /* ErrorType.swift */; };
+		FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAF12875496400A216EC /* ProgressManager.swift */; };
 		FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */; };
 		FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */; };
 		FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */; };
@@ -70,6 +76,12 @@
 		FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		FD47DAE128733FA700A216EC /* ProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputView.swift; sourceTree = "<group>"; };
+		FD47DAE3287537CC00A216EC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		FD47DAEA287544B300A216EC /* ProfileDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDomainObject.swift; sourceTree = "<group>"; };
+		FD47DAED287547CA00A216EC /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		FD47DAEE287547CA00A216EC /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		FD47DAF12875496400A216EC /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRadioButtonGroup.swift; sourceTree = "<group>"; };
@@ -129,6 +141,8 @@
 				FD0093522865F75A007FA97A /* App */,
 				FD0093542865F773007FA97A /* Coordinator */,
 				FD0093572865F7BF007FA97A /* UI */,
+				FD47DAE82875446B00A216EC /* Repository */,
+				FD47DAE528753EA000A216EC /* Manager */,
 				FD00935C2865FA0A007FA97A /* UIComponent */,
 				FD0A246D286E3B4B00BBF8EC /* BaseObject */,
 				FD0093582865F899007FA97A /* Extension */,
@@ -288,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				FD0A2463286C713500BBF8EC /* ProfileViewController.swift */,
+				FD47DAE3287537CC00A216EC /* ProfileViewModel.swift */,
 				FD0A2468286C9C1A00BBF8EC /* View */,
 			);
 			path = Profile;
@@ -316,6 +331,41 @@
 				FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */,
 			);
 			path = BaseObject;
+			sourceTree = "<group>";
+		};
+		FD47DAE528753EA000A216EC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FD47DAF12875496400A216EC /* ProgressManager.swift */,
+				FD47DAEC287547CA00A216EC /* ErrorHandler */,
+				FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FD47DAE82875446B00A216EC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FD47DAE92875448700A216EC /* Profile */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FD47DAE92875448700A216EC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FD47DAEA287544B300A216EC /* ProfileDomainObject.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FD47DAEC287547CA00A216EC /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				FD47DAED287547CA00A216EC /* ErrorHandler.swift */,
+				FD47DAEE287547CA00A216EC /* ErrorType.swift */,
+			);
+			path = ErrorHandler;
 			sourceTree = "<group>";
 		};
 		FD9E9AA1286F03B30068CADD /* TableViewCell */ = {
@@ -450,12 +500,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD47DAE728753EBD00A216EC /* UserDefaultManager.swift in Sources */,
 				FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */,
+				FD47DAEB287544B300A216EC /* ProfileDomainObject.swift in Sources */,
+				FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */,
 				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
 				FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */,
 				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
+				FD47DAE4287537CC00A216EC /* ProfileViewModel.swift in Sources */,
 				FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */,
 				FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */,
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
@@ -465,9 +519,11 @@
 				FD00933F2865F66C007FA97A /* AppDelegate.swift in Sources */,
 				FD0A2460286C6EE100BBF8EC /* TestProgressView.swift in Sources */,
 				FD0A244E286A191000BBF8EC /* UIViewExtension.swift in Sources */,
+				FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */,
 				FD0A2447286A136100BBF8EC /* OnBoardingScrollIndexView.swift in Sources */,
 				FD00936B28661508007FA97A /* UIFontExtension.swift in Sources */,
 				FD00935B2865F8AF007FA97A /* UIColorExtension.swift in Sources */,
+				FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */,
 				FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */,
 				FD0A2445286A120C00BBF8EC /* OnBoardingScrollView.swift in Sources */,
 				FD009368286611D6007FA97A /* ThemeButton.swift in Sources */,

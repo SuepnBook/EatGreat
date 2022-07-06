@@ -11,7 +11,7 @@ target 'EatGreat' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Reusable'
 
-  pod 'SVProgressHUD'
+  pod 'ProgressHUD'
   pod 'IQKeyboardManager'
 
   # Pods for EatGreat

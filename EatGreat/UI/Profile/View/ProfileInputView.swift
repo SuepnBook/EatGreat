@@ -7,13 +7,26 @@
 
 import UIKit
 
+protocol ProfileInputViewDelegate:AnyObject {
+    func textFieldUpdate(_ view:ProfileInputView)
+}
+
 class ProfileInputView: UIView {
+    
+    weak var delegate:ProfileInputViewDelegate?
     
     let titleLabel:UILabel = {
         let label = UILabel()
         label.font = .subHead
         label.textColor = .grey3
         return label
+    }()
+    
+    private lazy var pickerView:UIPickerView = {
+        let view = UIPickerView()
+        view.delegate = self
+        view.dataSource = self
+        return view
     }()
     
     lazy var textField:UITextField = {
@@ -29,9 +42,12 @@ class ProfileInputView: UIView {
         return textField
     }()
     
+    var pickerDataSource:[String] = []
+    
     var isDropDownStyle:Bool = false {
         didSet {
             updateFrame()
+            updateTextFieldInputView()
         }
     }
     
@@ -83,7 +99,7 @@ class ProfileInputView: UIView {
             imageView.image = .init(named: "KeyboardArrowDown")
             rightView.addSubview(imageView)
             imageView.snp.makeConstraints { make in
-                make.edges.equalToSuperview().inset(12)
+                make.edges.equalToSuperview().inset(16)
             }
             
             textField.rightView = rightView
@@ -93,8 +109,17 @@ class ProfileInputView: UIView {
             textField.rightViewMode = .never
         }
     }
+    
+    private func updateTextFieldInputView() {
+        if isDropDownStyle {
+            textField.inputView = pickerView
+        } else {
+            textField.inputView = nil
+        }
+    }
 }
 
+// MARK: - UITextFieldDelegate
 extension ProfileInputView: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.themePrimary.cgColor
@@ -104,5 +129,26 @@ extension ProfileInputView: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.grey2.cgColor
         titleLabel.textColor = UIColor.grey2
+        delegate?.textFieldUpdate(self)
+    }
+}
+
+// MARK: - UIPickerViewDelegate
+extension ProfileInputView: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        pickerDataSource.isEmpty ? 0 : 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        pickerDataSource.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        pickerDataSource[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        textField.text = pickerDataSource[row]
     }
 }

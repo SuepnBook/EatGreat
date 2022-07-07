@@ -116,6 +116,7 @@ class ProfileViewController: BaseViewController {
         initView()
         reactiveX()
         setupDefault()
+        updateNextButtonStatus()
     }
     
     override func viewWillAppear(_ animated: Bool) {

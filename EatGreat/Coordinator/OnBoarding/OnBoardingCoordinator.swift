@@ -8,6 +8,7 @@
 import UIKit
 
 class OnBoardingCoordinator:UINavigationController {
+    
     public init() {
 //        let rootVC = OnBoardingViewController()
         let rootVC = ProfileViewController()
@@ -41,6 +42,7 @@ extension OnBoardingCoordinator:TestViewControllerDelegate {
 // MARK: - ProfileViewControllerDelegate
 extension OnBoardingCoordinator:ProfileViewControllerDelegate {
     func selectNext(vc: ProfileViewController) {
-        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        appDelegate.coordinator.showTabBar()
     }
 }

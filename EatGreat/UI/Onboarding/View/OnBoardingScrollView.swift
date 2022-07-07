@@ -48,7 +48,7 @@ class OnBoardingScrollView: UIView {
     
     private let timerRunning: BehaviorRelay<Bool> = BehaviorRelay(value: true)
 
-    private let timer = Observable<Int>.interval(RxTimeInterval.seconds(1), scheduler: MainScheduler.asyncInstance)
+    private let timer = Observable<Int>.interval(RxTimeInterval.seconds(2), scheduler: MainScheduler.asyncInstance)
     
     private var disposeBag:DisposeBag = DisposeBag()
 
@@ -56,7 +56,6 @@ class OnBoardingScrollView: UIView {
         super.init(frame: frame)
         initView()
         reactiveX()
-//        updateFrame()
     }
     
     required init?(coder: NSCoder) {
@@ -71,13 +70,11 @@ class OnBoardingScrollView: UIView {
         
         scrollView.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview()
-//            make.height.equalTo(320)
         }
         
         stackView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
             make.height.equalToSuperview()
-//            make.width.greaterThanOrEqualTo(scrollView)
         }
         
         pageControl.snp.makeConstraints { make in

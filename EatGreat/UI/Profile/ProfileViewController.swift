@@ -115,6 +115,7 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         initView()
         reactiveX()
+        setupDefault()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -180,6 +181,21 @@ extension ProfileViewController {
                 guard let self = self else { return }
                 self.gotoNext()
             }.disposed(by: disposeBag)
+    }
+    
+    private func setupDefault() {
+        let profile = viewModel.getProfile()
+        nickNameView.textField.text = profile.nickName
+        genderView.textField.text = profile.gender
+        if let height = profile.height{
+            heightView.textField.text = String(describing: height)
+        }
+        if let weight = profile.weight{
+            weightView.textField.text = String(describing: weight)
+        }
+        if let born = profile.born{
+            bornView.textField.text = String(describing: born)
+        }
     }
     
     private func gotoNext() {

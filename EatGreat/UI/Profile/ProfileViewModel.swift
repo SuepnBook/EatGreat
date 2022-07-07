@@ -10,6 +10,15 @@ import RxCocoa
 import RxSwift
 
 class ProfileViewModel: BaseViewModel {
+    
+    func getProfile() -> ProfileDomainObject.Profile {
+        ProfileDomainObject.Profile(nickName: UserDefaultManager.nickName,
+                                    gender: UserDefaultManager.gender,
+                                    height: UserDefaultManager.height,
+                                    weight: UserDefaultManager.weight,
+                                    born: UserDefaultManager.born)
+    }
+    
     func genderDataSource() -> [String] {
         ["男","女"]
     }

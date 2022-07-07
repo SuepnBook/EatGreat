@@ -40,14 +40,12 @@ extension OnBoardingViewController {
         
         scrollView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(50)
-//            make.top.equalToSuperview().inset(100)
             make.left.right.equalToSuperview().inset(24)
         }
         
         startButton.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(24)
             make.height.equalTo(48)
-//            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(50)
             make.bottom.equalToSuperview().inset(50)
         }
     }

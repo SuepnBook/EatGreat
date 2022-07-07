@@ -19,7 +19,11 @@ class AppCoordinator {
     }
     
     func start() {
-        showTabBar()
+        if UserDefaultManager.nickName != nil {
+            showTabBar()
+        } else {
+            showOnboarding()
+        }
         self.window?.makeKeyAndVisible()
     }
     

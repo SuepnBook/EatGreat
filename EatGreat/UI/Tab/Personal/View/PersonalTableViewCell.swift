@@ -26,6 +26,8 @@ class PersonalTableViewCell: BaseTableViewCell {
     }
     
     private func initView(){
+        
+        contentView.backgroundColor = .white
         contentView.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints { make in

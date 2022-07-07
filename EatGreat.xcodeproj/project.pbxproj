@@ -49,6 +49,8 @@
 		FDC73B6528773B8600E503F0 /* PersonalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6428773B8600E503F0 /* PersonalCoordinator.swift */; };
 		FDC73B6928773BA600E503F0 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6828773BA600E503F0 /* PlanViewController.swift */; };
 		FDC73B6B28773BAF00E503F0 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6A28773BAF00E503F0 /* PersonalViewController.swift */; };
+		FDC73B6D2877413400E503F0 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */; };
+		FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		FDC73B6428773B8600E503F0 /* PersonalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoordinator.swift; sourceTree = "<group>"; };
 		FDC73B6828773BA600E503F0 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		FDC73B6A28773BAF00E503F0 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
+		FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
+		FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTableViewCell.swift; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -417,8 +421,18 @@
 			isa = PBXGroup;
 			children = (
 				FDC73B6A28773BAF00E503F0 /* PersonalViewController.swift */,
+				FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */,
+				FDC73B6E2877422700E503F0 /* View */,
 			);
 			path = Personal;
+			sourceTree = "<group>";
+		};
+		FDC73B6E2877422700E503F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FDF9E0D72868B32200104CDC /* Test */ = {
@@ -561,6 +575,7 @@
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
 				FDC73B6128773B1600E503F0 /* MyPhysiqueViewController.swift in Sources */,
 				FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */,
+				FDC73B6D2877413400E503F0 /* PersonalViewModel.swift in Sources */,
 				FD0A245D286C6D2600BBF8EC /* ArrayExtension.swift in Sources */,
 				FD0A2453286A22C800BBF8EC /* Coordinator.swift in Sources */,
 				FD00933F2865F66C007FA97A /* AppDelegate.swift in Sources */,
@@ -577,6 +592,7 @@
 				FD0A2445286A120C00BBF8EC /* OnBoardingScrollView.swift in Sources */,
 				FD009368286611D6007FA97A /* ThemeButton.swift in Sources */,
 				FDC73B5E28773ABB00E503F0 /* MyPhysiqueCoordinator.swift in Sources */,
+				FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */,
 				FD0A244C286A186800BBF8EC /* UIScrollViewExtension.swift in Sources */,
 				FDC73B6528773B8600E503F0 /* PersonalCoordinator.swift in Sources */,
 				FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */,

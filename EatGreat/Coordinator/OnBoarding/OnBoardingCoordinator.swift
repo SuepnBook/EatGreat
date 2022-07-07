@@ -10,8 +10,7 @@ import UIKit
 class OnBoardingCoordinator:UINavigationController {
     
     public init() {
-//        let rootVC = OnBoardingViewController()
-        let rootVC = ProfileViewController()
+        let rootVC = OnBoardingViewController()
         super.init(rootViewController: rootVC)
         rootVC.delegate = self
     }
@@ -33,7 +32,7 @@ extension OnBoardingCoordinator:OnBoardingViewControllerDelegate {
 // MARK: - TestViewControllerDelegate
 extension OnBoardingCoordinator:TestViewControllerDelegate {
     func selectNext(vc: TestViewController) {
-        let vc = ProfileViewController()
+        let vc = ProfileViewController(initType: .onBoarding)
         vc.delegate = self
         pushViewController(vc, animated: true)
     }

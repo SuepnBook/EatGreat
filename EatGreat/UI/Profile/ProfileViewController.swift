@@ -14,6 +14,11 @@ protocol ProfileViewControllerDelegate:AnyObject {
 
 class ProfileViewController: BaseViewController {
     
+    enum InitType{
+        case onBoarding
+        case modify
+    }
+    
     weak var delegate:ProfileViewControllerDelegate?
     
     private let topView:UIView = {
@@ -104,13 +109,24 @@ class ProfileViewController: BaseViewController {
     
     private lazy var nextButton:ThemeButton = {
         let button = ThemeButton()
-        button.text = "送出"
+        button.text = initType == .onBoarding ? "送出" : "儲存"
         button.type = .disable
         return button
     }()
     
+    private let initType:InitType
+    
     private let viewModel:ProfileViewModel = ProfileViewModel()
-
+    
+    init(initType:InitType) {
+        self.initType = initType
+        super.init()
+    }
+    
+    public required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -209,7 +225,12 @@ extension ProfileViewController {
         .subscribe { [weak self] _ in
             guard let self = self else { return }
             ProgressManager.showSuccessHUD(withStatus: nil)
-            self.delegate?.selectNext(vc: self)
+            switch self.initType {
+            case .onBoarding:
+                self.delegate?.selectNext(vc: self)
+            case .modify:
+                self.dismiss(animated: true)
+            }
         } onFailure: { error in
             ErrorHandler.handle(error: error)
         }.disposed(by: disposeBag)

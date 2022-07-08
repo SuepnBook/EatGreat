@@ -1,0 +1,374 @@
+{
+  "v1": {
+    "physiqueReference": [
+      {
+        "physiqueType" : "WaterFat",
+        "feature" : [1,2,3,4],
+        "cause" : [1,2,3,4],
+        "suggest" : [1,2,3,4,5]
+      },
+      {
+        "physiqueType" : "WeakHeart",
+        "feature" : [1,2,3,4],
+        "cause" : [1,2,3,4],
+        "suggest" : [1,2,3,4,5]
+      },
+      {
+        "physiqueType" : "LiverFire",
+        "feature" : [1,2,3,4],
+        "cause" : [1,2,3,4],
+        "suggest" : [1,2,3,4,5]
+      },
+      {
+        "physiqueType" : "BellyFat",
+        "feature" : [1,2,3,4],
+        "cause" : [1,2,3,4],
+        "suggest" : [1,2,3,4,5]
+      },
+      {
+        "physiqueType" : "ArmFat",
+        "feature" : [1,2,3,4],
+        "cause" : [1,2,3,4],
+        "suggest" : [1,2,3,4,5]
+      }
+    ]
+    ,
+    "questions": [
+      {
+        "id": "A-1",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "⾃⼰的⾁視覺上看起來拋拋"
+      },
+      {
+        "id": "A-2",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "自己的肉摸起來軟軟的"
+      },
+      {
+        "id": "A-3",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Head",
+        "title": "早上起床眼⽪或眼袋浮腫"
+      },
+      {
+        "id": "A-4",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Head",
+        "title": "進出冷氣房時容易偏頭痛"
+      },
+      {
+        "id": "A-5",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Trunk",
+        "title": "進出冷氣房時容易肩頸痠痛"
+      },
+      {
+        "id": "A-6",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "進出冷氣房時容易血壓升高"
+      },
+      {
+        "id": "A-7",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Trunk",
+        "title": "到下午時，腿部容易腫脹"
+      },
+      {
+        "id": "A-8",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "常常想尿尿"
+      },
+      {
+        "id": "A-9",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "半夜會起來夜尿"
+      },
+      {
+        "id": "A-10",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "大便經常鬆散、不成形(非條狀、顆狀)"
+      },
+      {
+        "id": "B-1",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Life",
+        "title": "⼀有壓⼒或是訊息量⼤，就很容易⼼慌，煩躁"
+      },
+      {
+        "id": "B-2",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Life",
+        "title": "嘴饞，有機會就想吃零食"
+      },
+      {
+        "id": "B-3",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Digestion",
+        "title": "排便不順，大便大不出來"
+      },
+      {
+        "id": "B-4",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Life",
+        "title": "害怕衝突和爭吵"
+      },
+      {
+        "id": "B-5",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Life",
+        "title": "害怕被討厭"
+      },
+      {
+        "id": "B-6",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Trunk",
+        "title": "脂肪囤積在下腹部明顯"
+      },
+      {
+        "id": "B-7",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Trunk",
+        "title": "脂肪囤積在⼤腿明顯"
+      },
+      {
+        "id": "B-8",
+        "physicalType": [
+          "WaterHeart"
+        ],
+        "questionType": "Life",
+        "title": "擔心他人沒有回覆，是因為自己說錯話"
+      },
+      {
+        "id": "C-1",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "早上起床，眼睛裡有眼屎"
+      },
+      {
+        "id": "C-2",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Digestion",
+        "title": "⼤便顏⾊偏深（相較於⾦黃⾊）硬"
+      },
+      {
+        "id": "C-3",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Digestion",
+        "title": "害怕被討厭"
+      },
+      {
+        "id": "C-4",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "臉上容易長斑"
+      },
+      {
+        "id": "C-5",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "臉上膚⾊暗沈"
+      },
+      {
+        "id": "C-6",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "⼝乾舌燥，⼀直喝⽔還是覺得⼝渴"
+      },
+      {
+        "id": "C-7",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Trunk",
+        "title": "脂肪⼤多堆積在腰部，像⼀圈救⽣圈"
+      },
+      {
+        "id": "D-1",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "肚⼦⿎⿎脹脹的"
+      },
+      {
+        "id": "D-2",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "吃飽飯後會打嗝"
+      },
+      {
+        "id": "D-3",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "吃飽飯後會放屁"
+      },
+      {
+        "id": "D-4",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "胃悶，胃脹痛，胃發炎"
+      },
+      {
+        "id": "D-5",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "喝完咖啡或吃甜食，會胃食道逆流"
+      },
+      {
+        "id": "D-6",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Head",
+        "title": "牙齦腫痛"
+      },
+      {
+        "id": "D-7",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Trunk",
+        "title": "胸部/乳房脹痛"
+      },
+      {
+        "id": "E-1",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Trunk",
+        "title": "脂肪堆積在⼿臂"
+      },
+      {
+        "id": "E-2",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Head",
+        "title": "脂肪堆積在肩背"
+      },
+      {
+        "id": "E-3",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Head",
+        "title": "頭⽪容易出油，需要洗頭"
+      },
+      {
+        "id": "E-4",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "All",
+        "title": "體⽑比較多，若是女性的話甚⾄有⼩鬍⼦"
+      },
+      {
+        "id": "E-5",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Life",
+        "title": "常吃蛋類料理"
+      },
+      {
+        "id": "E-6",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Trunk",
+        "title": "有副乳"
+      }
+    ]
+    ,
+    "feature" : [
+      {
+        "id" : "1",
+        "title":"早上起來總是覺得臉⼤了⼀圈浮腫且拋拋的感覺，明明就沒有多吃什麼，卻感覺到⾃⼰褲⼦變緊了，總是想要找熱性食物比如有些辣的或是燒烤的來吃。",
+        "links" : ["1","2","3"]
+      }
+    ],
+    "cause" : [
+      {
+        "id" : "1",
+        "title" : "長期蔬果吃過量，或是天⾊變暗，正常細胞開始休息時，還吃進偏寒的葉菜類，⽣菜沙拉，⽣⿂片，冷飲，使得體質變寒，體質寒就會⽔腫",
+        "links" : ["1","2","3"]
+      }
+    ],
+    "suggest" : [
+      {
+        "id" : "1",
+        "title" : "避免造成體質寒冷的食物，控制蔬菜⽔果的量和種類，以及吃的時間",
+        "subTitles" : ["subtitle1","subTitle2"],
+         "links" : ["1","2","3"]
+      }
+    ]
+    ,
+    "link" : [
+      {
+        "id" : "1",
+        "image" : "https://www.googe.com.image",
+        "title" : "String"
+      }
+    ]
+  }
+}

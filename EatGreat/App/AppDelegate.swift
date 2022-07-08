@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 import IQKeyboardManager
 
 @main
@@ -28,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setupSDK() {
         IQKeyboardManager.shared().toolbarDoneBarButtonItemText = "完成"
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
+        FirebaseApp.configure()
+        
+        QuestionRepository.shared.listenQuestion()
     }
 
 }

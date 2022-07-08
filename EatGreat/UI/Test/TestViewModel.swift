@@ -46,24 +46,43 @@ class TestViewModel: BaseViewModel {
     }
     
     func selectFrequency(index:Int, level: Int) {
+        
+        var isSelectedBefore:Bool = false
+        
         switch testObject.currentCategory {
         case .life:
+            isSelectedBefore = testObject.life.testQuestions[index].frequency != nil
             testObject.life.testQuestions[index].frequency = level
         case .head:
+            isSelectedBefore = testObject.head.testQuestions[index].frequency != nil
             testObject.head.testQuestions[index].frequency = level
         case .digestion:
+            isSelectedBefore = testObject.digestion.testQuestions[index].frequency != nil
             testObject.digestion.testQuestions[index].frequency = level
         case .trunk:
+            isSelectedBefore = testObject.trunk.testQuestions[index].frequency != nil
             testObject.trunk.testQuestions[index].frequency = level
         case .all:
+            isSelectedBefore = testObject.all.testQuestions[index].frequency != nil
             testObject.all.testQuestions[index].frequency = level
         }
+        
         updateProgressView()
         updateDataSource()
         updateNextButton()
+        
+        let isSeriousDone = testObject.currentSection.testQuestions[index].serious != nil
+        if isSeriousDone && !isSelectedBefore {
+            let nextIndex = index + 1
+            if nextIndex < testObject.currentSection.testQuestions.count {
+                delegate?.scrollToIndexPath(index: nextIndex)
+            }
+        }
     }
     
     func selectSerious(index:Int, level: Int) {
+        
+        let isSelectedBefore:Bool = testObject.currentSection.testQuestions[index].serious != nil
         
         switch testObject.currentCategory {
         case .life:
@@ -83,7 +102,7 @@ class TestViewModel: BaseViewModel {
         updateNextButton()
         
         let isFrequencyDone = testObject.currentSection.testQuestions[index].frequency != nil
-        if isFrequencyDone {
+        if isFrequencyDone && !isSelectedBefore {
             let nextIndex = index + 1
             if nextIndex < testObject.currentSection.testQuestions.count {
                 delegate?.scrollToIndexPath(index: nextIndex)

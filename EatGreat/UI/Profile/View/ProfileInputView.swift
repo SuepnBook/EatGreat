@@ -94,6 +94,7 @@ class ProfileInputView: UIView {
     private func updateFrame() {
         if isDropDownStyle {
             let rightView = UIView()
+            rightView.isUserInteractionEnabled = false
             
             let imageView = UIImageView()
             imageView.image = .init(named: "KeyboardArrowDown")

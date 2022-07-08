@@ -139,6 +139,8 @@ class ProfileViewController: BaseViewController {
         super.viewWillAppear(animated)
         setNavigationBar(title: nil, backgroundColor: .themeBackground2)
         setNavigationBar(isHiddenBottomLine: true)
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.hidesBackButton = true
     }
 }
 

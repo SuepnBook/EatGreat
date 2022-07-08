@@ -50,6 +50,8 @@
 		FD62CF1A2878472B00876B39 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF192878472B00876B39 /* FirebaseAuth */; };
 		FD62CF1C28784E9800876B39 /* DataSnapshotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */; };
 		FD62CF1E28784EB800876B39 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF1D28784EB800876B39 /* DictionaryExtension.swift */; };
+		FD62CF2128785F4D00876B39 /* RealtimeDatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF2028785F4D00876B39 /* RealtimeDatabaseRepository.swift */; };
+		FD62CF2328785F9B00876B39 /* RealTimeDatabaseDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF2228785F9B00876B39 /* RealTimeDatabaseDomainObject.swift */; };
 		FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */; };
 		FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */; };
 		FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */; };
@@ -107,6 +109,8 @@
 		FD62CF15287846CC00876B39 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
 		FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSnapshotExtension.swift; sourceTree = "<group>"; };
 		FD62CF1D28784EB800876B39 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		FD62CF2028785F4D00876B39 /* RealtimeDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDatabaseRepository.swift; sourceTree = "<group>"; };
+		FD62CF2228785F9B00876B39 /* RealTimeDatabaseDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealTimeDatabaseDomainObject.swift; sourceTree = "<group>"; };
 		FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRadioButtonGroup.swift; sourceTree = "<group>"; };
@@ -398,6 +402,7 @@
 		FD47DAE82875446B00A216EC /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				FD62CF1F28785D1400876B39 /* RealtimeDatabase */,
 				FD62CF12287846AB00876B39 /* Questions */,
 				FD47DAE92875448700A216EC /* Profile */,
 			);
@@ -428,6 +433,15 @@
 				FD62CF15287846CC00876B39 /* QuestionRepository.swift */,
 			);
 			path = Questions;
+			sourceTree = "<group>";
+		};
+		FD62CF1F28785D1400876B39 /* RealtimeDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				FD62CF2228785F9B00876B39 /* RealTimeDatabaseDomainObject.swift */,
+				FD62CF2028785F4D00876B39 /* RealtimeDatabaseRepository.swift */,
+			);
+			path = RealtimeDatabase;
 			sourceTree = "<group>";
 		};
 		FD9E9AA1286F03B30068CADD /* TableViewCell */ = {
@@ -616,6 +630,7 @@
 				FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */,
 				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
+				FD62CF2128785F4D00876B39 /* RealtimeDatabaseRepository.swift in Sources */,
 				FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */,
 				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
@@ -644,6 +659,7 @@
 				FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */,
 				FD0A2445286A120C00BBF8EC /* OnBoardingScrollView.swift in Sources */,
 				FD009368286611D6007FA97A /* ThemeButton.swift in Sources */,
+				FD62CF2328785F9B00876B39 /* RealTimeDatabaseDomainObject.swift in Sources */,
 				FDC73B5E28773ABB00E503F0 /* MyPhysiqueCoordinator.swift in Sources */,
 				FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */,
 				FD0A244C286A186800BBF8EC /* UIScrollViewExtension.swift in Sources */,

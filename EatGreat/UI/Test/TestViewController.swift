@@ -44,7 +44,7 @@ class TestViewController: BaseViewController {
         return viewModel
     }()
     
-    private var testQuestions: [TestQuestion] = []
+    private var testQuestions: [QuestionDomainObject.Question] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,10 +106,10 @@ extension TestViewController {
 // MARK: - TestViewModelDelegate
 extension TestViewController:TestViewModelDelegate {
     
-    func updateDataSource(testQuestions:[TestQuestion]) {
+    func updateDataSource(testQuestions:[QuestionDomainObject.Question]) {
         self.testQuestions = testQuestions
     }
-    func reloadTableView(testQuestions: [TestQuestion]) {
+    func reloadTableView(testQuestions: [QuestionDomainObject.Question]) {
         self.testQuestions = testQuestions
         tableView.reloadSections(.init(integer: 0), with: .automatic)
     }

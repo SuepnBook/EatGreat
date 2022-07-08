@@ -8,10 +8,17 @@
 import Foundation
 
 struct QuestionDomainObject{
-    struct OriginQuestion:Decodable {
+    
+    struct Question:Decodable {
         let id:String
-        let physicalType:[String]
-        let questionType:String
-        let title:String
+        var title:String
+        let physicalType:[PhysiqueType]
+        let questionType:QuestionType
+        
+        var frequency:Int? = 1
+        var serious:Int? = 3
+        var isFinish:Bool {
+            frequency != nil && serious != nil
+        }
     }
 }

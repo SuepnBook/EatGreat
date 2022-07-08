@@ -8,19 +8,10 @@
 import RxCocoa
 import RxSwift
 
-struct TestQuestion {
-    var title:String
-    var frequency:Int?
-    var serious:Int?
-    var isFinish:Bool {
-        frequency != nil && serious != nil
-    }
-}
-
 protocol TestViewModelDelegate:AnyObject {
     func updateProgressView(viewObject:TestProgressView.Object)
-    func updateDataSource(testQuestions:[TestQuestion])
-    func reloadTableView(testQuestions:[TestQuestion])
+    func updateDataSource(testQuestions:[QuestionDomainObject.Question])
+    func reloadTableView(testQuestions:[QuestionDomainObject.Question])
     func scrollToIndexPath(index:Int)
     func updateNextButton(title:String,isEnable:Bool)
     func gotoNextView()
@@ -29,6 +20,8 @@ protocol TestViewModelDelegate:AnyObject {
 class TestViewModel: BaseViewModel {
     
     weak var delegate:TestViewModelDelegate?
+    
+    private let repo:QuestionRepository = .shared
     
     private var testObject:TestObject = .init()
     
@@ -133,15 +126,11 @@ class TestViewModel: BaseViewModel {
 extension TestViewModel {
     
     private func updateTestQuestion() {
-        var testQuestions:[TestQuestion] = []
-        for i in 0...5 {
-            testQuestions.append(.init(title: "\(i).題目？"))
-        }
-        testObject.life.testQuestions = testQuestions
-        testObject.head.testQuestions = testQuestions
-        testObject.digestion.testQuestions = testQuestions
-        testObject.trunk.testQuestions = testQuestions
-        testObject.all.testQuestions = testQuestions
+        testObject.life.testQuestions = repo.getQuestions(questionType: .life)
+        testObject.head.testQuestions = repo.getQuestions(questionType: .head)
+        testObject.digestion.testQuestions = repo.getQuestions(questionType: .digestion)
+        testObject.trunk.testQuestions = repo.getQuestions(questionType: .trunk)
+        testObject.all.testQuestions = repo.getQuestions(questionType: .all)
     }
     
     private func updateProgressView() {
@@ -217,7 +206,7 @@ extension TestViewModel {
         var all:Section = .init()
         
         struct Section {
-            var testQuestions:[TestQuestion] = []
+            var testQuestions:[QuestionDomainObject.Question] = []
             var completionRatio:Float {
                 let totalCount:Float = Float(testQuestions.count)
                 if totalCount == 0 {

@@ -20,6 +20,7 @@ class TestQuestionTableViewCell: BaseTableViewCell {
         let label = UILabel()
         label.font = .button
         label.textColor = .grey5
+        label.numberOfLines = 0
         return label
     }()
     
@@ -61,7 +62,7 @@ class TestQuestionTableViewCell: BaseTableViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(32)
-            make.left.equalToSuperview().inset(24)
+            make.leading.trailing.equalToSuperview().inset(24)
         }
         
         frequencyButtonGroup.snp.makeConstraints { make in
@@ -82,7 +83,7 @@ class TestQuestionTableViewCell: BaseTableViewCell {
         }
     }
     
-    func updateFrame(question:TestQuestion, indexPath:IndexPath) {
+    func updateFrame(question:QuestionDomainObject.Question, indexPath:IndexPath) {
         self.indexPath = indexPath
         titleLabel.text = question.title
         frequencyButtonGroup.updateFrame(level: question.frequency)

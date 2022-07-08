@@ -31,8 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         FirebaseApp.configure()
         
-        QuestionRepository.shared.listenQuestion()
+        RealtimeDatabaseRepository.shared.fetchDB()
     }
-
 }
 

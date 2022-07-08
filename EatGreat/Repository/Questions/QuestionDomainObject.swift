@@ -15,8 +15,8 @@ struct QuestionDomainObject{
         let physicalType:[PhysiqueType]
         let questionType:QuestionType
         
-        var frequency:Int? = 1
-        var serious:Int? = 3
+        var frequency:Int?
+        var serious:Int? 
         var isFinish:Bool {
             frequency != nil && serious != nil
         }

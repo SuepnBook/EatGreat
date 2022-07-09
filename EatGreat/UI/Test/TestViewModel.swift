@@ -21,7 +21,7 @@ class TestViewModel: BaseViewModel {
     
     weak var delegate:TestViewModelDelegate?
     
-    private let repo:QuestionRepository = .shared
+    private let repo:PhysiqueRepository = .shared
     
     private var testObject:TestObject = .init()
     

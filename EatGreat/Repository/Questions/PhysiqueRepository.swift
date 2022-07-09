@@ -6,16 +6,16 @@
 //
 
 
-class QuestionRepository {
+class PhysiqueRepository {
     
-    static let shared:QuestionRepository = QuestionRepository()
+    static let shared:PhysiqueRepository = PhysiqueRepository()
     
     private var questions:[QuestionDomainObject.Question] = []
     
 }
 
 //MARK: - Create
-extension QuestionRepository {
+extension PhysiqueRepository {
     func savePhysiquePercentage(type:PhysiqueType, percentage:Float) {
         UserDefaultManager.savePhysiquePercentage(type: type, percentage: percentage)
         print("type : \(type) , percentage : \(percentage)")
@@ -23,7 +23,7 @@ extension QuestionRepository {
 }
 
 //MARK: - READ
-extension QuestionRepository {
+extension PhysiqueRepository {
     func getQuestions(questionType:QuestionType) -> [QuestionDomainObject.Question] {
         var questions = questions.filter({$0.questionType == questionType})
         for (index,question) in questions.enumerated() {
@@ -31,10 +31,14 @@ extension QuestionRepository {
         }
         return questions
     }
+    
+    func getPhysiquePercentage(type:PhysiqueType) -> Float {
+        UserDefaultManager.getPhysiquePercentage(type: type)
+    }
 }
 
 //MARK: - Update
-extension QuestionRepository {
+extension PhysiqueRepository {
     func updateQuestion(questions:[RealTimeDatabaseDomainObject.Question]) {
         var result:[QuestionDomainObject.Question] = []
         

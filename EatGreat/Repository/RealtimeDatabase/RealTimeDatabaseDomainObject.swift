@@ -6,14 +6,48 @@
 //
 
 import Foundation
+import UIKit
 
 enum PhysiqueType: String, Codable, CaseIterable {
     case armFat = "ArmFat"
     case bellyFat = "BellyFat"
     case liverFire = "LiverFire"
     case waterFat = "WaterFat"
-    case waterHeart = "WaterHeart"
     case weakHeart = "WeakHeart"
+    
+    var title:String {
+        switch self {
+        case .armFat:
+            return "肩背手臂肥胖"
+        case .bellyFat:
+            return "上腹部"
+        case .liverFire:
+            return "上肝火"
+        case .waterFat:
+            return "腎虛肥胖"
+        case .weakHeart:
+            return "心臟無力"
+        }
+    }
+    
+    var image:String {
+        switch self {
+        case .armFat:
+            return "Physique-ArmFat"
+        case .bellyFat:
+            return "Physique-ArmFat"
+        case .liverFire:
+            return "Physique-ArmFat"
+        case .waterFat:
+            return "Physique-ArmFat"
+        case .weakHeart:
+            return "Physique-ArmFat"
+        }
+    }
+    
+    var color:UIColor {
+        .themePrimary
+    }
 }
 
 enum QuestionType: String, Codable {

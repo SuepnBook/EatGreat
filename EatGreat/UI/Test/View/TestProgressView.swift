@@ -340,3 +340,4 @@ private class ProgressBarView:UIView {
         }
     }
 }
+

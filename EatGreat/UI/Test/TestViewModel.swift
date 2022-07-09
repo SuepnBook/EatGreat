@@ -110,8 +110,8 @@ class TestViewModel: BaseViewModel {
             selectSection(category: .all)
         case .all:
             let answer = testObject.answer
+            savePhysiquePercentage(answer: answer)
             delegate?.gotoNextView(answer: answer)
-            repo.postAnswer(answer: answer)
         }
     }
 }
@@ -165,6 +165,30 @@ extension TestViewModel {
             title = "下一步"
         }
         delegate?.updateNextButton(title: title, isEnable: isEnable)
+    }
+    
+    private func savePhysiquePercentage(answer:[QuestionDomainObject.Question]) {
+        for type in PhysiqueType.allCases {
+            let percentage = getPercentage(physiqueType: type, answer: answer)
+            repo.savePhysiquePercentage(type: type, percentage: percentage)
+        }
+    }
+    
+    private func getPercentage(physiqueType:PhysiqueType, answer:[QuestionDomainObject.Question]) -> Float {
+        let totalQuestions = answer
+        let conformQuestion = totalQuestions.filter({$0.physicalType.contains(where: {$0 == physiqueType})})
+        if conformQuestion.count == 0 {
+            return 0
+        }
+        let totalScore = conformQuestion.count * 25
+        var getScore:Int = 0
+        for question in conformQuestion {
+            let frequency = question.frequency ?? 0
+            let serious = question.serious ?? 0
+            getScore += frequency * serious
+        }
+        let percentage = Float(getScore) / Float(totalScore)
+        return percentage
     }
 }
 

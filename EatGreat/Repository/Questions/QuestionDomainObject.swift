@@ -14,9 +14,9 @@ struct QuestionDomainObject{
         var title:String
         let physicalType:[PhysiqueType]
         let questionType:QuestionType
-        
-        var frequency:Int?
-        var serious:Int? 
+//        FIXME:Remember to remove
+        var frequency:Int? = Int.random(in: 1...5)
+        var serious:Int? = Int.random(in: 1...5)
         var isFinish:Bool {
             frequency != nil && serious != nil
         }

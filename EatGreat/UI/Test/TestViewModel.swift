@@ -14,7 +14,7 @@ protocol TestViewModelDelegate:AnyObject {
     func reloadTableView(testQuestions:[QuestionDomainObject.Question])
     func scrollToIndexPath(index:Int)
     func updateNextButton(title:String,isEnable:Bool)
-    func gotoNextView()
+    func gotoNextView(answer:[QuestionDomainObject.Question])
 }
 
 class TestViewModel: BaseViewModel {
@@ -37,26 +37,21 @@ class TestViewModel: BaseViewModel {
         reloadTableView()
         updateNextButton()
     }
-    
+
     func selectFrequency(index:Int, level: Int) {
         
-        var isSelectedBefore:Bool = false
+        let isSelectedBefore:Bool = testObject.currentSection.testQuestions[index].frequency != nil
         
         switch testObject.currentCategory {
         case .life:
-            isSelectedBefore = testObject.life.testQuestions[index].frequency != nil
             testObject.life.testQuestions[index].frequency = level
         case .head:
-            isSelectedBefore = testObject.head.testQuestions[index].frequency != nil
             testObject.head.testQuestions[index].frequency = level
         case .digestion:
-            isSelectedBefore = testObject.digestion.testQuestions[index].frequency != nil
             testObject.digestion.testQuestions[index].frequency = level
         case .trunk:
-            isSelectedBefore = testObject.trunk.testQuestions[index].frequency != nil
             testObject.trunk.testQuestions[index].frequency = level
         case .all:
-            isSelectedBefore = testObject.all.testQuestions[index].frequency != nil
             testObject.all.testQuestions[index].frequency = level
         }
         
@@ -104,21 +99,20 @@ class TestViewModel: BaseViewModel {
     }
     
     func selectNextButton() {
-        let nextCategory:Category
         switch testObject.currentCategory {
         case .life:
-            nextCategory = .head
+            selectSection(category: .head)
         case .head:
-            nextCategory = .digestion
+            selectSection(category: .digestion)
         case .digestion:
-            nextCategory = .trunk
+            selectSection(category: .trunk)
         case .trunk:
-            nextCategory = .all
+            selectSection(category: .all)
         case .all:
-            delegate?.gotoNextView()
-            return
+            let answer = testObject.answer
+            delegate?.gotoNextView(answer: answer)
+            repo.postAnswer(answer: answer)
         }
-        selectSection(category: nextCategory)
     }
 }
 
@@ -204,6 +198,14 @@ extension TestViewModel {
         var digestion:Section = .init()
         var trunk:Section = .init()
         var all:Section = .init()
+        var answer:[QuestionDomainObject.Question] {
+            var result:[QuestionDomainObject.Question] = []
+            result.append(contentsOf: life.testQuestions)
+            result.append(contentsOf: head.testQuestions)
+            result.append(contentsOf: digestion.testQuestions)
+            result.append(contentsOf: all.testQuestions)
+            return result
+        }
         
         struct Section {
             var testQuestions:[QuestionDomainObject.Question] = []

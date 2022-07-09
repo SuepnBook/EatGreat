@@ -55,6 +55,27 @@ enum UserDefaultManager {
     
 }
 
+// MARK: - PhysiquePercentage
+extension UserDefaultManager {
+    static func savePhysiquePercentage(type:PhysiqueType, percentage:Float) {
+        let key = "\(type.rawValue)Percentage"
+        
+        @UserDefault(key: key, defaultValue: 0)
+        var physiquePercentage:Float
+        
+        physiquePercentage = percentage
+    }
+    
+    static func getPhysiquePercentage(type:PhysiqueType) -> Float{
+        let key = "\(type.rawValue)Percentage"
+        
+        @UserDefault(key: key, defaultValue: 0)
+        var physiquePercentage:Float
+        
+        return physiquePercentage
+    }
+}
+
 // MARK: - Profile
 extension UserDefaultManager {
 
@@ -72,5 +93,4 @@ extension UserDefaultManager {
     
     @UserDefault(key: "born", defaultValue: nil)
     static var born:Int?
-
 }

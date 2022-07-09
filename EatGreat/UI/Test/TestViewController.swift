@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TestViewControllerDelegate:AnyObject {
-    func selectNext(vc:TestViewController)
+    func selectNext(vc:TestViewController, answer:[QuestionDomainObject.Question])
 }
 
 class TestViewController: BaseViewController {
@@ -132,8 +132,8 @@ extension TestViewController:TestViewModelDelegate {
         }
     }
     
-    func gotoNextView() {
-        delegate?.selectNext(vc: self)
+    func gotoNextView(answer:[QuestionDomainObject.Question]) {
+        delegate?.selectNext(vc: self, answer: answer)
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PhysiqueType: String, Codable {
+enum PhysiqueType: String, Codable, CaseIterable {
     case armFat = "ArmFat"
     case bellyFat = "BellyFat"
     case liverFire = "LiverFire"

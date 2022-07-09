@@ -392,8 +392,8 @@
 		FD47DAE528753EA000A216EC /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				FD47DAF12875496400A216EC /* ProgressManager.swift */,
 				FD47DAEC287547CA00A216EC /* ErrorHandler */,
+				FD47DAF12875496400A216EC /* ProgressManager.swift */,
 				FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */,
 			);
 			path = Manager;

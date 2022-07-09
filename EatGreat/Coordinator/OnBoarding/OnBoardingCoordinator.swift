@@ -31,7 +31,7 @@ extension OnBoardingCoordinator:OnBoardingViewControllerDelegate {
 
 // MARK: - TestViewControllerDelegate
 extension OnBoardingCoordinator:TestViewControllerDelegate {
-    func selectNext(vc: TestViewController) {
+    func selectNext(vc: TestViewController, answer: [QuestionDomainObject.Question]) {
         let vc = ProfileViewController(initType: .onBoarding)
         vc.delegate = self
         pushViewController(vc, animated: true)

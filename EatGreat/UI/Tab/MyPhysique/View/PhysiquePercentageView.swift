@@ -73,7 +73,8 @@ class PhysiquePercentageView: UIView {
     func updateFrame(type:PhysiqueType, percentage:Float) {
         titleLabel.text = type.title
         titleLabel.textColor = type.color
-        percentageLabel.text = "\(percentage)%"
+        let percentageTitle = Int(percentage * 100)
+        percentageLabel.text = "\(percentageTitle)%"
         percentageLabel.textColor = type.color
         highlightView.backgroundColor = type.color
         

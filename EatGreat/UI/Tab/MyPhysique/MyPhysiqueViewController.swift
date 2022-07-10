@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MyPhysiqueViewController: BaseViewController {
     
@@ -41,6 +43,7 @@ class MyPhysiqueViewController: BaseViewController {
         super.viewDidLoad()
         initView()
         updateFrame()
+        notification()
     }
 }
 
@@ -78,19 +81,30 @@ extension MyPhysiqueViewController {
     }
     
     private func updateFrame() {
-        let mainPhysique = viewModel.getMainPhysique()
-        mainPhysiqueLabel.text = mainPhysique.title + "型"
-        physiqueImageView.image = UIImage(named: mainPhysique.image)
-        
-        let physiques = viewModel.getAllPhysiquePercentage()
-        
-        for physique in physiques {
-            let view = PhysiquePercentageView()
-            view.updateFrame(type: physique.0, percentage: physique.1)
-            stackView.addArrangedSubview(view)
+            let mainPhysique = viewModel.getMainPhysique()
+            mainPhysiqueLabel.text = mainPhysique.title + "型"
+            physiqueImageView.image = UIImage(named: mainPhysique.image)
+            
+            let physiques = viewModel.getAllPhysiquePercentage()
+            
+            stackView.removeFullyAllArrangedSubviews()
+            
+            for physique in physiques {
+                let view = PhysiquePercentageView()
+                view.updateFrame(type: physique.0, percentage: physique.1)
+                stackView.addArrangedSubview(view)
+            }
+            
+            stackView.addSpacingView(height: 80)
         }
-        
-        stackView.addSpacingView(height: 80)
+    
+    private func notification() {
+        Notification.observable(names: [.symptomRefresh])
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] _ in
+                guard let self = self else { return }
+                self.updateFrame()
+            }.disposed(by: disposeBag)
     }
 }
 

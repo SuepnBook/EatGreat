@@ -32,6 +32,8 @@
 		FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */; };
 		FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */; };
 		FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */; };
+		FD244369287B532D00010852 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD244367287B532D00010852 /* NotificationExtension.swift */; };
+		FD24436A287B532D00010852 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD244368287B532D00010852 /* NotificationNameExtension.swift */; };
 		FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE128733FA700A216EC /* ProfileInputView.swift */; };
 		FD47DAE4287537CC00A216EC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE3287537CC00A216EC /* ProfileViewModel.swift */; };
 		FD47DAE728753EBD00A216EC /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */; };
@@ -100,6 +102,8 @@
 		FD0A2469286CD66A00BBF8EC /* UIStackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
 		FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FD0A246E286E3B7800BBF8EC /* TestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
+		FD244367287B532D00010852 /* NotificationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		FD244368287B532D00010852 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		FD47DAE128733FA700A216EC /* ProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputView.swift; sourceTree = "<group>"; };
 		FD47DAE3287537CC00A216EC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FD47DAE628753EBD00A216EC /* UserDefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 		FD0093582865F899007FA97A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				FD244367287B532D00010852 /* NotificationExtension.swift */,
+				FD244368287B532D00010852 /* NotificationNameExtension.swift */,
 				FD0A244A286A178200BBF8EC /* ArrayExtension.swift */,
 				FD62CF1D28784EB800876B39 /* DictionaryExtension.swift */,
 				FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */,
@@ -643,6 +649,7 @@
 				FDC73B5C28773A4F00E503F0 /* MainTabBarViewController.swift in Sources */,
 				FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */,
 				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,
+				FD244369287B532D00010852 /* NotificationExtension.swift in Sources */,
 				FD0093562865F781007FA97A /* AppCoordinator.swift in Sources */,
 				FD62CF2128785F4D00876B39 /* RealtimeDatabaseRepository.swift in Sources */,
 				FD0A246C286E3B4400BBF8EC /* BaseViewModel.swift in Sources */,
@@ -671,6 +678,7 @@
 				FDC73B6B28773BAF00E503F0 /* PersonalViewController.swift in Sources */,
 				FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */,
 				FD62CF1E28784EB800876B39 /* DictionaryExtension.swift in Sources */,
+				FD24436A287B532D00010852 /* NotificationNameExtension.swift in Sources */,
 				FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */,
 				FD0A2445286A120C00BBF8EC /* OnBoardingScrollView.swift in Sources */,
 				FD009368286611D6007FA97A /* ThemeButton.swift in Sources */,

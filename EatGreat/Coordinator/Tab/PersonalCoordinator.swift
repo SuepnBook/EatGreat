@@ -29,7 +29,9 @@ extension PersonalCoordinator: PersonalViewControllerDelegate {
             vc.delegate = self
             present(viewController: vc, animated: true, completion: nil)
         case .modifyTest:
-            break
+            let vc = TestViewController()
+            vc.delegate = self
+            present(viewController: vc, animated: true, completion: nil)
         case .more:
             break
         }
@@ -39,6 +41,13 @@ extension PersonalCoordinator: PersonalViewControllerDelegate {
 // MARK: - ProfileViewControllerDelegate
 extension PersonalCoordinator: ProfileViewControllerDelegate {
     func selectNext(vc: ProfileViewController) {
-        
+        vc.dismiss(animated: true)
+    }
+}
+
+// MARK: - TestViewControllerDelegate
+extension PersonalCoordinator: TestViewControllerDelegate {
+    func selectNext(vc: TestViewController, answer: [QuestionDomainObject.Question]) {
+        vc.dismiss(animated: true)
     }
 }

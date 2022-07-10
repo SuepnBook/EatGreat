@@ -28,6 +28,9 @@ extension PhysiqueRepository {
         var questions = questions.filter({$0.questionType == questionType})
         for (index,question) in questions.enumerated() {
             questions[index].title = "\(index + 1).\(question.title)"
+//        FIXME: - Remember to remove
+            questions[index].frequency = Int.random(in: 1...5)
+            questions[index].serious = Int.random(in: 1...5)
         }
         return questions
     }

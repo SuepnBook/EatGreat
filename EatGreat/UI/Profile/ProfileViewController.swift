@@ -227,12 +227,7 @@ extension ProfileViewController {
         .subscribe { [weak self] _ in
             guard let self = self else { return }
             ProgressManager.showSuccessHUD(withStatus: nil)
-            switch self.initType {
-            case .onBoarding:
-                self.delegate?.selectNext(vc: self)
-            case .modify:
-                self.dismiss(animated: true)
-            }
+            self.delegate?.selectNext(vc: self)
         } onFailure: { error in
             ErrorHandler.handle(error: error)
         }.disposed(by: disposeBag)

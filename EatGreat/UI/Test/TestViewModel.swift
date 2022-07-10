@@ -111,6 +111,7 @@ class TestViewModel: BaseViewModel {
         case .all:
             let answer = testObject.answer
             savePhysiquePercentage(answer: answer)
+            Notification.post(name: .symptomRefresh)
             delegate?.gotoNextView(answer: answer)
         }
     }

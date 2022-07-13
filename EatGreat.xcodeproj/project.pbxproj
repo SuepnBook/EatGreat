@@ -41,6 +41,7 @@
 		FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAED287547CA00A216EC /* ErrorHandler.swift */; };
 		FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAEE287547CA00A216EC /* ErrorType.swift */; };
 		FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAF12875496400A216EC /* ProgressManager.swift */; };
+		FD5F9646287F38C300D135B9 /* MyPhysiqueTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */; };
 		FD62CF092878460800876B39 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF082878460800876B39 /* FirebaseAnalytics */; };
 		FD62CF0B2878460800876B39 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF0A2878460800876B39 /* FirebaseAnalyticsSwift */; };
 		FD62CF0D2878460800876B39 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF0C2878460800876B39 /* FirebaseCrashlytics */; };
@@ -111,6 +112,7 @@
 		FD47DAED287547CA00A216EC /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		FD47DAEE287547CA00A216EC /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		FD47DAF12875496400A216EC /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
+		FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueTabView.swift; sourceTree = "<group>"; };
 		FD62CF13287846C100876B39 /* QuestionDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDomainObject.swift; sourceTree = "<group>"; };
 		FD62CF15287846CC00876B39 /* PhysiqueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueRepository.swift; sourceTree = "<group>"; };
 		FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSnapshotExtension.swift; sourceTree = "<group>"; };
@@ -511,6 +513,7 @@
 		FDFF090E2879BAD200553125 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */,
 				FDFF090F2879BAEB00553125 /* PhysiquePercentageView.swift */,
 			);
 			path = View;
@@ -646,6 +649,7 @@
 				FD47DAE728753EBD00A216EC /* UserDefaultManager.swift in Sources */,
 				FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */,
 				FD47DAEB287544B300A216EC /* ProfileDomainObject.swift in Sources */,
+				FD5F9646287F38C300D135B9 /* MyPhysiqueTabView.swift in Sources */,
 				FDC73B5C28773A4F00E503F0 /* MainTabBarViewController.swift in Sources */,
 				FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */,
 				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,

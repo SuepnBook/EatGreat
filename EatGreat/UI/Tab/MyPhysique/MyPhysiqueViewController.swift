@@ -23,6 +23,11 @@ class MyPhysiqueViewController: BaseViewController {
         return view
     }()
     
+    private let tabView:MyPhysiqueTabView = {
+        let view = MyPhysiqueTabView()
+        return view
+    }()
+    
     private lazy var scrollView:UIScrollView = {
         let view = UIScrollView()
         view.alwaysBounceVertical = true
@@ -50,10 +55,12 @@ class MyPhysiqueViewController: BaseViewController {
 //MARK: - Private Function
 extension MyPhysiqueViewController {
     private func initView() {
-        view.backgroundColor = .themeBackground2
+        view.backgroundColor = .themeBackground1
         
         view.addSubview(mainPhysiqueLabel)
         view.addSubview(physiqueImageView)
+        
+        view.addSubview(tabView)
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
         
@@ -69,8 +76,13 @@ extension MyPhysiqueViewController {
             make.centerX.equalToSuperview()
         }
         
+        tabView.snp.makeConstraints { make in
+            make.top.equalTo(physiqueImageView.snp.bottom).offset(50)
+            make.leading.trailing.equalToSuperview()
+        }
+        
         scrollView.snp.makeConstraints { make in
-            make.top.equalTo(physiqueImageView.snp.bottom).offset(82)
+            make.top.equalTo(tabView.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
         }
         

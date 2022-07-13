@@ -46,7 +46,18 @@ enum PhysiqueType: String, Codable, CaseIterable {
     }
     
     var color:UIColor {
-        .themePrimary
+        switch self {
+        case .armFat:
+            return UIColor(red: 0.646, green: 0.302, blue: 0.28, alpha: 1)
+        case .bellyFat:
+            return UIColor(red: 0.613, green: 0.507, blue: 0.133, alpha: 1)
+        case .liverFire:
+            return UIColor(red: 0.349, green: 0.45, blue: 0.302, alpha: 1)
+        case .waterFat:
+            return UIColor(red: 0.267, green: 0.405, blue: 0.533, alpha: 1)
+        case .weakHeart:
+            return UIColor(red: 0.488, green: 0.289, blue: 0.492, alpha: 1)
+        }
     }
 }
 

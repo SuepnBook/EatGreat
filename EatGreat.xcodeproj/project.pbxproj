@@ -60,6 +60,7 @@
 		FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */; };
 		FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */; };
 		FD9E9AA5286F04E20068CADD /* AnswerRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */; };
+		FDA0466D287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0466C287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift */; };
 		FDC73B5C28773A4F00E503F0 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B5B28773A4F00E503F0 /* MainTabBarViewController.swift */; };
 		FDC73B5E28773ABB00E503F0 /* MyPhysiqueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B5D28773ABB00E503F0 /* MyPhysiqueCoordinator.swift */; };
 		FDC73B6128773B1600E503F0 /* MyPhysiqueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6028773B1600E503F0 /* MyPhysiqueViewController.swift */; };
@@ -72,7 +73,7 @@
 		FDC73B722877E0B600E503F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 		FDFF090D2879ABE200553125 /* MyPhysiqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */; };
-		FDFF09102879BAEB00553125 /* PhysiquePercentageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090F2879BAEB00553125 /* PhysiquePercentageView.swift */; };
+		FDFF09102879BAEB00553125 /* PhysiquePercentageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		FD9E9A9F286F036F0068CADD /* TestQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestQuestionTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		FD9E9AA4286F04E20068CADD /* AnswerRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRadioButtonGroup.swift; sourceTree = "<group>"; };
+		FDA0466C287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainPhysiqueImageTableViewCell.swift; sourceTree = "<group>"; };
 		FDC73B5B28773A4F00E503F0 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		FDC73B5D28773ABB00E503F0 /* MyPhysiqueCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueCoordinator.swift; sourceTree = "<group>"; };
 		FDC73B6028773B1600E503F0 /* MyPhysiqueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueViewController.swift; sourceTree = "<group>"; };
@@ -138,7 +140,7 @@
 		FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueViewModel.swift; sourceTree = "<group>"; };
-		FDFF090F2879BAEB00553125 /* PhysiquePercentageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiquePercentageView.swift; sourceTree = "<group>"; };
+		FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiquePercentageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -527,8 +529,9 @@
 		FDFF090E2879BAD200553125 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FDA0466C287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift */,
 				FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */,
-				FDFF090F2879BAEB00553125 /* PhysiquePercentageView.swift */,
+				FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -707,9 +710,10 @@
 				FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */,
 				FD0A244C286A186800BBF8EC /* UIScrollViewExtension.swift in Sources */,
 				FD62CF1C28784E9800876B39 /* DataSnapshotExtension.swift in Sources */,
-				FDFF09102879BAEB00553125 /* PhysiquePercentageView.swift in Sources */,
+				FDFF09102879BAEB00553125 /* PhysiquePercentageTableViewCell.swift in Sources */,
 				FDC73B6528773B8600E503F0 /* PersonalCoordinator.swift in Sources */,
 				FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */,
+				FDA0466D287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift in Sources */,
 				FD00936D2866189B007FA97A /* UIControlExtension.swift in Sources */,
 				FDC73B6928773BA600E503F0 /* PlanViewController.swift in Sources */,
 				FD0A2454286A22C800BBF8EC /* BaseCoordinator.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PhysiquePercentageView.swift
+//  PhysiquePercentageTableViewCell.swift.swift
 //  EatGreat
 //
 //  Created by Book on 2022/7/9.
@@ -7,7 +7,12 @@
 
 import UIKit
 
-class PhysiquePercentageView: UIView {
+class PhysiquePercentageTableViewCell: BaseTableViewCell {
+    
+    struct Object{
+        let type:PhysiqueType
+        let percentage:Float
+    }
     
     private let titleLabel:UILabel = {
         let label = UILabel()
@@ -21,7 +26,7 @@ class PhysiquePercentageView: UIView {
         return label
     }()
     
-    private let backgroundView:UIView = {
+    private let backgroundLine:UIView = {
         let view = UIView()
         view.layer.cornerRadius = 2
         view.layer.masksToBounds = true
@@ -29,28 +34,30 @@ class PhysiquePercentageView: UIView {
         return view
     }()
     
-    private let highlightView:UIView = {
+    private let highlightLine:UIView = {
         let view = UIView()
         view.layer.cornerRadius = 2
         view.layer.masksToBounds = true
         view.backgroundColor = .grey1
         return view
     }()
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         initView()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
-    private func initView() {
+    private func initView(){
+        contentView.backgroundColor = .themeBackground1
+        
         addSubview(titleLabel)
         addSubview(percentageLabel)
-        addSubview(backgroundView)
-        backgroundView.addSubview(highlightView)
+        addSubview(backgroundLine)
+        backgroundLine.addSubview(highlightLine)
         
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(36)
@@ -62,7 +69,7 @@ class PhysiquePercentageView: UIView {
             make.centerX.equalToSuperview()
         }
         
-        backgroundView.snp.makeConstraints { make in
+        backgroundLine.snp.makeConstraints { make in
             make.top.equalTo(percentageLabel.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview().inset(24)
             make.height.equalTo(12)
@@ -70,19 +77,19 @@ class PhysiquePercentageView: UIView {
         }
     }
 
-    func updateFrame(type:PhysiqueType, percentage:Float) {
-        titleLabel.text = type.title
-        titleLabel.textColor = type.color
-        let percentageTitle = Int(percentage * 100)
+    func updateFrame(object:Object) {
+        titleLabel.text = object.type.title
+        titleLabel.textColor = object.type.color
+        let percentageTitle = Int(object.percentage * 100)
         percentageLabel.text = "\(percentageTitle)%"
-        percentageLabel.textColor = type.color
-        highlightView.backgroundColor = type.color
+        percentageLabel.textColor = object.type.color
+        highlightLine.backgroundColor = object.type.color
         
-        highlightView.snp.remakeConstraints { make in
+        highlightLine.snp.remakeConstraints { make in
             make.top.bottom.leading.equalToSuperview()
-            let multiplied = percentage * 2
+            let multiplied = object.percentage * 2
             if multiplied > 0 {
-                make.trailing.equalTo(backgroundView.snp.centerX).multipliedBy(multiplied)
+                make.trailing.equalTo(backgroundLine.snp.centerX).multipliedBy(multiplied)
             } else {
                 make.width.equalTo(0)
             }

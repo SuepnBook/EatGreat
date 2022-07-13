@@ -18,37 +18,36 @@ class MyPhysiqueViewController: BaseViewController {
         return label
     }()
     
-    private let physiqueImageView:UIImageView = {
-        let view = UIImageView()
+    private lazy var tableView:UITableView = {
+        let view = UITableView()
+        view.register(cellType: MyMainPhysiqueImageTableViewCell.self)
+        view.register(cellType: PhysiquePercentageTableViewCell.self)
+        view.backgroundColor = .themeBackground1
+        view.separatorStyle = .none
+        view.delegate = self
+        view.dataSource = self
         return view
     }()
     
-    private let tabView:MyPhysiqueTabView = {
+    private lazy var tabView:MyPhysiqueTabView = {
         let view = MyPhysiqueTabView()
+        view.delegate = self
         return view
     }()
     
-    private lazy var scrollView:UIScrollView = {
-        let view = UIScrollView()
-        view.alwaysBounceVertical = true
-        view.showsVerticalScrollIndicator = false
-        view.showsHorizontalScrollIndicator = false
-        return view
-    }()
+    private var dataSource:[MyPhysiqueViewModel.Section] = []
     
-    private let stackView:UIStackView = {
-        let view = UIStackView()
-        view.axis = .vertical
-        return view
+    private lazy var viewModel:MyPhysiqueViewModel = {
+        let viewModel = MyPhysiqueViewModel()
+        viewModel.delegate = self
+        return viewModel
     }()
-    
-    private let viewModel:MyPhysiqueViewModel = MyPhysiqueViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        updateFrame()
         notification()
+        viewModel.setup()
     }
 }
 
@@ -58,65 +57,113 @@ extension MyPhysiqueViewController {
         view.backgroundColor = .themeBackground1
         
         view.addSubview(mainPhysiqueLabel)
-        view.addSubview(physiqueImageView)
         
-        view.addSubview(tabView)
-        view.addSubview(scrollView)
-        scrollView.addSubview(stackView)
+        view.addSubview(tableView)
         
         mainPhysiqueLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(92)
             make.left.equalToSuperview().inset(24)
         }
         
-        physiqueImageView.snp.makeConstraints { make in
-            make.top.equalTo(mainPhysiqueLabel.snp.bottom)
-            let width = UIScreen.main.bounds.width * 2 / 3
-            make.height.width.equalTo(width)
-            make.centerX.equalToSuperview()
-        }
-        
-        tabView.snp.makeConstraints { make in
-            make.top.equalTo(physiqueImageView.snp.bottom).offset(50)
-            make.leading.trailing.equalToSuperview()
-        }
-        
-        scrollView.snp.makeConstraints { make in
-            make.top.equalTo(tabView.snp.bottom)
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(mainPhysiqueLabel.snp.bottom).offset(16)
             make.leading.trailing.bottom.equalToSuperview()
         }
-        
-        stackView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-            make.width.equalToSuperview()
-        }
     }
-    
-    private func updateFrame() {
-            let mainPhysique = viewModel.getMainPhysique()
-            mainPhysiqueLabel.text = mainPhysique.title + "型"
-            physiqueImageView.image = UIImage(named: mainPhysique.image)
-            
-            let physiques = viewModel.getAllPhysiquePercentage()
-            
-            stackView.removeFullyAllArrangedSubviews()
-            
-            for physique in physiques {
-                let view = PhysiquePercentageView()
-                view.updateFrame(type: physique.0, percentage: physique.1)
-                stackView.addArrangedSubview(view)
-            }
-            
-            stackView.addSpacingView(height: 80)
-        }
     
     private func notification() {
         Notification.observable(names: [.symptomRefresh])
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] _ in
                 guard let self = self else { return }
-                self.updateFrame()
+                self.viewModel.setup()
             }.disposed(by: disposeBag)
     }
 }
 
+//MARK: - MyPhysiqueViewModelDelegate
+extension MyPhysiqueViewController:MyPhysiqueViewModelDelegate {
+    func reload(mainPhysique: PhysiqueType) {
+        mainPhysiqueLabel.text = mainPhysique.title + "型"
+    }
+    
+    func reload(dataSource: [MyPhysiqueViewModel.Section]) {
+        self.dataSource = dataSource
+        tableView.reloadData()
+    }
+}
+
+//MARK: - UITableViewDelegate, UITableViewDataSource
+extension MyPhysiqueViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch dataSource[section] {
+        case .mainPhysique:
+            return 1
+        case .detail(let type):
+            switch type {
+            case .analyze(let viewObjects):
+                return viewObjects.count
+            case .explain:
+                return 0
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 1 {
+            return 32
+        } else {
+            return CGFloat.leastNormalMagnitude
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            return tabView
+        } else {
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch dataSource[indexPath.section] {
+        case .mainPhysique(let type):
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: MyMainPhysiqueImageTableViewCell.self)
+            cell.updateFrame(image: type.image)
+            return cell
+        case .detail(let type):
+            switch type {
+            case .analyze(let viewObjects):
+                let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PhysiquePercentageTableViewCell.self)
+                let object = viewObjects[indexPath.row]
+                cell.updateFrame(object: object)
+                return cell
+            case .explain:
+                return UITableViewCell()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        nil
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        CGFloat.leastNormalMagnitude
+    }
+}
+
+//MARK: - MyPhysiqueTabViewDelegate
+extension MyPhysiqueViewController: MyPhysiqueTabViewDelegate {
+    func select(_ view: MyPhysiqueTabView, type: MyPhysiqueViewModel.MyPhysiqueDetailType) {
+        viewModel.selectViewType(type: type)
+    }
+}

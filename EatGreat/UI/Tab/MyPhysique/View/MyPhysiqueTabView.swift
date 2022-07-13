@@ -9,10 +9,13 @@ import UIKit
 import RxSwift
 
 protocol MyPhysiqueTabViewDelegate:AnyObject {
-    
+    func select(_ view:MyPhysiqueTabView,
+                type:MyPhysiqueViewModel.MyPhysiqueDetailType)
 }
 
 class MyPhysiqueTabView: UIView {
+    
+    weak var delegate:MyPhysiqueTabViewDelegate?
     
     private let analyzeButton:TabButton = {
         let button = TabButton()
@@ -28,8 +31,8 @@ class MyPhysiqueTabView: UIView {
         return button
     }()
     
-    private let disposeBag:DisposeBag = DisposeBag()
-
+    private var disposeBag:DisposeBag = DisposeBag()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -41,16 +44,15 @@ class MyPhysiqueTabView: UIView {
     }
     
     private func initView() {
+        
+        backgroundColor = .themeBackground1
+        
         let underLine = UIView()
         underLine.backgroundColor = .grey1
         
         addSubview(analyzeButton)
         addSubview(explainButton)
         addSubview(underLine)
-        
-        self.snp.makeConstraints { make in
-            make.height.equalTo(32)
-        }
         
         analyzeButton.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -76,6 +78,7 @@ class MyPhysiqueTabView: UIView {
                 guard let self = self else { return }
                 self.analyzeButton.updateFrame(isSelected: true)
                 self.explainButton.updateFrame(isSelected: false)
+                self.delegate?.select(self, type: .analyze)
             }.disposed(by: disposeBag)
         
         explainButton.rxControlEvent()
@@ -83,7 +86,13 @@ class MyPhysiqueTabView: UIView {
                 guard let self = self else { return }
                 self.analyzeButton.updateFrame(isSelected: false)
                 self.explainButton.updateFrame(isSelected: true)
+                self.delegate?.select(self, type: .explain)
             }.disposed(by: disposeBag)
+    }
+    
+    func updateFrame(type:MyPhysiqueViewModel.MyPhysiqueDetailType) {
+        analyzeButton.updateFrame(isSelected: type == .analyze)
+        explainButton.updateFrame(isSelected: type == .explain)
     }
 }
 
@@ -115,6 +124,8 @@ private class TabButton:UIControl {
     }
     
     private func initView() {
+        backgroundColor = .themeBackground1
+        
         addSubview(titleLabel)
         addSubview(focusLine)
         
@@ -137,7 +148,7 @@ private class TabButton:UIControl {
     
     func updateFrame(isSelected:Bool) {
         UIView.transition(with: self,
-                          duration: 0.5,
+                          duration: 0.2,
                           options: .transitionCrossDissolve) {
             self.titleLabel.textColor = isSelected ? .themePrimary : .grey1
             self.focusLine.isHidden = !isSelected

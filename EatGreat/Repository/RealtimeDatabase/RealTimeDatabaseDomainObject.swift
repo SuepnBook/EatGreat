@@ -38,7 +38,7 @@ struct RealTimeDatabaseDomainObject {
     // MARK: - PhysiqueReference
     struct PhysiqueReference: Codable {
         let physiqueType: PhysiqueType
-        let feature, cause, suggest: [Int]
+        let feature, cause, suggest: [String]
     }
     
     // MARK: - Question

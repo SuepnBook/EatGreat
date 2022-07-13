@@ -21,7 +21,8 @@ class TestViewModel: BaseViewModel {
     
     weak var delegate:TestViewModelDelegate?
     
-    private let repo:PhysiqueRepository = .shared
+    private let questionRepo:QuestionRepository = .shared
+    private let physiqueRepo:PhysiqueRepository = .shared
     
     private var testObject:TestObject = .init()
     
@@ -121,11 +122,11 @@ class TestViewModel: BaseViewModel {
 extension TestViewModel {
     
     private func updateTestQuestion() {
-        testObject.life.testQuestions = repo.getQuestions(questionType: .life)
-        testObject.head.testQuestions = repo.getQuestions(questionType: .head)
-        testObject.digestion.testQuestions = repo.getQuestions(questionType: .digestion)
-        testObject.trunk.testQuestions = repo.getQuestions(questionType: .trunk)
-        testObject.all.testQuestions = repo.getQuestions(questionType: .all)
+        testObject.life.testQuestions = questionRepo.getQuestions(questionType: .life)
+        testObject.head.testQuestions = questionRepo.getQuestions(questionType: .head)
+        testObject.digestion.testQuestions = questionRepo.getQuestions(questionType: .digestion)
+        testObject.trunk.testQuestions = questionRepo.getQuestions(questionType: .trunk)
+        testObject.all.testQuestions = questionRepo.getQuestions(questionType: .all)
     }
     
     private func updateProgressView() {
@@ -171,7 +172,7 @@ extension TestViewModel {
     private func savePhysiquePercentage(answer:[QuestionDomainObject.Question]) {
         for type in PhysiqueType.allCases {
             let percentage = getPercentage(physiqueType: type, answer: answer)
-            repo.savePhysiquePercentage(type: type, percentage: percentage)
+            physiqueRepo.savePhysiquePercentage(type: type, percentage: percentage)
         }
     }
     

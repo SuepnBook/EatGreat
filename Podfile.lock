@@ -1,5 +1,6 @@
 PODS:
   - IQKeyboardManager (6.5.9)
+  - Kingfisher (7.2.1)
   - ProgressHUD (13.6)
   - Reusable (4.1.2):
     - Reusable/Storyboard (= 4.1.2)
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - Kingfisher (~> 7.0)
   - ProgressHUD
   - Reusable
   - RxCocoa (= 6.2.0)
@@ -25,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - IQKeyboardManager
+    - Kingfisher
     - ProgressHUD
     - Reusable
     - RxCocoa
@@ -34,6 +37,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 241cc94ccabc9deb8f8bd7d12f00d73288d13ecc
+  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
@@ -41,6 +45,6 @@ SPEC CHECKSUMS:
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: fe8ab808a17185602b98148db5944887c6ba8128
+PODFILE CHECKSUM: 2861d4b432ac480f31d49844316b53af01f08fc2
 
 COCOAPODS: 1.11.2

@@ -42,13 +42,15 @@
 		FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAEE287547CA00A216EC /* ErrorType.swift */; };
 		FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAF12875496400A216EC /* ProgressManager.swift */; };
 		FD5F9646287F38C300D135B9 /* MyPhysiqueTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */; };
+		FD5F9649287F443200D135B9 /* PhysiqueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9648287F443200D135B9 /* PhysiqueRepository.swift */; };
+		FD5F964B287F449B00D135B9 /* PhysiqueDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F964A287F449B00D135B9 /* PhysiqueDomainObject.swift */; };
 		FD62CF092878460800876B39 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF082878460800876B39 /* FirebaseAnalytics */; };
 		FD62CF0B2878460800876B39 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF0A2878460800876B39 /* FirebaseAnalyticsSwift */; };
 		FD62CF0D2878460800876B39 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF0C2878460800876B39 /* FirebaseCrashlytics */; };
 		FD62CF0F2878460800876B39 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF0E2878460800876B39 /* FirebaseDatabase */; };
 		FD62CF112878460800876B39 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF102878460800876B39 /* FirebaseDatabaseSwift */; };
 		FD62CF14287846C100876B39 /* QuestionDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF13287846C100876B39 /* QuestionDomainObject.swift */; };
-		FD62CF16287846CC00876B39 /* PhysiqueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF15287846CC00876B39 /* PhysiqueRepository.swift */; };
+		FD62CF16287846CC00876B39 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF15287846CC00876B39 /* QuestionRepository.swift */; };
 		FD62CF182878471D00876B39 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF172878471D00876B39 /* FirebaseFirestoreSwift */; };
 		FD62CF1A2878472B00876B39 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF192878472B00876B39 /* FirebaseAuth */; };
 		FD62CF1C28784E9800876B39 /* DataSnapshotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */; };
@@ -113,8 +115,10 @@
 		FD47DAEE287547CA00A216EC /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		FD47DAF12875496400A216EC /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueTabView.swift; sourceTree = "<group>"; };
+		FD5F9648287F443200D135B9 /* PhysiqueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueRepository.swift; sourceTree = "<group>"; };
+		FD5F964A287F449B00D135B9 /* PhysiqueDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueDomainObject.swift; sourceTree = "<group>"; };
 		FD62CF13287846C100876B39 /* QuestionDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDomainObject.swift; sourceTree = "<group>"; };
-		FD62CF15287846CC00876B39 /* PhysiqueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueRepository.swift; sourceTree = "<group>"; };
+		FD62CF15287846CC00876B39 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
 		FD62CF1B28784E9800876B39 /* DataSnapshotExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSnapshotExtension.swift; sourceTree = "<group>"; };
 		FD62CF1D28784EB800876B39 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
 		FD62CF2028785F4D00876B39 /* RealtimeDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDatabaseRepository.swift; sourceTree = "<group>"; };
@@ -417,6 +421,7 @@
 				FD62CF1F28785D1400876B39 /* RealtimeDatabase */,
 				FD62CF12287846AB00876B39 /* Questions */,
 				FD47DAE92875448700A216EC /* Profile */,
+				FD5F9647287F43C000D135B9 /* Physique */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -438,11 +443,20 @@
 			path = ErrorHandler;
 			sourceTree = "<group>";
 		};
+		FD5F9647287F43C000D135B9 /* Physique */ = {
+			isa = PBXGroup;
+			children = (
+				FD5F964A287F449B00D135B9 /* PhysiqueDomainObject.swift */,
+				FD5F9648287F443200D135B9 /* PhysiqueRepository.swift */,
+			);
+			path = Physique;
+			sourceTree = "<group>";
+		};
 		FD62CF12287846AB00876B39 /* Questions */ = {
 			isa = PBXGroup;
 			children = (
 				FD62CF13287846C100876B39 /* QuestionDomainObject.swift */,
-				FD62CF15287846CC00876B39 /* PhysiqueRepository.swift */,
+				FD62CF15287846CC00876B39 /* QuestionRepository.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -671,16 +685,18 @@
 				FDFF090D2879ABE200553125 /* MyPhysiqueViewModel.swift in Sources */,
 				FD0A2453286A22C800BBF8EC /* Coordinator.swift in Sources */,
 				FD00933F2865F66C007FA97A /* AppDelegate.swift in Sources */,
+				FD5F9649287F443200D135B9 /* PhysiqueRepository.swift in Sources */,
 				FDC73B6328773B7300E503F0 /* PlanCoordinator.swift in Sources */,
 				FD0A2460286C6EE100BBF8EC /* TestProgressView.swift in Sources */,
 				FD0A244E286A191000BBF8EC /* UIViewExtension.swift in Sources */,
 				FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */,
 				FD0A2447286A136100BBF8EC /* OnBoardingScrollIndexView.swift in Sources */,
 				FD00936B28661508007FA97A /* UIFontExtension.swift in Sources */,
-				FD62CF16287846CC00876B39 /* PhysiqueRepository.swift in Sources */,
+				FD62CF16287846CC00876B39 /* QuestionRepository.swift in Sources */,
 				FD00935B2865F8AF007FA97A /* UIColorExtension.swift in Sources */,
 				FDC73B6B28773BAF00E503F0 /* PersonalViewController.swift in Sources */,
 				FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */,
+				FD5F964B287F449B00D135B9 /* PhysiqueDomainObject.swift in Sources */,
 				FD62CF1E28784EB800876B39 /* DictionaryExtension.swift in Sources */,
 				FD24436A287B532D00010852 /* NotificationNameExtension.swift in Sources */,
 				FD0093622866115C007FA97A /* OnBoardingViewController.swift in Sources */,

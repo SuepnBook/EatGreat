@@ -26,8 +26,10 @@ class RealtimeDatabaseRepository {
                 do {
                     let root = try JSONDecoder().decode(RealTimeDatabaseDomainObject.Root.self,
                                              from: snapshot.valueToJSON)
-                    PhysiqueRepository.shared.updateQuestion(questions: root.questions)
-
+                    QuestionRepository.shared.updateQuestion(questions: root.questions)
+                    PhysiqueRepository.shared.update(features: root.feature)
+                    PhysiqueRepository.shared.update(causes: root.cause)
+                    PhysiqueRepository.shared.update(suggests: root.suggest)
                 } catch {
                     print(error)
                 }

@@ -13,6 +13,8 @@ target 'EatGreat' do
 
   pod 'ProgressHUD'
   pod 'IQKeyboardManager'
+  
+  pod 'Kingfisher', '~> 7.0'
 
   # Pods for EatGreat
 

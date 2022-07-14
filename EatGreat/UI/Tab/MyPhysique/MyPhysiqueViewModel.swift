@@ -16,7 +16,12 @@ extension MyPhysiqueViewModel {
 
     enum DetailViewType {
         case analyze(viewObjects:[PhysiquePercentageTableViewCell.Object])
-        case explain
+        case explain(explains:[ExplainType])
+        
+        enum ExplainType {
+            case description(ExplainResultTableViewCell.Object)
+            case insertLinks([InsertDomainObject.Link])
+        }
     }
     
     enum MyPhysiqueDetailType {
@@ -59,7 +64,27 @@ extension MyPhysiqueViewModel {
             let vos = getAllPhysiquePercentage()
             result.append(.detail(type: .analyze(viewObjects: vos)))
         case .explain:
-            result.append(.detail(type: .explain))
+            var explains:[DetailViewType.ExplainType] = []
+                    
+            let causes = repo.getPhysiqueCauses(type: mainPhysique)
+            
+            var subTitles = causes.map({$0.title})
+            var links = causes.flatMap({$0.links})
+
+            explains.append(.description(.init(title: "體質成因",
+                                               subTitles: subTitles)))
+            explains.append(.insertLinks(links))
+            
+            let features = repo.getPhysiqueFeatures(type: mainPhysique)
+            
+            subTitles = features.map({$0.title})
+            links = features.flatMap({$0.links})
+
+            explains.append(.description(.init(title: "體質特色",
+                                               subTitles: subTitles)))
+            explains.append(.insertLinks(links))
+            
+            result.append(.detail(type: .explain(explains: explains)))
         }
         
         delegate?.reload(dataSource: result)

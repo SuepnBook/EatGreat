@@ -74,6 +74,9 @@
 		FDF54141288089A400C80E27 /* ExplainResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */; };
 		FDF5414428808B3300C80E27 /* InsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414328808B3300C80E27 /* InsertRepository.swift */; };
 		FDF5414628808B5900C80E27 /* InsertDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414528808B5900C80E27 /* InsertDomainObject.swift */; };
+		FDF54148288096EB00C80E27 /* InsertLinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF54147288096EB00C80E27 /* InsertLinksTableViewCell.swift */; };
+		FDF5414B2880986D00C80E27 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414A2880986D00C80E27 /* BaseCollectionViewCell.swift */; };
+		FDF5414D288098A000C80E27 /* InsertLinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414C288098A000C80E27 /* InsertLinkCollectionViewCell.swift */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 		FDFF090D2879ABE200553125 /* MyPhysiqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */; };
 		FDFF09102879BAEB00553125 /* PhysiquePercentageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */; };
@@ -144,6 +147,9 @@
 		FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainResultTableViewCell.swift; sourceTree = "<group>"; };
 		FDF5414328808B3300C80E27 /* InsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRepository.swift; sourceTree = "<group>"; };
 		FDF5414528808B5900C80E27 /* InsertDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDomainObject.swift; sourceTree = "<group>"; };
+		FDF54147288096EB00C80E27 /* InsertLinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLinksTableViewCell.swift; sourceTree = "<group>"; };
+		FDF5414A2880986D00C80E27 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		FDF5414C288098A000C80E27 /* InsertLinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertLinkCollectionViewCell.swift; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueViewModel.swift; sourceTree = "<group>"; };
 		FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiquePercentageTableViewCell.swift; sourceTree = "<group>"; };
@@ -289,8 +295,9 @@
 		FD00935C2865FA0A007FA97A /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				FDF5413D2880892C00C80E27 /* TableView */,
 				FDF5413C2880890E00C80E27 /* UIView */,
+				FDF5413D2880892C00C80E27 /* TableView */,
+				FDF54149288097FB00C80E27 /* CollectionView */,
 				FD00935E28661103007FA97A /* ViewController */,
 				FD009363286611D6007FA97A /* Button */,
 			);
@@ -309,6 +316,7 @@
 		FD00935E28661103007FA97A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FD00935F28661103007FA97A /* BaseViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -408,8 +416,6 @@
 		FD0A246D286E3B4B00BBF8EC /* BaseObject */ = {
 			isa = PBXGroup;
 			children = (
-				FD9E9AA1286F03B30068CADD /* TableViewCell */,
-				FD00935F28661103007FA97A /* BaseViewController.swift */,
 				FD0A246B286E3B4400BBF8EC /* BaseViewModel.swift */,
 			);
 			path = BaseObject;
@@ -481,14 +487,6 @@
 			path = RealtimeDatabase;
 			sourceTree = "<group>";
 		};
-		FD9E9AA1286F03B30068CADD /* TableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */,
-			);
-			path = TableViewCell;
-			sourceTree = "<group>";
-		};
 		FDC73B5F28773B0000E503F0 /* MyPhysique */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +534,8 @@
 			isa = PBXGroup;
 			children = (
 				FD5F9645287F38C300D135B9 /* TableViewTabSection.swift */,
+				FDF54147288096EB00C80E27 /* InsertLinksTableViewCell.swift */,
+				FD9E9AA2286F03B30068CADD /* BaseTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -563,6 +563,15 @@
 				FDF5414328808B3300C80E27 /* InsertRepository.swift */,
 			);
 			path = InsertLink;
+			sourceTree = "<group>";
+		};
+		FDF54149288097FB00C80E27 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5414A2880986D00C80E27 /* BaseCollectionViewCell.swift */,
+				FDF5414C288098A000C80E27 /* InsertLinkCollectionViewCell.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		FDF9E0D72868B32200104CDC /* Test */ = {
@@ -726,9 +735,12 @@
 				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
 				FD47DAE4287537CC00A216EC /* ProfileViewModel.swift in Sources */,
+				FDF54148288096EB00C80E27 /* InsertLinksTableViewCell.swift in Sources */,
 				FDF54141288089A400C80E27 /* ExplainResultTableViewCell.swift in Sources */,
 				FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */,
 				FDF5414428808B3300C80E27 /* InsertRepository.swift in Sources */,
+				FDF5414B2880986D00C80E27 /* BaseCollectionViewCell.swift in Sources */,
+				FDF5414D288098A000C80E27 /* InsertLinkCollectionViewCell.swift in Sources */,
 				FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */,
 				FD62CF14287846C100876B39 /* QuestionDomainObject.swift in Sources */,
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,

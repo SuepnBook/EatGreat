@@ -11,5 +11,6 @@ struct InsertDomainObject {
     struct Link {
         let image: String
         let title: String
+        let url:String
     }
 }

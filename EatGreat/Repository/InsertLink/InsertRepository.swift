@@ -37,7 +37,8 @@ extension InsertRepository {
         insertLinks = [:]
         for link in links {
             insertLinks[link.id] = .init(image: link.image,
-                                         title: link.title)
+                                         title: link.title,
+                                         url: link.url)
         }
     }
 }

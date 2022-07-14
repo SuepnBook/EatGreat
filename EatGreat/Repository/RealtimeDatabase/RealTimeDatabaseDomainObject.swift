@@ -48,6 +48,7 @@ struct RealTimeDatabaseDomainObject {
         let id: String
         let image: String
         let title: String
+        let url: String
     }
     
     // MARK: - PhysiqueReference

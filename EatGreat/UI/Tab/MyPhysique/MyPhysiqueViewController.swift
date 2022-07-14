@@ -22,6 +22,8 @@ class MyPhysiqueViewController: BaseViewController {
         let view = UITableView()
         view.register(cellType: MyMainPhysiqueImageTableViewCell.self)
         view.register(cellType: PhysiquePercentageTableViewCell.self)
+        view.register(cellType: ExplainResultTableViewCell.self)
+        view.register(cellType: InsertLinksTableViewCell.self)
         view.backgroundColor = .themeBackground1
         view.separatorStyle = .none
         view.delegate = self
@@ -107,8 +109,8 @@ extension MyPhysiqueViewController: UITableViewDelegate, UITableViewDataSource {
             switch type {
             case .analyze(let viewObjects):
                 return viewObjects.count
-            case .explain:
-                return 0
+            case .explain(let explains):
+                return explains.count
             }
         }
     }
@@ -129,10 +131,6 @@ extension MyPhysiqueViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch dataSource[indexPath.section] {
         case .mainPhysique(let type):
@@ -146,10 +144,23 @@ extension MyPhysiqueViewController: UITableViewDelegate, UITableViewDataSource {
                 let object = viewObjects[indexPath.row]
                 cell.updateFrame(object: object)
                 return cell
-            case .explain:
-                return UITableViewCell()
+            case .explain(let explains):
+                switch explains[indexPath.row] {
+                case .description(let vo):
+                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: ExplainResultTableViewCell.self)
+                    cell.updateFrame(object: vo)
+                    return cell
+                case .insertLinks(let links):
+                    let cell = tableView.dequeueReusableCell(for: indexPath, cellType: InsertLinksTableViewCell.self)
+                    cell.updateFrame(links:links)
+                    return cell
+                }
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

@@ -59,7 +59,7 @@ extension MyPhysiqueViewModel {
             let vos = getAllPhysiquePercentage()
             result.append(.detail(type: .analyze(viewObjects: vos)))
         case .explain:
-            break
+            result.append(.detail(type: .explain))
         }
         
         delegate?.reload(dataSource: result)

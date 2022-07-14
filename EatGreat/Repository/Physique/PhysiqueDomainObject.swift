@@ -61,24 +61,23 @@ enum PhysiqueType: String, Codable, CaseIterable {
 }
 
 struct PhysiqueDomainObject {
-    struct PhysiqueReference {
-        let physiqueType: PhysiqueType
+    struct PhysiqueReference: Codable {
         let feature, cause, suggest: [String]
     }
     
-    struct Feature:Codable {
-        let id, title: String
-        let links: [String]
+    struct Feature {
+        let title: String
+        let links: [InsertDomainObject.Link]
     }
     
-    struct Cause:Codable {
-        let id, title: String
-        let links: [String]
+    struct Cause {
+        let title: String
+        let links: [InsertDomainObject.Link]
     }
 
-    struct Suggest:Codable {
-        let id, title: String
-        let links: [String]
+    struct Suggest {
+        let title: String
+        let links: [InsertDomainObject.Link]
         let subTitles: [String]?
     }
 }

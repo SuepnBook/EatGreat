@@ -29,8 +29,8 @@ class MyPhysiqueViewController: BaseViewController {
         return view
     }()
     
-    private lazy var tabView:MyPhysiqueTabView = {
-        let view = MyPhysiqueTabView()
+    private lazy var tabView:TableViewTabSection = {
+        let view = TableViewTabSection()
         view.delegate = self
         return view
     }()
@@ -163,7 +163,7 @@ extension MyPhysiqueViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - MyPhysiqueTabViewDelegate
 extension MyPhysiqueViewController: MyPhysiqueTabViewDelegate {
-    func select(_ view: MyPhysiqueTabView, type: MyPhysiqueViewModel.MyPhysiqueDetailType) {
+    func select(_ view: TableViewTabSection, type: MyPhysiqueViewModel.MyPhysiqueDetailType) {
         viewModel.selectViewType(type: type)
     }
 }

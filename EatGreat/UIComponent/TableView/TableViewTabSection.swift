@@ -9,11 +9,11 @@ import UIKit
 import RxSwift
 
 protocol MyPhysiqueTabViewDelegate:AnyObject {
-    func select(_ view:MyPhysiqueTabView,
+    func select(_ view:TableViewTabSection,
                 type:MyPhysiqueViewModel.MyPhysiqueDetailType)
 }
 
-class MyPhysiqueTabView: UIView {
+class TableViewTabSection: UIView {
     
     weak var delegate:MyPhysiqueTabViewDelegate?
     

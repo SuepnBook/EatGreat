@@ -22,13 +22,28 @@ struct RealTimeDatabaseDomainObject {
     struct Root: Codable {
         let physiqueReference: [PhysiqueReference]
         let questions: [Question]
-        let feature: [PhysiqueDomainObject.Feature]
-        let cause: [PhysiqueDomainObject.Cause]
-        let suggest: [PhysiqueDomainObject.Suggest]
+        let feature: [Feature]
+        let cause: [Cause]
+        let suggest: [Suggest]
         let link: [Link]
     }
     
-    // MARK: - Link
+    struct Feature:Codable {
+        let id, title: String
+        let links: [String]
+    }
+    
+    struct Cause:Codable {
+        let id, title: String
+        let links: [String]
+    }
+
+    struct Suggest:Codable {
+        let id, title: String
+        let links: [String]
+        let subTitles: [String]?
+    }
+    
     struct Link: Codable {
         let id: String
         let image: String

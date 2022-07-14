@@ -1,0 +1,15 @@
+//
+//  InsertDomainObject.swift
+//  EatGreat
+//
+//  Created by Book on 2022/7/15.
+//
+
+import Foundation
+
+struct InsertDomainObject {
+    struct Link {
+        let image: String
+        let title: String
+    }
+}

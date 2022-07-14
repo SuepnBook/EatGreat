@@ -41,7 +41,7 @@
 		FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAED287547CA00A216EC /* ErrorHandler.swift */; };
 		FD47DAF0287547CA00A216EC /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAEE287547CA00A216EC /* ErrorType.swift */; };
 		FD47DAF22875496400A216EC /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47DAF12875496400A216EC /* ProgressManager.swift */; };
-		FD5F9646287F38C300D135B9 /* MyPhysiqueTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */; };
+		FD5F9646287F38C300D135B9 /* TableViewTabSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9645287F38C300D135B9 /* TableViewTabSection.swift */; };
 		FD5F9649287F443200D135B9 /* PhysiqueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F9648287F443200D135B9 /* PhysiqueRepository.swift */; };
 		FD5F964B287F449B00D135B9 /* PhysiqueDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5F964A287F449B00D135B9 /* PhysiqueDomainObject.swift */; };
 		FD62CF092878460800876B39 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FD62CF082878460800876B39 /* FirebaseAnalytics */; };
@@ -71,6 +71,9 @@
 		FDC73B6D2877413400E503F0 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */; };
 		FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */; };
 		FDC73B722877E0B600E503F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */; };
+		FDF54141288089A400C80E27 /* ExplainResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */; };
+		FDF5414428808B3300C80E27 /* InsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414328808B3300C80E27 /* InsertRepository.swift */; };
+		FDF5414628808B5900C80E27 /* InsertDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414528808B5900C80E27 /* InsertDomainObject.swift */; };
 		FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9E0D82868B34D00104CDC /* TestViewController.swift */; };
 		FDFF090D2879ABE200553125 /* MyPhysiqueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */; };
 		FDFF09102879BAEB00553125 /* PhysiquePercentageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */; };
@@ -115,7 +118,7 @@
 		FD47DAED287547CA00A216EC /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		FD47DAEE287547CA00A216EC /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		FD47DAF12875496400A216EC /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
-		FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueTabView.swift; sourceTree = "<group>"; };
+		FD5F9645287F38C300D135B9 /* TableViewTabSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTabSection.swift; sourceTree = "<group>"; };
 		FD5F9648287F443200D135B9 /* PhysiqueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueRepository.swift; sourceTree = "<group>"; };
 		FD5F964A287F449B00D135B9 /* PhysiqueDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiqueDomainObject.swift; sourceTree = "<group>"; };
 		FD62CF13287846C100876B39 /* QuestionDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDomainObject.swift; sourceTree = "<group>"; };
@@ -138,6 +141,9 @@
 		FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
 		FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTableViewCell.swift; sourceTree = "<group>"; };
 		FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainResultTableViewCell.swift; sourceTree = "<group>"; };
+		FDF5414328808B3300C80E27 /* InsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRepository.swift; sourceTree = "<group>"; };
+		FDF5414528808B5900C80E27 /* InsertDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDomainObject.swift; sourceTree = "<group>"; };
 		FDF9E0D82868B34D00104CDC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		FDFF090C2879ABE200553125 /* MyPhysiqueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhysiqueViewModel.swift; sourceTree = "<group>"; };
 		FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiquePercentageTableViewCell.swift; sourceTree = "<group>"; };
@@ -283,6 +289,8 @@
 		FD00935C2865FA0A007FA97A /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
+				FDF5413D2880892C00C80E27 /* TableView */,
+				FDF5413C2880890E00C80E27 /* UIView */,
 				FD00935E28661103007FA97A /* ViewController */,
 				FD009363286611D6007FA97A /* Button */,
 			);
@@ -424,6 +432,7 @@
 				FD62CF12287846AB00876B39 /* Questions */,
 				FD47DAE92875448700A216EC /* Profile */,
 				FD5F9647287F43C000D135B9 /* Physique */,
+				FDF5414228808B1500C80E27 /* InsertLink */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -516,6 +525,46 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FDF5413C2880890E00C80E27 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		FDF5413D2880892C00C80E27 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FD5F9645287F38C300D135B9 /* TableViewTabSection.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FDF5413E2880897400C80E27 /* Analyze */ = {
+			isa = PBXGroup;
+			children = (
+				FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */,
+			);
+			path = Analyze;
+			sourceTree = "<group>";
+		};
+		FDF5413F2880898500C80E27 /* Explain */ = {
+			isa = PBXGroup;
+			children = (
+				FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */,
+			);
+			path = Explain;
+			sourceTree = "<group>";
+		};
+		FDF5414228808B1500C80E27 /* InsertLink */ = {
+			isa = PBXGroup;
+			children = (
+				FDF5414528808B5900C80E27 /* InsertDomainObject.swift */,
+				FDF5414328808B3300C80E27 /* InsertRepository.swift */,
+			);
+			path = InsertLink;
+			sourceTree = "<group>";
+		};
 		FDF9E0D72868B32200104CDC /* Test */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,8 +579,8 @@
 			isa = PBXGroup;
 			children = (
 				FDA0466C287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift */,
-				FD5F9645287F38C300D135B9 /* MyPhysiqueTabView.swift */,
-				FDFF090F2879BAEB00553125 /* PhysiquePercentageTableViewCell.swift */,
+				FDF5413E2880897400C80E27 /* Analyze */,
+				FDF5413F2880898500C80E27 /* Explain */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -666,7 +715,7 @@
 				FD47DAE728753EBD00A216EC /* UserDefaultManager.swift in Sources */,
 				FD0A246F286E3B7800BBF8EC /* TestViewModel.swift in Sources */,
 				FD47DAEB287544B300A216EC /* ProfileDomainObject.swift in Sources */,
-				FD5F9646287F38C300D135B9 /* MyPhysiqueTabView.swift in Sources */,
+				FD5F9646287F38C300D135B9 /* TableViewTabSection.swift in Sources */,
 				FDC73B5C28773A4F00E503F0 /* MainTabBarViewController.swift in Sources */,
 				FD47DAEF287547CA00A216EC /* ErrorHandler.swift in Sources */,
 				FD47DAE228733FA700A216EC /* ProfileInputView.swift in Sources */,
@@ -677,7 +726,9 @@
 				FD9E9AA3286F03B30068CADD /* BaseTableViewCell.swift in Sources */,
 				FD0A2458286A22FF00BBF8EC /* NavigationRouter.swift in Sources */,
 				FD47DAE4287537CC00A216EC /* ProfileViewModel.swift in Sources */,
+				FDF54141288089A400C80E27 /* ExplainResultTableViewCell.swift in Sources */,
 				FD0A2464286C713500BBF8EC /* ProfileViewController.swift in Sources */,
+				FDF5414428808B3300C80E27 /* InsertRepository.swift in Sources */,
 				FD9E9AA0286F036F0068CADD /* TestQuestionTableViewCell.swift in Sources */,
 				FD62CF14287846C100876B39 /* QuestionDomainObject.swift in Sources */,
 				FD00936028661103007FA97A /* BaseViewController.swift in Sources */,
@@ -711,6 +762,7 @@
 				FD0A244C286A186800BBF8EC /* UIScrollViewExtension.swift in Sources */,
 				FD62CF1C28784E9800876B39 /* DataSnapshotExtension.swift in Sources */,
 				FDFF09102879BAEB00553125 /* PhysiquePercentageTableViewCell.swift in Sources */,
+				FDF5414628808B5900C80E27 /* InsertDomainObject.swift in Sources */,
 				FDC73B6528773B8600E503F0 /* PersonalCoordinator.swift in Sources */,
 				FDF9E0D92868B34D00104CDC /* TestViewController.swift in Sources */,
 				FDA0466D287F4C8C005B5BB2 /* MyMainPhysiqueImageTableViewCell.swift in Sources */,

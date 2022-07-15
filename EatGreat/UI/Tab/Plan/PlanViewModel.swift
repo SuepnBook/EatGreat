@@ -40,8 +40,15 @@ extension PlanViewModel {
         
         var links:[InsertDomainObject.Link] = []
         for suggest in suggests {
+            var subTitles = suggest.subTitles
+            if let height = UserDefaultManager.height {
+                subTitles = subTitles
+                    .map({$0.replacingOccurrences(of: "$height",
+                                                  with: "\(height)")})
+            }
+            
             dataSource.append(.description(.init(title: suggest.title,
-                                                 subTitles: suggest.subTitles)))
+                                                 subTitles: subTitles)))
             links.append(contentsOf: suggest.links)
         }
         

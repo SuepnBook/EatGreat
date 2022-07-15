@@ -33,7 +33,9 @@ extension PersonalCoordinator: PersonalViewControllerDelegate {
             vc.delegate = self
             present(viewController: vc, animated: true, completion: nil)
         case .more:
-            break
+            if let url = URL(string: "https://appshhhyqkn4694.h5.xiaoeknow.com/p/decorate/homepage") {
+                UIApplication.shared.open(url)
+            }
         }
     }
 }

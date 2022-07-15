@@ -49,7 +49,7 @@ class MyPhysiqueViewController: BaseViewController {
         super.viewDidLoad()
         initView()
         notification()
-        viewModel.setup()
+        viewModel.setup(type: .analyze)
     }
 }
 
@@ -78,7 +78,9 @@ extension MyPhysiqueViewController {
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] _ in
                 guard let self = self else { return }
-                self.viewModel.setup()
+                let type:MyPhysiqueViewModel.MyPhysiqueDetailType = .analyze
+                self.tabView.updateFrame(type: type)
+                self.viewModel.setup(type: type)
             }.disposed(by: disposeBag)
     }
 }

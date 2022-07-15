@@ -40,10 +40,10 @@ class MyPhysiqueViewModel: BaseViewModel {
     private let repo:PhysiqueRepository = .shared
     
     weak var delegate:MyPhysiqueViewModelDelegate?
-    
-    func setup() {
+
+    func setup(type:MyPhysiqueDetailType) {
         updateMainPhysique()
-        updateDataSource(type: .analyze)
+        updateDataSource(type: type)
     }
     
     func selectViewType(type:MyPhysiqueDetailType) {
@@ -71,18 +71,28 @@ extension MyPhysiqueViewModel {
             var subTitles = causes.map({$0.title})
             var links = causes.flatMap({$0.links})
 
-            explains.append(.description(.init(title: "體質成因",
-                                               subTitles: subTitles)))
-            explains.append(.insertLinks(links))
+            if !subTitles.isEmpty {
+                explains.append(.description(.init(title: "體質成因",
+                                                   subTitles: subTitles)))
+            }
+            
+            if !links.isEmpty {
+                explains.append(.insertLinks(links))
+            }
             
             let features = repo.getPhysiqueFeatures(type: mainPhysique)
             
             subTitles = features.map({$0.title})
             links = features.flatMap({$0.links})
 
-            explains.append(.description(.init(title: "體質特色",
-                                               subTitles: subTitles)))
-            explains.append(.insertLinks(links))
+            if !subTitles.isEmpty {
+                explains.append(.description(.init(title: "體質特色",
+                                                   subTitles: subTitles)))
+            }
+            
+            if !links.isEmpty {
+                explains.append(.insertLinks(links))
+            }
             
             result.append(.detail(type: .explain(explains: explains)))
         }

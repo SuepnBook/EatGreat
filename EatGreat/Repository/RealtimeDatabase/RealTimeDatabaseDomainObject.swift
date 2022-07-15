@@ -30,17 +30,17 @@ struct RealTimeDatabaseDomainObject {
     
     struct Feature:Codable {
         let id, title: String
-        let links: [String]
+        let links: [String]?
     }
     
     struct Cause:Codable {
         let id, title: String
-        let links: [String]
+        let links: [String]?
     }
 
     struct Suggest:Codable {
         let id, title: String
-        let links: [String]
+        let links: [String]?
         let subTitles: [String]?
     }
     

@@ -20,7 +20,10 @@ extension InsertRepository {
         return insertLinks[id]
     }
     
-    func getLinks(ids:[String]) -> [InsertDomainObject.Link] {
+    func getLinks(ids:[String]?) -> [InsertDomainObject.Link] {
+        guard let ids = ids else {
+            return []
+        }
         var links:[InsertDomainObject.Link] = []
         for id in ids{
             if let link = getLink(id: id) {

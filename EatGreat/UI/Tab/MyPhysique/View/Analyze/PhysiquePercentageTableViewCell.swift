@@ -8,12 +8,7 @@
 import UIKit
 
 class PhysiquePercentageTableViewCell: BaseTableViewCell {
-    
-    struct Object{
-        let type:PhysiqueType
-        let percentage:Float
-    }
-    
+
     private let titleLabel:UILabel = {
         let label = UILabel()
         label.font = .button
@@ -77,7 +72,7 @@ class PhysiquePercentageTableViewCell: BaseTableViewCell {
         }
     }
 
-    func updateFrame(object:Object) {
+    func updateFrame(object:PhysiqueDomainObject.PhysiquePercentage) {
         titleLabel.text = object.type.title
         titleLabel.textColor = object.type.color
         let percentageTitle = Int(object.percentage * 100)

@@ -65,6 +65,11 @@ struct PhysiqueDomainObject {
         let feature, cause, suggest: [String]
     }
     
+    struct PhysiquePercentage {
+        let type:PhysiqueType
+        let percentage:Float
+    }
+    
     struct Feature {
         let title: String
         let links: [InsertDomainObject.Link]
@@ -78,6 +83,6 @@ struct PhysiqueDomainObject {
     struct Suggest {
         let title: String
         let links: [InsertDomainObject.Link]
-        let subTitles: [String]?
+        let subTitles: [String]
     }
 }

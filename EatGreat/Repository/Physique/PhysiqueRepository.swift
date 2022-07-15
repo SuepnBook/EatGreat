@@ -29,6 +29,21 @@ extension PhysiqueRepository {
 //MARK: - READ
 extension PhysiqueRepository {
     
+    func getMainPhysique() -> PhysiqueType {
+        getAllPhysiquePercentage().first?.type ?? .armFat
+    }
+    
+    func getAllPhysiquePercentage() -> [PhysiqueDomainObject.PhysiquePercentage] {
+        var result:[PhysiqueDomainObject.PhysiquePercentage] = []
+        for physique in PhysiqueType.allCases {
+            let percentage = getPhysiquePercentage(type: physique)
+            result.append(.init(type: physique, percentage: percentage))
+        }
+        
+        result.sort(by: {$0.percentage >= $1.percentage})
+        return result
+    }
+    
     func getPhysiquePercentage(type:PhysiqueType) -> Float {
         UserDefaultManager.getPhysiquePercentage(type: type)
     }
@@ -112,7 +127,7 @@ extension PhysiqueRepository {
             let links = InsertRepository.shared.getLinks(ids: suggest.links)
             self.suggests[suggest.id] = .init(title: suggest.title,
                                               links: links,
-                                              subTitles: suggest.subTitles)
+                                              subTitles: suggest.subTitles ?? [])
         }
     }
 }

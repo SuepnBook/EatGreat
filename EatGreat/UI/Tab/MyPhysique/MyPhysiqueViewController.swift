@@ -24,6 +24,8 @@ class MyPhysiqueViewController: BaseViewController {
         view.register(cellType: PhysiquePercentageTableViewCell.self)
         view.register(cellType: ExplainResultTableViewCell.self)
         view.register(cellType: InsertLinksTableViewCell.self)
+        view.tableFooterView = UIView(frame: .init(origin: .zero,
+                                                   size: .init(width: 1, height: 80)))
         view.backgroundColor = .themeBackground1
         view.separatorStyle = .none
         view.delegate = self

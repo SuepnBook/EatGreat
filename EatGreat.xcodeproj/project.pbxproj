@@ -71,6 +71,8 @@
 		FDC73B6D2877413400E503F0 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */; };
 		FDC73B702877423A00E503F0 /* PersonalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */; };
 		FDC73B722877E0B600E503F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */; };
+		FDCAB1042881D718002F3045 /* PlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAB1032881D718002F3045 /* PlanViewModel.swift */; };
+		FDCAB1072881D891002F3045 /* SuggestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCAB1062881D891002F3045 /* SuggestTableViewCell.swift */; };
 		FDF54141288089A400C80E27 /* ExplainResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */; };
 		FDF5414428808B3300C80E27 /* InsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414328808B3300C80E27 /* InsertRepository.swift */; };
 		FDF5414628808B5900C80E27 /* InsertDomainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF5414528808B5900C80E27 /* InsertDomainObject.swift */; };
@@ -144,6 +146,8 @@
 		FDC73B6C2877413400E503F0 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
 		FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalTableViewCell.swift; sourceTree = "<group>"; };
 		FDC73B712877E0B600E503F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDCAB1032881D718002F3045 /* PlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewModel.swift; sourceTree = "<group>"; };
+		FDCAB1062881D891002F3045 /* SuggestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestTableViewCell.swift; sourceTree = "<group>"; };
 		FDF54140288089A400C80E27 /* ExplainResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainResultTableViewCell.swift; sourceTree = "<group>"; };
 		FDF5414328808B3300C80E27 /* InsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertRepository.swift; sourceTree = "<group>"; };
 		FDF5414528808B5900C80E27 /* InsertDomainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDomainObject.swift; sourceTree = "<group>"; };
@@ -501,6 +505,8 @@
 			isa = PBXGroup;
 			children = (
 				FDC73B6828773BA600E503F0 /* PlanViewController.swift */,
+				FDCAB1032881D718002F3045 /* PlanViewModel.swift */,
+				FDCAB1052881D872002F3045 /* View */,
 			);
 			path = Plan;
 			sourceTree = "<group>";
@@ -519,6 +525,14 @@
 			isa = PBXGroup;
 			children = (
 				FDC73B6F2877423A00E503F0 /* PersonalTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDCAB1052881D872002F3045 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDCAB1062881D891002F3045 /* SuggestTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,6 +761,8 @@
 				FDC73B6128773B1600E503F0 /* MyPhysiqueViewController.swift in Sources */,
 				FD0A246A286CD66A00BBF8EC /* UIStackViewExtension.swift in Sources */,
 				FDC73B6D2877413400E503F0 /* PersonalViewModel.swift in Sources */,
+				FDCAB1072881D891002F3045 /* SuggestTableViewCell.swift in Sources */,
+				FDCAB1042881D718002F3045 /* PlanViewModel.swift in Sources */,
 				FD0A245D286C6D2600BBF8EC /* ArrayExtension.swift in Sources */,
 				FDFF090D2879ABE200553125 /* MyPhysiqueViewModel.swift in Sources */,
 				FD0A2453286A22C800BBF8EC /* Coordinator.swift in Sources */,

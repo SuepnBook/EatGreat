@@ -15,7 +15,7 @@ extension MyPhysiqueViewModel {
     }
 
     enum DetailViewType {
-        case analyze(viewObjects:[PhysiquePercentageTableViewCell.Object])
+        case analyze(viewObjects:[PhysiqueDomainObject.PhysiquePercentage])
         case explain(explains:[ExplainType])
         
         enum ExplainType {
@@ -56,12 +56,12 @@ extension MyPhysiqueViewModel {
     
     private func updateDataSource(type:MyPhysiqueDetailType) {
         var result: [Section] = []
-        let mainPhysique = getMainPhysique()
+        let mainPhysique = repo.getMainPhysique()
         result.append(.mainPhysique(type: mainPhysique))
         
         switch type {
         case .analyze:
-            let vos = getAllPhysiquePercentage()
+            let vos = repo.getAllPhysiquePercentage()
             result.append(.detail(type: .analyze(viewObjects: vos)))
         case .explain:
             var explains:[DetailViewType.ExplainType] = []
@@ -101,35 +101,7 @@ extension MyPhysiqueViewModel {
     }
     
     private func updateMainPhysique()  {
-        let mainType = getMainPhysique()
+        let mainType = repo.getMainPhysique()
         delegate?.reload(mainPhysique: mainType)
-    }
-    
-    private func getMainPhysique() -> PhysiqueType {
-        var mainType:PhysiqueType = .armFat
-        var highestPercentage:Float = 0
-        for physique in PhysiqueType.allCases {
-            let currentPercentage = getPercentage(type: physique)
-            if currentPercentage >= highestPercentage {
-                mainType = physique
-                highestPercentage = currentPercentage
-            }
-        }
-        return mainType
-    }
-    
-    private func getAllPhysiquePercentage() -> [PhysiquePercentageTableViewCell.Object] {
-        var result:[PhysiquePercentageTableViewCell.Object] = []
-        for physique in PhysiqueType.allCases {
-            let percentage = getPercentage(type: physique)
-            result.append(.init(type: physique, percentage: percentage))
-        }
-        
-        result.sort(by: {$0.percentage >= $1.percentage})
-        return result
-    }
-    
-    private func getPercentage(type:PhysiqueType) -> Float {
-        repo.getPhysiquePercentage(type: type)
     }
 }

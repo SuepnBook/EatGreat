@@ -19,7 +19,7 @@ enum PhysiqueType: String, Codable, CaseIterable {
         case .armFat:
             return "肩背手臂肥胖"
         case .bellyFat:
-            return "上腹部"
+            return "上腹部肥胖"
         case .liverFire:
             return "上肝火"
         case .waterFat:
@@ -47,15 +47,15 @@ enum PhysiqueType: String, Codable, CaseIterable {
     var color:UIColor {
         switch self {
         case .armFat:
-            return UIColor(red: 0.646, green: 0.302, blue: 0.28, alpha: 1)
+            return UIColor(red: 89, gre: 115, blu: 75, alp: 1)
         case .bellyFat:
-            return UIColor(red: 0.613, green: 0.507, blue: 0.133, alpha: 1)
+            return UIColor(red: 156, gre: 129, blu: 34, alp: 1)
         case .liverFire:
-            return UIColor(red: 0.349, green: 0.45, blue: 0.302, alpha: 1)
+            return UIColor(red: 165, gre: 77, blu: 71, alp: 1)
         case .waterFat:
-            return UIColor(red: 0.267, green: 0.405, blue: 0.533, alpha: 1)
+            return UIColor(red: 68, gre: 103, blu: 136, alp: 1)
         case .weakHeart:
-            return UIColor(red: 0.488, green: 0.289, blue: 0.492, alpha: 1)
+            return UIColor(red: 124, gre: 75, blu: 125, alp: 1)
         }
     }
 }

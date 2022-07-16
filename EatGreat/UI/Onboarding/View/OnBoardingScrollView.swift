@@ -39,12 +39,12 @@ class OnBoardingScrollView: UIView {
     private var indexObjects:[OnBoardingScrollIndexObject] = [.init(image: "OnBoardingIndexImage1",
                                                                     title: "了解自我體質成因",
                                                                     index: "您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。"),
-                                                              .init(image: "OnBoardingIndexImage1",
-                                                                    title: "了解自我體質成因",
-                                                                    index: "了解體質成因與相關知識了解體質成因與相關知識"),
-                                                              .init(image: "OnBoardingIndexImage1",
-                                                                    title: "了解自我體質成因",
-                                                                    index: "您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。您是屬於腎虛肥胖、心臟無力還是上肝火體質等呢？從 5 分鐘小測驗，了解您的體質屬性與成因。")]
+                                                              .init(image: "OnBoardingIndexImage2",
+                                                                    title: "獲得專屬的擇食建議",
+                                                                    index: "除了協助您了解個人體質的成因，我們也根據您的體質，提供適合的飲食與作息建議。"),
+                                                              .init(image: "OnBoardingIndexImage3",
+                                                                    title: "立即進行測驗",
+                                                                    index: "立即進行 5 分鐘小測驗，了解您的體質屬性與成因，獲得您專屬的擇食建議！")]
     
     private let timerRunning: BehaviorRelay<Bool> = BehaviorRelay(value: true)
 

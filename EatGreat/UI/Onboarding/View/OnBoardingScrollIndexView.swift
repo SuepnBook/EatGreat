@@ -32,6 +32,7 @@ class OnBoardingScrollIndexView: UIView {
     
     private let indexLabel:UILabel = {
         let label = UILabel()
+//        label
         label.textColor = .grey4
         label.numberOfLines = 0
         label.textAlignment = .center

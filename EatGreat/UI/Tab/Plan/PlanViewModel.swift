@@ -43,8 +43,16 @@ extension PlanViewModel {
             var subTitles = suggest.subTitles
             if let height = UserDefaultManager.height {
                 subTitles = subTitles
-                    .map({$0.replacingOccurrences(of: "$height",
-                                                  with: "\(height)")})
+                    .map({ title in
+                        let calcProteinx1 = Int(Float( height - 100 ) * 3.75 / 5)
+                        let calcProteinx2 = Int(Float( height - 100 ) * 3.75 / 5 * 2)
+                        return title.replacingOccurrences(of: "$height",
+                                                   with: "\(height)")
+                        .replacingOccurrences(of: "$calcProteinx1",
+                                                   with: "\(calcProteinx1)")
+                        .replacingOccurrences(of: "$calcProteinx2",
+                                                   with: "\(calcProteinx2)")
+                    })
             }
             
             dataSource.append(.description(.init(title: suggest.title,

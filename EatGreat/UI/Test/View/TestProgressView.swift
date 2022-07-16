@@ -40,15 +40,15 @@ class TestProgressView: UIView {
         var image:String {
             switch self {
             case .life:
-                return "BodySection1"
+                return "BodySection-Life"
             case .head:
-                return "BodySection1"
+                return "BodySection-Head"
             case .digestion:
-                return "BodySection1"
+                return "BodySection-Digestion"
             case .trunk:
-                return "BodySection1"
+                return "BodySection-Trunk"
             case .all:
-                return "BodySection1"
+                return "BodySection-All"
             }
         }
     }

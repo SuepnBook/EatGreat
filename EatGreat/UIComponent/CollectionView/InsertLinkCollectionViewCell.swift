@@ -12,6 +12,8 @@ class InsertLinkCollectionViewCell: BaseCollectionViewCell {
     
     private let imageView:UIImageView = {
         let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.backgroundColor = .themeBackground2
         return view
     }()
@@ -40,12 +42,22 @@ class InsertLinkCollectionViewCell: BaseCollectionViewCell {
         contentView.layer.cornerRadius = 8
         contentView.layer.masksToBounds = true
         
+        let underLine = UIView()
+        underLine.backgroundColor = .grey1
+        
         contentView.addSubview(imageView)
+        contentView.addSubview(underLine)
         contentView.addSubview(titleLabel)
         
         imageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.height.equalTo(120)
+        }
+        
+        underLine.snp.makeConstraints { make in
+            make.top.equalTo(imageView.snp.bottom)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(0.5)
         }
         
         titleLabel.snp.makeConstraints { make in

@@ -66,6 +66,7 @@ class ExplainResultTableViewCell: BaseTableViewCell {
         let label = UILabel()
         label.textColor = .grey5
         label.font = .body
+        label.lineBreakMode = .byWordWrapping
         label.text = text
         label.numberOfLines = 0
         

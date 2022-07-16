@@ -11,7 +11,7 @@ target 'EatGreat' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Reusable'
 
-  pod 'ProgressHUD'
+  pod 'SVProgressHUD'
   pod 'IQKeyboardManager'
   
   pod 'Kingfisher', '~> 7.0'

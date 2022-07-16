@@ -9,6 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
+struct AlertInfo {
+    var actions: [UIAlertAction]
+    var title: String?
+    var message: String?
+}
+
 class BaseViewController: UIViewController {
     
     var disposeBag = DisposeBag()
@@ -112,5 +119,18 @@ class BaseViewController: UIViewController {
         }
         
         navigationController?.navigationBar.setNeedsLayout()
+    }
+
+    
+    func alert(alertInfo: AlertInfo) {
+        DispatchQueue.main.async {
+            let alertView = UIAlertController(title: alertInfo.title,
+                                              message: alertInfo.message,
+                                              preferredStyle: .alert)
+            for action in alertInfo.actions {
+                alertView.addAction(action)
+            }
+            self.present(alertView, animated: true, completion: nil)
+        }
     }
 }

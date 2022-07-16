@@ -71,8 +71,8 @@ class TestProgressView: UIView {
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceHorizontal = true
-        scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
         return scrollView
     }()
     
@@ -105,7 +105,7 @@ class TestProgressView: UIView {
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-            make.height.equalTo(68)
+            make.height.equalTo(72)
         }
         
         scrollView.addSubview(lifeButton)
@@ -153,6 +153,7 @@ class TestProgressView: UIView {
         }
         allButton.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
+            make.trailing.equalToSuperview().inset(16)
         }
     }
     
@@ -252,11 +253,11 @@ private class SectionButton:UIControl {
         
         self.snp.makeConstraints { make in
             make.width.greaterThanOrEqualTo(42)
-            make.height.equalTo(68)
+            make.height.equalTo(72)
         }
         
         imageView.snp.makeConstraints { make in
-            make.height.width.equalTo(20)
+            make.height.width.equalTo(24)
             make.top.equalToSuperview().inset(8)
             make.centerX.equalToSuperview()
         }

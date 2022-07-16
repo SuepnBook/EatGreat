@@ -48,7 +48,7 @@ class OnBoardingScrollView: UIView {
     
     private let timerRunning: BehaviorRelay<Bool> = BehaviorRelay(value: true)
 
-    private let timer = Observable<Int>.interval(RxTimeInterval.seconds(2), scheduler: MainScheduler.asyncInstance)
+    private let timer = Observable<Int>.interval(RxTimeInterval.seconds(3), scheduler: MainScheduler.asyncInstance)
     
     private var disposeBag:DisposeBag = DisposeBag()
 

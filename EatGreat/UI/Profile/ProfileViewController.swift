@@ -226,7 +226,6 @@ extension ProfileViewController {
         .observe(on: MainScheduler.instance)
         .subscribe { [weak self] _ in
             guard let self = self else { return }
-            ProgressManager.showSuccessHUD(withStatus: nil)
             self.delegate?.selectNext(vc: self)
         } onFailure: { error in
             ErrorHandler.handle(error: error)

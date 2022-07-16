@@ -42,6 +42,10 @@ extension OnBoardingCoordinator:TestViewControllerDelegate {
 extension OnBoardingCoordinator:ProfileViewControllerDelegate {
     func selectNext(vc: ProfileViewController) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-        appDelegate.coordinator.showTabBar()
+        ProgressManager.showPressHUD()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            ProgressManager.dismiss()
+            appDelegate.coordinator.showTabBar()
+        }
     }
 }

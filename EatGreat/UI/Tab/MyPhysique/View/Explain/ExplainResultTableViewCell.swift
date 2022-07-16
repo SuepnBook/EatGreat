@@ -74,13 +74,15 @@ class ExplainResultTableViewCell: BaseTableViewCell {
         contentView.addSubview(label)
         
         dotLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview()
+            make.top.equalTo(label.snp.top)
+            make.leading.equalToSuperview()
             make.height.width.equalTo(20)
         }
         
         label.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(8)
             make.leading.equalTo(dotLabel.snp.trailing)
-            make.top.trailing.bottom.equalToSuperview()
+            make.trailing.bottom.equalToSuperview()
         }
         
         return contentView

@@ -34,13 +34,13 @@ enum PhysiqueType: String, Codable, CaseIterable {
         case .armFat:
             return "Physique-ArmFat"
         case .bellyFat:
-            return "Physique-ArmFat"
+            return "Physique-BellyFat"
         case .liverFire:
-            return "Physique-ArmFat"
+            return "Physique-LiverFire"
         case .waterFat:
-            return "Physique-ArmFat"
+            return "Physique-WaterFat"
         case .weakHeart:
-            return "Physique-ArmFat"
+            return "Physique-WeakHeart"
         }
     }
     

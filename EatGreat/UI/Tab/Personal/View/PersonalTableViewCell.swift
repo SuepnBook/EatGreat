@@ -11,7 +11,7 @@ class PersonalTableViewCell: BaseTableViewCell {
     
     private let titleLabel:UILabel = {
         let label = UILabel()
-        label.font = .button
+        label.font = .body
         label.textColor = .black
         return label
     }()

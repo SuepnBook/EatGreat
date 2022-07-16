@@ -8,7 +8,7 @@
 import Foundation
 
 struct InsertDomainObject {
-    struct Link {
+    struct Link : Hashable{
         let image: String
         let title: String
         let url:String

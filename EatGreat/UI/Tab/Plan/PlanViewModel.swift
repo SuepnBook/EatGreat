@@ -60,7 +60,11 @@ extension PlanViewModel {
             links.append(contentsOf: suggest.links)
         }
         
-        dataSource.append(.insertLinks(links))
+        if !links.isEmpty {
+            links = links.uniqued()
+            dataSource.append(.insertLinks(links))
+        }
+        
         delegate?.reload(dataSource: dataSource)
     }
 }

@@ -76,7 +76,9 @@ extension MyPhysiqueViewModel {
                                                    subTitles: subTitles)))
             }
             
+            
             if !links.isEmpty {
+                links = links.uniqued()
                 explains.append(.insertLinks(links))
             }
             
@@ -91,6 +93,7 @@ extension MyPhysiqueViewModel {
             }
             
             if !links.isEmpty {
+                links = links.uniqued()
                 explains.append(.insertLinks(links))
             }
             
@@ -105,3 +108,5 @@ extension MyPhysiqueViewModel {
         delegate?.reload(mainPhysique: mainType)
     }
 }
+
+

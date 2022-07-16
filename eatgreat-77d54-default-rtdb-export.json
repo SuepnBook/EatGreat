@@ -1,309 +1,390 @@
 {
   "v1": {
-    "questions": [
+    "cause": [
       {
-        "id": "A-1",
-        "physicalType": [
-          "WaterFat"
+        "id": "1",
+        "links": [
+          "17"
         ],
-        "questionType": "All",
-        "title": "⾃⼰的⾁視覺上看起來拋拋"
+        "title": "長期蔬果吃過量，或是天⾊變暗，正常細胞開始休息時，還吃進偏寒的葉菜類，⽣菜沙拉，⽣⿂片，冷飲，使得體質變寒，體質寒就會⽔腫"
       },
       {
-        "id": "A-2",
-        "physicalType": [
-          "WaterFat"
+        "id": "2",
+        "links": [
+          "17"
         ],
-        "questionType": "All",
-        "title": "自己的肉摸起來軟軟的"
+        "title": "當體質寒冷時，往往會想要吃熱性食物，像是燒烤，辣的食物，⽽這些食物會導致⾝體上肝火。除此之外，重⼝味的食物會讓⾝體攝入較多的鈉，腎臟來不及排出⾝體就會吸收⽔分來滲透壓，尤其晚上代謝趨緩，亂吃就更容易⽔腫。"
       },
       {
-        "id": "A-3",
-        "physicalType": [
-          "WaterFat"
+        "id": "3",
+        "links": [
+          "17"
         ],
-        "questionType": "Head",
-        "title": "早上起床眼⽪或眼袋浮腫"
+        "title": "蛋⽩質攝取不⾜，使得⼼臟，腎臟代謝功能不良⽽影響基礎代謝率變差，體內多餘的⽔分就無法排出。"
       },
       {
-        "id": "A-4",
-        "physicalType": [
-          "WaterFat"
+        "id": "4",
+        "links": [
+          "17"
         ],
-        "questionType": "Head",
-        "title": "進出冷氣房時容易偏頭痛"
+        "title": "長期⽔分攝取不⾜或是過量。"
       },
       {
-        "id": "A-5",
-        "physicalType": [
-          "WaterFat"
+        "id": "5",
+        "links": [
+          "17"
         ],
-        "questionType": "Trunk",
-        "title": "進出冷氣房時容易肩頸痠痛"
+        "title": "體質形成的原因是由於⼼臟所需營養攝取不⾜或是攝取錯誤，造成⼼臟無⼒，⽽⼼臟無⼒，基礎代謝率就會差，就算是瘦下來，也很容易復胖"
       },
       {
-        "id": "A-6",
-        "physicalType": [
-          "WaterFat"
+        "id": "6",
+        "links": [
+          "17"
         ],
-        "questionType": "All",
-        "title": "進出冷氣房時容易血壓升高"
+        "title": "⼼臟無⼒也會導致便秘，⼼臟無⼒會造成腸⼦蠕動過慢，腸⼦蠕動過慢就會沒有便意，或是有便意但是⼤不出來。"
       },
       {
-        "id": "A-7",
-        "physicalType": [
-          "WaterFat"
+        "id": "7",
+        "links": [
+          "17"
         ],
-        "questionType": "Trunk",
-        "title": "到下午時，腿部容易腫脹"
+        "title": "⼼臟無⼒的結果除了瘦不下來之外，容易負⾯思考，總是擔⼼，猜疑，退縮和壓抑。這些是⾝體的狀況影響到情緒的原因。"
       },
       {
-        "id": "A-8",
-        "physicalType": [
-          "WaterFat"
+        "id": "8",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "常常想尿尿"
+        "title": "這類型的⼈是『火⼤，就瘦不了的體質』"
       },
       {
-        "id": "A-9",
-        "physicalType": [
-          "WaterFat"
+        "id": "9",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "半夜會起來夜尿"
+        "title": "可能因為長期晚睡（11點之後才就寢），常常喝咖啡提神，加上經常性外食以⾄於超太多⾼溫快炒、爆炒、燒烤或油炸的食物，導致上肝火的狀況。喜歡吃咖哩、⿇辣鍋、⿇油雞、藥燉排骨、⿇辣鍋⋯等類似食物，調味也喜愛偏重⼝味，例如喜愛吃沙茶、紅蔥酥、辣椒、胡椒、八⾓、花椒、茴香、香油、⿇油。"
       },
       {
-        "id": "A-10",
-        "physicalType": [
-          "WaterFat"
+        "id": "10",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "大便經常鬆散、不成形(非條狀、顆狀)"
+        "title": "這類型的⼈可能出現容易暴躁、易怒及無名火的情緒，憤怒的情緒⼀旦沒有流動，也會導致上肝火的狀況。"
       },
       {
-        "id": "B-1",
-        "physicalType": [
-          "WeakHeart"
+        "id": "11",
+        "links": [
+          "17"
         ],
-        "questionType": "Life",
-        "title": "一但有壓⼒或是訊息量⼤，就很容易⼼慌、煩躁"
+        "title": "肝臟負責解毒，幫助脂肪分解。如果⼀直上肝火，肝臟就無法幫助脂肪分解，很容易囤積脂肪，讓全⾝的脂肪曾變厚。"
       },
       {
-        "id": "B-2",
-        "physicalType": [
-          "WeakHeart"
+        "id": "12",
+        "links": [
+          "17"
         ],
-        "questionType": "Life",
-        "title": "嘴饞，有機會就想吃零食"
+        "title": "吃飯吃太快（沒有經過充分咀嚼混合⼝⽔消化的食物，很容易對胃造成負擔，久了會演變成胃潰瘍）"
       },
       {
-        "id": "B-3",
-        "physicalType": [
-          "WeakHeart"
+        "id": "13",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "排便不順，大便大不出來"
+        "title": "不專⼼吃飯（邊開會邊吃飯，邊看電視邊吃飯，邊滑⼿機邊吃飯）"
       },
       {
-        "id": "B-4",
-        "physicalType": [
-          "WeakHeart"
+        "id": "14",
+        "links": [
+          "17"
         ],
-        "questionType": "Life",
-        "title": "害怕衝突和爭吵"
+        "title": "習慣⽤吃來發洩壓⼒"
       },
       {
-        "id": "B-5",
-        "physicalType": [
-          "WeakHeart"
+        "id": "15",
+        "links": [
+          "17"
         ],
-        "questionType": "Life",
-        "title": "害怕被討厭"
+        "title": "愛吃容易脹氣的食物"
       },
       {
-        "id": "B-6",
-        "physicalType": [
-          "WeakHeart"
+        "id": "16",
+        "links": [
+          "17"
         ],
-        "questionType": "Trunk",
-        "title": "脂肪囤積在下腹部明顯"
+        "title": "久坐不動"
       },
       {
-        "id": "B-7",
-        "physicalType": [
-          "WeakHeart"
+        "id": "17",
+        "links": [
+          "17"
         ],
-        "questionType": "Trunk",
-        "title": "脂肪囤積在⼤腿明顯"
+        "title": "兩餐間隔時間太久"
       },
       {
-        "id": "B-8",
-        "physicalType": [
-          "WeakHeart"
+        "id": "18",
+        "links": [
+          "17"
         ],
-        "questionType": "Life",
-        "title": "擔心他人沒有回覆，是因為自己說錯話"
+        "title": "當你胸部以下⾄肚臍以上特別突出肥胖，通常都是因為吃飯吃太快以及有暴食（對現實⽣活不滿，有深深的無⼒感，覺得無法改變，⽤吃來滿⾜以及放空。）的傾向，第三個是和脹氣有關。（1.食物2.坐著不動3.兩餐間隔太久.4.緊張的時候）因為情緒影響，習慣⽤吃來發洩壓⼒或者得到虛幻的滿⾜。"
       },
       {
-        "id": "C-1",
-        "physicalType": [
-          "LiverFire"
+        "id": "19",
+        "links": [
+          "17"
         ],
-        "questionType": "Head",
-        "title": "早上起床，眼睛裡有眼屎"
+        "title": "如果脂肪堆積在⼿臂，肩背，基本上跟男性賀爾蒙旺盛或是對蛋過敏有關。"
       },
       {
-        "id": "C-2",
-        "physicalType": [
-          "LiverFire"
+        "id": "20",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "⼤便顏⾊偏深（相較於⾦黃⾊）硬"
+        "title": "你可以觀察⼀下⾃⼰是否和⼤多數的⼈相比，體⽑比較旺盛，女性甚⾄嘴巴上有寒⽑（⼩鬍⼦）。"
       },
       {
-        "id": "C-3",
-        "physicalType": [
-          "LiverFire"
+        "id": "21",
+        "links": [
+          "17"
         ],
-        "questionType": "Digestion",
-        "title": "害怕被討厭"
+        "title": "回想⼀下，是否⾃⼰常常吃到含蛋類的製品？"
       },
       {
-        "id": "C-4",
-        "physicalType": [
-          "LiverFire"
+        "id": "22",
+        "links": [
+          "17"
         ],
-        "questionType": "Head",
-        "title": "臉上容易長斑"
+        "title": "這個類型的⼈，通常也會有副乳，尤其是久坐不動，或是總是低頭滑⼿機的⼈，肩頸淋巴代謝不良，上背圍會越來越寬。"
+      }
+    ],
+    "feature": [
+      {
+        "id": "1",
+        "links": [
+          "18"
+        ],
+        "title": "早上起來總是覺得臉⼤了⼀圈浮腫且拋拋的感覺，明明就沒有多吃什麼，卻感覺到⾃⼰褲⼦變緊了，總是想要找熱性食物比如有些辣的或是燒烤的來吃。"
       },
       {
-        "id": "C-5",
-        "physicalType": [
-          "LiverFire"
+        "id": "2",
+        "links": [
+          "18"
         ],
-        "questionType": "Head",
-        "title": "臉上膚⾊暗沈"
+        "title": "腎虛的⼈除了⽔腫胖以外，情緒容易莫名低落，也容易受到驚嚇，感覺到恐慌，或是暴怒。"
       },
       {
-        "id": "C-6",
-        "physicalType": [
-          "LiverFire"
+        "id": "3",
+        "links": [
+          "18"
         ],
-        "questionType": "Head",
-        "title": "⼝乾舌燥，⼀直喝⽔還是覺得⼝渴"
+        "title": "遇到溫度劇烈變化時，很容易頭痛。特別是夏天天氣熱進出冷氣房，或是冬天家裡有開暖氣，外出 寒冷時。另外，遇到情緒劇烈變化時，也容易頭痛，肩頸痠痛或是⾎壓升⾼。"
       },
       {
-        "id": "C-7",
-        "physicalType": [
-          "LiverFire"
+        "id": "4",
+        "links": [
+          "18"
         ],
-        "questionType": "Trunk",
-        "title": "脂肪⼤多堆積在腰部，像⼀圈救⽣圈"
+        "title": "此因是由於腎虛，腎臟無法製造⾎管放鬆素導致⽽成，若長期如此，不只會⽔腫胖也會演變成⾼⾎壓。"
       },
       {
-        "id": "D-1",
-        "physicalType": [
-          "BellyFat"
+        "id": "5",
+        "links": [
+          "18"
         ],
-        "questionType": "Digestion",
-        "title": "肚⼦⿎⿎脹脹的"
+        "title": "『吃不營養，吃不對，就瘦不了』類型的⼈，很容易便秘，常常需要不同的刺激幫助⾃⼰排便。"
       },
       {
-        "id": "D-2",
-        "physicalType": [
-          "BellyFat"
+        "id": "6",
+        "links": [
+          "18"
         ],
-        "questionType": "Digestion",
-        "title": "吃飽飯後會打嗝"
+        "title": "在⽇常⽣活當中常常感覺到疲倦，提不起勁，能坐著就不會站著，能躺著就不會坐著.....。"
       },
       {
-        "id": "D-3",
-        "physicalType": [
-          "BellyFat"
+        "id": "7",
+        "links": [
+          "18"
         ],
-        "questionType": "Digestion",
-        "title": "吃飽飯後會放屁"
+        "title": "⽽且還容易嘴饞，常常想要吃零食，尤其是澱粉類的零食。正餐吃完，⼀定要來個甜點才會覺得滿⾜，甚⾄有些這類型的⼈，為了減重，會捨棄正餐的澱粉，⽽只吃甜點。"
       },
       {
-        "id": "D-4",
-        "physicalType": [
-          "BellyFat"
+        "id": "8",
+        "links": [
+          "18"
         ],
-        "questionType": "Digestion",
-        "title": "胃悶，胃脹痛，胃發炎"
+        "title": "千萬不能讓這類型的⼈餓到，也不能讓他們累到。當他們餓到或累到的時候跟他們說話，他們很容易就會『不耐煩』。"
       },
       {
-        "id": "D-5",
-        "physicalType": [
-          "BellyFat"
+        "id": "9",
+        "links": [
+          "18"
         ],
-        "questionType": "Digestion",
-        "title": "喝完咖啡或吃甜食，會胃食道逆流"
+        "title": "除此之外，⼼臟無⼒也會影響到對⾃⼰的⾃信，所以這類型的⼈，有⼀部份是⾃⼰覺得胖，⾝旁的⼈都覺得他們對⾃⼰要求太⾼了。"
       },
       {
-        "id": "D-6",
-        "physicalType": [
-          "BellyFat"
+        "id": "10",
+        "links": [
+          "18"
         ],
-        "questionType": "Head",
-        "title": "牙齦腫痛"
+        "title": "他們脂肪堆積的部位經常都是在下腹部或是⼤腿，穿⽜仔褲時很容易有⼀圈的⾁。若是女性，婦科容易發炎，經痛的症狀。"
       },
       {
-        "id": "D-7",
-        "physicalType": [
-          "BellyFat"
+        "id": "11",
+        "links": [
+          "18"
         ],
-        "questionType": "Trunk",
-        "title": "胸部/乳房脹痛"
+        "title": "四肢不⼀定胖，但肚⼦就是圓圓的。"
       },
       {
-        "id": "E-1",
-        "physicalType": [
-          "ArmFat"
+        "id": "12",
+        "links": [
+          "18"
         ],
-        "questionType": "Trunk",
-        "title": "脂肪堆積在⼿臂"
+        "title": "上肝火體質的⼈，⾝體⼤多數的脂肪都堆積在腰部，以肚臍為中⼼，形成⼀圈救⽣圈。這⼀圈救⽣圈和脂肪肝防輻黏膩的情侶，⼤部分有這⼀圈肚⼦的⼈85%都有脂肪肝。"
       },
       {
-        "id": "E-2",
-        "physicalType": [
-          "ArmFat"
+        "id": "13",
+        "links": [
+          "18"
         ],
-        "questionType": "Head",
-        "title": "脂肪堆積在肩背"
+        "title": "這樣的⼈幾乎都會有睡眠的問題。不論是難以入睡，淺眠，很容易醒來，或是容易做很多夢，這都和上肝火有關係 ; 另外，肝火也會引發⽪膚過敏。"
       },
       {
-        "id": "E-3",
-        "physicalType": [
-          "ArmFat"
+        "id": "14",
+        "links": [
+          "18"
         ],
-        "questionType": "Head",
-        "title": "頭⽪容易出油，需要洗頭"
+        "title": "吃太快就瘦不了類型的⼈，也是三餐不定時就瘦不了的⼈。"
       },
       {
-        "id": "E-4",
-        "physicalType": [
-          "ArmFat"
+        "id": "15",
+        "links": [
+          "18"
         ],
-        "questionType": "All",
-        "title": "體⽑比較多，若是女性的話甚⾄有⼩鬍⼦"
+        "title": "這類型的⼈常常會因為感受到壓⼒，焦慮，緊張的情緒⽽抓了食物就往嘴裡塞，特別喜歡吃起來有聲⾳的食物"
       },
       {
-        "id": "E-5",
-        "physicalType": [
-          "ArmFat"
+        "id": "16",
+        "links": [
+          "18"
         ],
-        "questionType": "Life",
-        "title": "常吃蛋類料理"
+        "title": "⼀開始吃就停不下來，甚⾄有些會在晚上會磨牙。"
       },
       {
-        "id": "E-6",
-        "physicalType": [
-          "ArmFat"
+        "id": "17",
+        "links": [
+          "18"
         ],
-        "questionType": "Trunk",
-        "title": "有副乳"
+        "title": "⼿臂有掰掰袖，肩背寬厚。"
+      }
+    ],
+    "link": [
+      {
+        "id": "1",
+        "image": "https://img01.yzcdn.cn/upload_files/2022/06/17/FjBHRdSR3d96WTsdem3L7IZAz5gN.jpg!large.webp",
+        "title": "薑汁軟糖",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2xf7r0kwou7o2?banner_id=f.97879327~goods.9~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_752d740c516248cd918ec04503906618&slg=0&components_style_layout=0&reft=1657693892940&spm=f.97879327"
+      },
+      {
+        "id": "2",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/04/30/FlIOw9AsVskoDEGDhLT5y2mWwoRy.jpg!large.jpg",
+        "title": "玉顏糕",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2x6nljwmdh8g2?banner_id=f.97879327~goods.10~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_f9356c9a856d4cb7a70cf560e326cfb7&slg=0&components_style_layout=1&reft=1657693960949&spm=f.97879327"
+      },
+      {
+        "id": "3",
+        "image": "https://img01.yzcdn.cn/upload_files/2021/10/12/Fi0nmk5U867fIU6AdjUUGHB9O5LL.jpg!large.jpg",
+        "title": "清蔬雞湯",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/1yf4szw32oqma?banner_id=f.97879327~goods.10~4~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_f9356c9a856d4cb7a70cf560e326cfb7&slg=0&components_style_layout=1&reft=1657694045263&spm=f.97879327"
+      },
+      {
+        "id": "4",
+        "image": "https://img01.yzcdn.cn/upload_files/2021/08/20/FhpA7yjzpGP8r9IqlxFb2IM07Hk-.jpg!large.jpg",
+        "title": "薑汁飲品",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nvdonmd4trzm?banner_id=f.97879327~goods.14~2~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_65af2d0d7499462c81af73b1295dc0e9&slg=0&components_style_layout=1&reft=1657694099185&spm=f.97879327"
+      },
+      {
+        "id": "5",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/08/31/Fq8ezOKA_EjRsgC3qZfdcTF9OqoF.jpg!large.jpg",
+        "title": "黃砂糖",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2x7u1dhogd1v6?banner_id=f.97879327~goods.15~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_a000f06f3a454556981045fa56edcdbe&slg=0&components_style_layout=1&reft=1657694131780&spm=f.97879327"
+      },
+      {
+        "id": "6",
+        "image": "https://img01.yzcdn.cn/upload_files/2019/10/22/FgAH9UsKabnuvoE2eD8VUx9GmiHQ.jpg!large.jpg",
+        "title": "薑汁醬油",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2op5cy90zc2gi?banner_id=f.97879327~goods.15~3~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_a000f06f3a454556981045fa56edcdbe&slg=0&components_style_layout=1&reft=1657694172281&spm=f.97879327"
+      },
+      {
+        "id": "7",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/12/29/FoSsTQ8MFFD084-CkFBlkMGgJYBP.jpg!large.jpg",
+        "title": "紅豆茯苓蓮子湯",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nqh6adpgubki?banner_id=f.97879327~goods.15~4~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_a000f06f3a454556981045fa56edcdbe&slg=0&components_style_layout=1&reft=1657694197056&spm=f.97879327"
+      },
+      {
+        "id": "8",
+        "image": "https://img01.yzcdn.cn/upload_files/2022/03/04/FiIzvYeizShpsCOay-UdqKd3TR5A.jpg!large.jpg",
+        "title": "紅豆茯苓八珍糕",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/366k82rpmi382x7?banner_id=f.97879327~goods.20~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3fb61127caa548eb938eaa994f066f68&slg=0&components_style_layout=1&reft=1657694244656&spm=f.97879327"
+      },
+      {
+        "id": "9",
+        "image": "https://img01.yzcdn.cn/upload_files/2022/03/04/FiIzvYeizShpsCOay-UdqKd3TR5A.jpg!large.jpg",
+        "title": "鸡内金橘皮八珍糕",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nqijzbb4uyj6aw?banner_id=f.97879327~goods.20~2~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3fb61127caa548eb938eaa994f066f68&slg=0&components_style_layout=1&reft=1657694280406&spm=f.97879327"
+      },
+      {
+        "id": "10",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/12/04/FsnMci8DMJNVlwy4fL157EZvQn9Y.jpg!large.jpg",
+        "title": "姜汁黄糖玉米饼",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/277pg54nqkav6?banner_id=f.97879327~goods.20~4~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3fb61127caa548eb938eaa994f066f68&slg=0&components_style_layout=1&reft=1657694335473&spm=f.97879327"
+      },
+      {
+        "id": "11",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/07/21/FtHP1gQ93H2GZtjdh-5jgZmg8X-B.jpg!large.jpg",
+        "title": "南酸枣糕",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2xhptnwle6a0y?banner_id=f.97879327~goods.20~5~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3fb61127caa548eb938eaa994f066f68&slg=0&components_style_layout=1&reft=1657694367241&spm=f.97879327"
+      },
+      {
+        "id": "12",
+        "image": "https://img01.yzcdn.cn/upload_files/2019/09/30/FkY9u8z36jKfdyqY9OEGkT6_Jne9.jpg!large.jpg",
+        "title": "香菇脆",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2fz0cyh3swo42?banner_id=f.97879327~goods.21~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3530a05e403e4831807de78618f2008d&slg=0&components_style_layout=1&reft=1657694415944&spm=f.97879327"
+      },
+      {
+        "id": "13",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/08/27/FnG-dPOhqrgyKzjYVPoWC-HrvIEB.jpg!large.jpg",
+        "title": "舒甘玫瑰饮",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/36a9s7fxod5pu?banner_id=f.97879327~goods.23~2~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_147db0ab2b05402f975e647044db70f6&slg=0&components_style_layout=1&reft=1657694450828&spm=f.97879327"
+      },
+      {
+        "id": "14",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/06/12/FvPAUF2QppuvxbKC0tq7MuCgJ2hV.jpg!large.jpg",
+        "title": "橘皮氧味茶",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3et00k2g5mrn6?banner_id=f.97879327~goods.23~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_147db0ab2b05402f975e647044db70f6&slg=0&components_style_layout=1&reft=1657694500983&spm=f.97879327"
+      },
+      {
+        "id": "15",
+        "image": "https://img01.yzcdn.cn/upload_files/2017/12/22/FktQi_AxIe7XRq3_uD40ZFfZDnVy.png!large.png",
+        "title": "泡脚/泡澡包",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/1yl94wiq6b1ky?banner_id=f.97879327~goods.30~2~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_a550c3dee30d4140ad92e4d557bb2a02&slg=0&components_style_layout=3&reft=1657694536761&spm=f.97879327"
+      },
+      {
+        "id": "16",
+        "image": "https://img01.yzcdn.cn/upload_files/2022/02/16/FpdujRXsF30xX26M-9qFD1tslb1b.jpg!large.jpg",
+        "title": "电热盐包",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3esygfo1bdbhuap?banner_id=f.97879327~goods.31~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_56596527ae874f65a56e4269d2fcf2d9&slg=0&components_style_layout=3&reft=1657694564856&spm=f.97879327"
+      },
+      {
+        "id": "17",
+        "image": "https://img01.yzcdn.cn/upload_files/2020/05/20/FhgNskJYeDLZ66Fga_8KN2MFld_e.jpg!large.jpg",
+        "title": "吃到自然瘦 全新修订版 邱锦伶",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/26u4mgcxxzo82?banner_id=f.97879327~goods.33~1~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3b5c0bdaa8d248a1a429cddf2e934966&slg=0&components_style_layout=5&reft=1657694596633&spm=f.97879327"
+      },
+      {
+        "id": "18",
+        "image": "https://img01.yzcdn.cn/upload_files/2017/11/03/Fl7OSrgmyevd59d-6qmEWK8Ynby3.png!large.png",
+        "title": "瘦孕",
+        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/2ocu9kfnfmdsi?banner_id=f.97879327~goods.33~2~YSXu3J8K&alg_id=common_by_external%2Cnot_need_rank%2C0.0.0.0.0.0.0.0.700.268.401.456.582_3b5c0bdaa8d248a1a429cddf2e934966&slg=0&components_style_layout=5&reft=1657694628391&spm=f.97879327"
       }
     ],
     "physiqueReference": [
@@ -413,477 +494,554 @@
         ]
       }
     ],
-    "cause": [
+    "questions": [
       {
-        "id": "1",
-        "title": "長期蔬果吃過量，或是天⾊變暗，正常細胞開始休息時，還吃進偏寒的葉菜類，⽣菜沙拉，⽣⿂片，冷飲，使得體質變寒，體質寒就會⽔腫",
-        "links": [
-          "1"
-        ]
+        "id": "A-1",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "拋拋人是我，我的肉看起來都浮浮拋拋的"
       },
       {
-        "id": "2",
-        "title": "當體質寒冷時，往往會想要吃熱性食物，像是燒烤，辣的食物，⽽這些食物會導致⾝體上肝火。除此之外，重⼝味的食物會讓⾝體攝入較多的鈉，腎臟來不及排出⾝體就會吸收⽔分來滲透壓，尤其晚上代謝趨緩，亂吃就更容易⽔腫。",
-        "links": [
-          "1"
-        ]
+        "id": "A-2",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "我的肉很軟喔"
       },
       {
-        "id": "3",
-        "title": "蛋⽩質攝取不⾜，使得⼼臟，腎臟代謝功能不良⽽影響基礎代謝率變差，體內多餘的⽔分就無法排出。",
-        "links": [
-          "1"
-        ]
+        "id": "A-3",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Head",
+        "title": "早上起床眼皮眼袋必腫腫"
       },
       {
-        "id": "4",
-        "title": "長期⽔分攝取不⾜或是過量。",
-        "links": [
-          "1"
-        ]
+        "id": "A-4",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Head",
+        "title": "吹到冷氣容易偏頭痛"
       },
       {
-        "id": "5",
-        "title": "體質形成的原因是由於⼼臟所需營養攝取不⾜或是攝取錯誤，造成⼼臟無⼒，⽽⼼臟無⼒，基礎代謝率就會差，就算是瘦下來，也很容易復胖",
-        "links": [
-          "1"
-        ]
+        "id": "A-5",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Trunk",
+        "title": "在冷氣房裡我肩頸都會很痠痛"
       },
       {
-        "id": "6",
-        "title": "⼼臟無⼒也會導致便秘，⼼臟無⼒會造成腸⼦蠕動過慢，腸⼦蠕動過慢就會沒有便意，或是有便意但是⼤不出來。",
-        "links": [
-          "1"
-        ]
+        "id": "A-6",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "All",
+        "title": "到冷氣房我的血壓就攀升"
       },
       {
-        "id": "7",
-        "title": "⼼臟無⼒的結果除了瘦不下來之外，容易負⾯思考，總是擔⼼，猜疑，退縮和壓抑。這些是⾝體的狀況影響到情緒的原因。",
-        "links": [
-          "1"
-        ]
+        "id": "A-7",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Trunk",
+        "title": "到下午腿就腫腳腫、很想要脫鞋。"
       },
       {
-        "id": "8",
-        "title": "這類型的⼈是『火⼤，就瘦不了的體質』",
-        "links": [
-          "1"
-        ]
+        "id": "A-8",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "常常想尿尿"
       },
       {
-        "id": "9",
-        "title": "可能因為長期晚睡（11點之後才就寢），常常喝咖啡提神，加上經常性外食以⾄於超太多⾼溫快炒、爆炒、燒烤或油炸的食物，導致上肝火的狀況。喜歡吃咖哩、⿇辣鍋、⿇油雞、藥燉排骨、⿇辣鍋⋯等類似食物，調味也喜愛偏重⼝味，例如喜愛吃沙茶、紅蔥酥、辣椒、胡椒、八⾓、花椒、茴香、香油、⿇油。",
-        "links": [
-          "1"
-        ]
+        "id": "A-9",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "半夜會要爬起來尿尿"
       },
       {
-        "id": "10",
-        "title": "這類型的⼈可能出現容易暴躁、易怒及無名火的情緒，憤怒的情緒⼀旦沒有流動，也會導致上肝火的狀況。",
-        "links": [
-          "1"
-        ]
+        "id": "A-10",
+        "physicalType": [
+          "WaterFat"
+        ],
+        "questionType": "Digestion",
+        "title": "我的便便經常散散爛爛的不成形"
       },
       {
-        "id": "11",
-        "title": "肝臟負責解毒，幫助脂肪分解。如果⼀直上肝火，肝臟就無法幫助脂肪分解，很容易囤積脂肪，讓全⾝的脂肪曾變厚。",
-        "links": [
-          "1"
-        ]
+        "id": "B-1",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Life",
+        "title": "有壓力或訊息很多時，我就容易心慌慌、覺得很阿雜(煩煩的）"
       },
       {
-        "id": "12",
-        "title": "吃飯吃太快（沒有經過充分咀嚼混合⼝⽔消化的食物，很容易對胃造成負擔，久了會演變成胃潰瘍）",
-        "links": [
-          "1"
-        ]
+        "id": "B-2",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Life",
+        "title": "沒事就想來一口什麼，有機會就想吃零食"
       },
       {
-        "id": "13",
-        "title": "不專⼼吃飯（邊開會邊吃飯，邊看電視邊吃飯，邊滑⼿機邊吃飯）",
-        "links": [
-          "1"
-        ]
+        "id": "B-3",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Digestion",
+        "title": "我…便秘"
       },
       {
-        "id": "14",
-        "title": "習慣⽤吃來發洩壓⼒",
-        "links": [
-          "1"
-        ]
+        "id": "B-4",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Life",
+        "title": "害怕衝突和爭吵"
       },
       {
-        "id": "15",
-        "title": "愛吃容易脹氣的食物",
-        "links": [
-          "1"
-        ]
+        "id": "B-5",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Life",
+        "title": "霸脫不要討厭我，我害怕被討厭"
       },
       {
-        "id": "16",
-        "title": "久坐不動",
-        "links": [
-          "1"
-        ]
+        "id": "B-6",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Trunk",
+        "title": "我是小腹婆、小腹公，我的胖胖堆積在下腹"
       },
       {
-        "id": "17",
-        "title": "兩餐間隔時間太久",
-        "links": [
-          "1"
-        ]
+        "id": "B-7",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Trunk",
+        "title": "胖胖在大腿，我的大腿很肥美"
       },
       {
-        "id": "18",
-        "title": "當你胸部以下⾄肚臍以上特別突出肥胖，通常都是因為吃飯吃太快以及有暴食（對現實⽣活不滿，有深深的無⼒感，覺得無法改變，⽤吃來滿⾜以及放空。）的傾向，第三個是和脹氣有關。（1.食物2.坐著不動3.兩餐間隔太久.4.緊張的時候）因為情緒影響，習慣⽤吃來發洩壓⼒或者得到虛幻的滿⾜。",
-        "links": [
-          "1"
-        ]
+        "id": "B-8",
+        "physicalType": [
+          "WeakHeart"
+        ],
+        "questionType": "Life",
+        "title": "別人給我句點或已讀不回時，我會擔心是不是我說錯什麼"
       },
       {
-        "id": "19",
-        "title": "如果脂肪堆積在⼿臂，肩背，基本上跟男性賀爾蒙旺盛或是對蛋過敏有關。",
-        "links": [
-          "1"
-        ]
+        "id": "C-1",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "早上起床眼睛油油的有眼屎"
       },
       {
-        "id": "20",
-        "title": "你可以觀察⼀下⾃⼰是否和⼤多數的⼈相比，體⽑比較旺盛，女性甚⾄嘴巴上有寒⽑（⼩鬍⼦）。",
-        "links": [
-          "1"
-        ]
+        "id": "C-2",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Digestion",
+        "title": "我的便便顏色深"
       },
       {
-        "id": "21",
-        "title": "回想⼀下，是否⾃⼰常常吃到含蛋類的製品？",
-        "links": [
-          "1"
-        ]
+        "id": "C-3",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Digestion",
+        "title": "我的便便硬梆梆"
       },
       {
-        "id": "22",
-        "title": "這個類型的⼈，通常也會有副乳，尤其是久坐不動，或是總是低頭滑⼿機的⼈，肩頸淋巴代謝不良，上背圍會越來越寬。",
-        "links": [
-          "1"
-        ]
-      }
-    ],
-    "feature": [
-      {
-        "id": "1",
-        "title": "早上起來總是覺得臉⼤了⼀圈浮腫且拋拋的感覺，明明就沒有多吃什麼，卻感覺到⾃⼰褲⼦變緊了，總是想要找熱性食物比如有些辣的或是燒烤的來吃。",
-        "links": [
-          "1"
-        ]
+        "id": "C-4",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "斑點人就是我（臉部）"
       },
       {
-        "id": "2",
-        "title": "腎虛的⼈除了⽔腫胖以外，情緒容易莫名低落，也容易受到驚嚇，感覺到恐慌，或是暴怒。",
-        "links": [
-          "1"
-        ]
+        "id": "C-5",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "人生需要打點光…我的皮膚偏暗沉(臉部）"
       },
       {
-        "id": "3",
-        "title": "遇到溫度劇烈變化時，很容易頭痛。特別是夏天天氣熱進出冷氣房，或是冬天家裡有開暖氣，外出 寒冷時。另外，遇到情緒劇烈變化時，也容易頭痛，肩頸痠痛或是⾎壓升⾼。",
-        "links": [
-          "1"
-        ]
+        "id": "C-6",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Head",
+        "title": "口乾舌燥，水怎麼喝還是怎麼渴"
       },
       {
-        "id": "4",
-        "title": "此因是由於腎虛，腎臟無法製造⾎管放鬆素導致⽽成，若長期如此，不只會⽔腫胖也會演變成⾼⾎壓。",
-        "links": [
-          "1"
-        ]
+        "id": "C-7",
+        "physicalType": [
+          "LiverFire"
+        ],
+        "questionType": "Trunk",
+        "title": "自帶游泳圈，我的胖胖在腰部"
       },
       {
-        "id": "5",
-        "title": "『吃不營養，吃不對，就瘦不了』類型的⼈，很容易便秘，常常需要不同的刺激幫助⾃⼰排便。",
-        "links": [
-          "1"
-        ]
+        "id": "D-1",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "根本微懷孕…我肚子鼓鼓脹脹的"
       },
       {
-        "id": "6",
-        "title": "在⽇常⽣活當中常常感覺到疲倦，提不起勁，能坐著就不會站著，能躺著就不會坐著.....。",
-        "links": [
-          "1"
-        ]
+        "id": "D-2",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "（嗝～～～excuse me!)我吃飽後會打嗝"
       },
       {
-        "id": "7",
-        "title": "⽽且還容易嘴饞，常常想要吃零食，尤其是澱粉類的零食。正餐吃完，⼀定要來個甜點才會覺得滿⾜，甚⾄有些這類型的⼈，為了減重，會捨棄正餐的澱粉，⽽只吃甜點。",
-        "links": [
-          "1"
-        ]
+        "id": "D-3",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "（噗～～～鴉雀無聲）呃，我吃飽後會放屁"
       },
       {
-        "id": "8",
-        "title": "千萬不能讓這類型的⼈餓到，也不能讓他們累到。當他們餓到或累到的時候跟他們說話，他們很容易就會『不耐煩』。",
-        "links": [
-          "1"
-        ]
+        "id": "D-4",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "我會胃悶悶痛痛、甚至發炎"
       },
       {
-        "id": "9",
-        "title": "除此之外，⼼臟無⼒也會影響到對⾃⼰的⾃信，所以這類型的⼈，有⼀部份是⾃⼰覺得胖，⾝旁的⼈都覺得他們對⾃⼰要求太⾼了。",
-        "links": [
-          "1"
-        ]
+        "id": "D-5",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Digestion",
+        "title": "喝完咖啡吃完甜食，整個會酸上來，胃食道逆流"
       },
       {
-        "id": "10",
-        "title": "他們脂肪堆積的部位經常都是在下腹部或是⼤腿，穿⽜仔褲時很容易有⼀圈的⾁。若是女性，婦科容易發炎，經痛的症狀。",
-        "links": [
-          "1"
-        ]
+        "id": "D-6",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Head",
+        "title": "牙齦腫腫痛痛"
       },
       {
-        "id": "11",
-        "title": "四肢不⼀定胖，但肚⼦就是圓圓的。",
-        "links": [
-          "1"
-        ]
+        "id": "D-7",
+        "physicalType": [
+          "BellyFat"
+        ],
+        "questionType": "Trunk",
+        "title": "我的捏捏(胸部)會脹痛"
       },
       {
-        "id": "12",
-        "title": "上肝火體質的⼈，⾝體⼤多數的脂肪都堆積在腰部，以肚臍為中⼼，形成⼀圈救⽣圈。這⼀圈救⽣圈和脂肪肝防輻黏膩的情侶，⼤部分有這⼀圈肚⼦的⼈85%都有脂肪肝。",
-        "links": [
-          "1"
-        ]
+        "id": "E-1",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Trunk",
+        "title": "我的掰掰袖超掰！胖胖堆積在手臂"
       },
       {
-        "id": "13",
-        "title": "這樣的⼈幾乎都會有睡眠的問題。不論是難以入睡，淺眠，很容易醒來，或是容易做很多夢，這都和上肝火有關係 ; 另外，肝火也會引發⽪膚過敏。",
-        "links": [
-          "1"
-        ]
+        "id": "E-2",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Head",
+        "title": "我是厚背人，胖胖堆積在肩背"
       },
       {
-        "id": "14",
-        "title": "吃太快就瘦不了類型的⼈，也是三餐不定時就瘦不了的⼈。",
-        "links": [
-          "1"
-        ]
+        "id": "E-3",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Head",
+        "title": "頭皮可以煎蛋了，容易出油，需要常洗頭"
       },
       {
-        "id": "15",
-        "title": "這類型的⼈常常會因為感受到壓⼒，焦慮，緊張的情緒⽽抓了食物就往嘴裡塞，特別喜歡吃起來有聲⾳的食物",
-        "links": [
-          "1"
-        ]
+        "id": "E-4",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "All",
+        "title": "我是毛毛人，體毛多，甚至我是女生但也有小鬍子"
       },
       {
-        "id": "16",
-        "title": "⼀開始吃就停不下來，甚⾄有些會在晚上會磨牙。",
-        "links": [
-          "1"
-        ]
+        "id": "E-5",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Life",
+        "title": "我愛吃蛋料理"
       },
       {
-        "id": "17",
-        "title": "⼿臂有掰掰袖，肩背寬厚。",
-        "links": [
-          "1"
-        ]
+        "id": "E-6",
+        "physicalType": [
+          "ArmFat"
+        ],
+        "questionType": "Trunk",
+        "title": "我的副乳很搶戲"
       }
     ],
     "suggest": [
       {
         "id": "1",
-        "title": "避免造成體質寒冷的食物，控制蔬菜⽔果的量和種類，以及吃的時間",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "每天五份蔬果 （每份各半碗）$height $calcProteinx1 $calcProteinx2",
+          "避開寒冷的蔬果：阻礙你變瘦的殺⼿蔬菜⽔果類（⽣菜沙拉、地瓜葉、⼤⽩菜、⼩⽩菜、 瓜類：⼤/⼩黃瓜 、苦瓜 、絲瓜 、瓢瓜 、冬瓜 、芥菜、 雪裡紅、 地瓜葉、 ⽩蘿蔔、 秋葵、 苜蓿芽",
+          "避開⽣⿂片、 ⽣冷、冰品、飲料、海鮮/⿂類",
+          "下午4點之後就不吃⽔果及葉菜瓜類，晚餐只吃⼀種蔬菜並且要是⼗字花科或根莖類的。"
+        ],
+        "title": "避免造成體質寒冷的食物，控制蔬菜⽔果的量和種類，以及吃的時間"
       },
       {
         "id": "2",
-        "title": "⽔分攝取⾜量，冬天1800cc 夏天 2000cc",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "21:00之後不喝⽔，如果覺得渴，可以喝⼀⼝含在⼝中，再慢慢吞下去。"
+        ],
+        "title": "⽔分攝取⾜量，冬天1800cc 夏天 2000cc"
       },
       {
         "id": "3",
-        "title": "補充⾜量的優質蛋⽩質（煮15-20分鐘內的蛋⽩質）",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "蛋⽩質是溫暖的，澱粉和⽔是中性的，⽽蔬菜⽔果都是寒性的。"
+        ],
+        "title": "補充⾜量的優質蛋⽩質（煮15-20分鐘內的蛋⽩質）"
       },
       {
         "id": "4",
-        "title": "消⽔腫神器",
         "links": [
-          "1"
+          "1",
+          "4",
+          "6",
+          "7",
+          "13"
         ],
-        "subTitles": []
+        "subTitles": [
+          "玫瑰疏肝飲（喝5天停2天）",
+          "薑汁",
+          "紅⾖茯苓蓮⼦湯每天⼀碗，喝5天停2天",
+          "海豹油1000mg早餐後吃"
+        ],
+        "title": "消⽔腫神器"
       },
       {
         "id": "5",
-        "title": "養腎神器",
         "links": [
-          "1"
+          "2"
         ],
-        "subTitles": []
+        "subTitles": [
+          "⽟顏糕（⽩天吃，⼀天2-3塊）"
+        ],
+        "title": "養腎神器"
       },
       {
         "id": "6",
-        "title": "補充適量澱粉",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "『不要再因為想要減重⽽不吃澱粉』，這句話很重要要說3次，因為澱粉是⼼臟不可或缺的營養素，沒有澱粉，⼼臟就不會有⼒，⼼臟無⼒，腸⼦蠕動就會變慢，腸⼦蠕動變慢，就會滿肚⼦⼤便。滿肚⼦⼤便的⼈，是不會瘦的。",
+          "澱粉的選擇以『抗性澱粉』為主，意指隔夜的⽩米飯。為什麼呢？抗性澱粉的好處是『降低熱量』和『有利於⾎糖的控制』。意思是原本只敢吃半碗的，可以安⼼吃⼀碗的飯了：）"
+        ],
+        "title": "補充適量澱粉"
       },
       {
         "id": "7",
-        "title": "每餐⾜量且優質的『豚⾁或⽺⾁』",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "為紅⾁當中富含能使肌⾁有耐⼒和爆發⼒的左旋⾁鹼，可以使⼼臟強壯，⼼臟強壯，基礎代謝率就會提⾼。⼈就不容易感到疲倦，提不起勁。",
+          "照⾝⾼計算份量，少吃沒有⽤，多吃反效果。您的身高：$height、建議份量：早餐、午餐 - $calcProteinx2 克  晚餐：$calcProteinx1",
+          "烹調時間在15-20分鐘內"
+        ],
+        "title": "每餐⾜量且優質的『豚⾁或⽺⾁』"
       },
       {
         "id": "8",
-        "title": "每天補充5蔬果（2果3蔬）",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "早餐2樣⽔果，午餐2樣蔬菜，晚餐1樣蔬菜",
+          "以⼗字花科和根莖類為主。避開太寒冷的葉菜類和屬性寒的蔬菜",
+          "下午4點前吃完⽔果"
+        ],
+        "title": "每天補充5蔬果（2果3蔬）"
       },
       {
         "id": "9",
-        "title": "每天⼤幅度的快走15分鐘",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "每天⼤幅度的快走15分鐘"
       },
       {
         "id": "10",
-        "title": "減重神器",
         "links": [
-          "1"
+          "1",
+          "3",
+          "4",
+          "6",
+          "7"
         ],
-        "subTitles": []
+        "subTitles": [
+          "玫瑰疏肝飲（喝5天停2天）",
+          "薑汁",
+          "擇食雞湯",
+          "紅⾖茯苓蓮⼦湯每天⼀碗，喝5天停2天。",
+          "Ｑ10 早餐或午餐後補充Ｑ10 100mg 1顆，如果擔⼼⾝體不習慣，可以從30mg開始。"
+        ],
+        "title": "減重神器"
       },
       {
         "id": "11",
-        "title": "以溫鍋冷油的烹調⽅式炒菜，炒⾁，或是以蒸，燙的⽅式。",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "嚴禁⾼溫烹調的食物，⾼溫爆炒/快炒/油炸/炭烤/燒烤。",
+          "沙茶 、紅蔥頭 、紅蔥酥 、⿇油、 香油、 辣椒 、胡椒、 八⾓、 花椒、 茴香、咖哩可⽤薑汁醬油、⻄式香料或洋蔥、香菇切碎或切絲中低溫爆香取代"
+        ],
+        "title": "以溫鍋冷油的烹調⽅式炒菜，炒⾁，或是以蒸，燙的⽅式。"
       },
       {
         "id": "12",
-        "title": "嚴格禁⽌上肝火的調味料如下",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "咖啡、米漿、⿊糖飲品",
+          "烤⼟司、⾼溫烘焙的堅果類，芝⿇、 花⽣ 、杏仁 、核桃、 開⼼果 、南瓜⼦、 葵瓜⼦、 蠶⾖、腰果 、松⼦、 夏威夷果仁、 米漿 。萬⼀要吃堅果，必須選擇⽣食或是低溫烘焙的，且適量即可。",
+          "-荔枝、龍眼、榴槤、櫻桃"
+        ],
+        "title": "嚴格禁⽌上肝火的調味料如下"
       },
       {
         "id": "13",
-        "title": "嚴格禁⽌上肝火的飲料，食物",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "嚴格禁⽌上肝火的飲料，食物"
       },
       {
         "id": "14",
-        "title": "嚴格禁⽌所有使⽤氫化植物油和酥油製成的食物。",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "嚴格禁⽌所有使⽤氫化植物油和酥油製成的食物。"
       },
       {
         "id": "15",
-        "title": "11點以前上床睡覺",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "11點以前上床睡覺"
       },
       {
         "id": "16",
-        "title": "忌⼝脹氣的食物",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "黃⾖製品(包括⾖⼲、⾖⽪、⾖花、⾖漿、黃⾖芽、蘭花乾、素雞、素⾁、味增、⽑⾖、納⾖、素火腿、⿊⾖、⿊⾖漿、⾖⿎等)以及黃⾖蛋⽩製品",
+          "糯米類 (⿇糬、粽⼦、油飯、米糕、湯圓、飯糰、紫米) ",
+          "⽵筍(包括筍絲、筍⼲等)",
+          "奶製品、甜點(包括調味乳、優酪乳相關產品、起司、冰淇淋、煉乳、⾼蛋⽩⽜奶製品、乳清蛋⽩等)",
+          "五穀雜糧類(包括⼩麥、⼤麥、燕麥、蕎麥、⿊麥、⼩麥胚芽、全麥類粉製品、糙米、胚芽米等)"
+        ],
+        "title": "忌⼝脹氣的食物"
       },
       {
         "id": "17",
-        "title": "⽣活作息：",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "每⼀⼝食物『⾄少嚼30下』",
+          "做好情緒調整",
+          "三餐定時定量"
+        ],
+        "title": "⽣活作息："
       },
       {
         "id": "18",
-        "title": "補充檸檬酸鈣1000mg，早中晚睡前各⼀顆。",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "補充檸檬酸鈣1000mg，早中晚睡前各⼀顆。"
       },
       {
         "id": "19",
-        "title": "不吃蛋，就會瘦。蛋製品是阻⽌你露⼿臂的元兇。",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          "所有的蛋製品 、蛋、 蛋糕、 蛋捲、 蛋餅、 泡芙、 布丁、 茶碗蒸、 美乃滋、 銅鑼燒、 ⽜軋糖、 蛋黃酥、 鳳梨酥 、含蛋的餅乾麵包（註：可食⽤法國麵包、⾙果、全素的麵包）"
+        ],
+        "title": "不吃蛋，就會瘦。蛋製品是阻⽌你露⼿臂的元兇。"
       },
       {
         "id": "20",
-        "title": "平時可以做局部的拍打，推脂。在做之前，先活動肩頸，讓上部變溫暖，之後空⼼全拍打肩頸，⼿臂，腋下淋巴等處。每天堅持做，1-2週就會有效果。",
         "links": [
           "1"
         ],
-        "subTitles": []
+        "subTitles": [
+          ""
+        ],
+        "title": "平時可以做局部的拍打，推脂。在做之前，先活動肩頸，讓上部變溫暖，之後空⼼全拍打肩頸，⼿臂，腋下淋巴等處。每天堅持做，1-2週就會有效果。"
       },
       {
         "id": "21",
-        "title": "認真攝取優質蛋⽩質，讓⼼臟變強，基礎代謝率變⾼。",
         "links": [
           "1"
         ],
-        "subTitles": []
-      }
-    ],
-    "link": [
-      {
-        "id": "1",
-        "image": "https://img01.yzcdn.cn/upload_files/2021/08/20/FhpA7yjzpGP8r9IqlxFb2IM07Hk-.jpg!large.jpg",
-        "title": "正常发货【邱品1姜汁饮品】老姜榨汁，严格工艺，一盒6小瓶",
-        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nvdonmd4trzm?banner_id=f.97879327~goods.14~2~YSXu3J8K&alg_id=comm"
-      },
-      {
-        "id": "2",
-        "image": "https://img01.yzcdn.cn/upload_files/2021/08/20/FhpA7yjzpGP8r9IqlxFb2IM07Hk-.jpg!large.jpg",
-        "title": "正常发货【邱品2姜汁饮品】老姜榨汁，严格工艺，一盒6小瓶",
-        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nvdonmd4trzm?banner_id=f.97879327~goods.14~2~YSXu3J8K&alg_id=comm"
-      },
-      {
-        "id": "3",
-        "image": "https://img01.yzcdn.cn/upload_files/2021/08/20/FhpA7yjzpGP8r9IqlxFb2IM07Hk-.jpg!large.jpg",
-        "title": "正常发货【邱品3姜汁饮品】老姜榨汁，严格工艺，一盒6小瓶",
-        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nvdonmd4trzm?banner_id=f.97879327~goods.14~2~YSXu3J8K&alg_id=comm"
-      },
-      {
-        "id": "4",
-        "image": "https://img01.yzcdn.cn/upload_files/2021/08/20/FhpA7yjzpGP8r9IqlxFb2IM07Hk-.jpg!large.jpg",
-        "title": "正常发货【邱品4姜汁饮品】老姜榨汁，严格工艺，一盒6小瓶",
-        "url": "https://shop19035210.m.youzan.com/wscgoods/detail/3nvdonmd4trzm?banner_id=f.97879327~goods.14~2~YSXu3J8K&alg_id=comm"
+        "subTitles": [
+          ""
+        ],
+        "title": "認真攝取優質蛋⽩質，讓⼼臟變強，基礎代謝率變⾼。"
       }
     ]
   }

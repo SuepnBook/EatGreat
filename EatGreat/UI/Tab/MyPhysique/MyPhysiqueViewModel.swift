@@ -65,33 +65,32 @@ extension MyPhysiqueViewModel {
             result.append(.detail(type: .analyze(viewObjects: vos)))
         case .explain:
             var explains:[DetailViewType.ExplainType] = []
-                    
-            let causes = repo.getPhysiqueCauses(type: mainPhysique)
-            
-            var subTitles = causes.map({$0.title})
-            var links = causes.flatMap({$0.links})
-
-            if !subTitles.isEmpty {
-                explains.append(.description(.init(title: "體質成因",
-                                                   subTitles: subTitles)))
-            }
-            
-            
-            if !links.isEmpty {
-                links = links.uniqued()
-                explains.append(.insertLinks(links))
-            }
             
             let features = repo.getPhysiqueFeatures(type: mainPhysique)
             
-            subTitles = features.map({$0.title})
-            links = features.flatMap({$0.links})
+            var subTitles = features.map({$0.title})
+            var links = features.flatMap({$0.links})
 
             if !subTitles.isEmpty {
                 explains.append(.description(.init(title: "體質特色",
                                                    subTitles: subTitles)))
             }
             
+            if !links.isEmpty {
+                links = links.uniqued()
+                explains.append(.insertLinks(links))
+            }
+                    
+            let causes = repo.getPhysiqueCauses(type: mainPhysique)
+            
+            subTitles = causes.map({$0.title})
+            links = causes.flatMap({$0.links})
+
+            if !subTitles.isEmpty {
+                explains.append(.description(.init(title: "體質成因",
+                                                   subTitles: subTitles)))
+            }
+
             if !links.isEmpty {
                 links = links.uniqued()
                 explains.append(.insertLinks(links))

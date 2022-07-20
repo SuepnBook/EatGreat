@@ -65,6 +65,10 @@ extension PlanViewModel {
             dataSource.append(.insertLinks(links))
         }
         
+        dataSource.append(.description(.init(title: "更多建議",
+                                             subTitles: ["想要了解更多請至個人設定裡頭搜尋🔍更多體質課程",
+                                                        "想要重新測試請至個人設定裡點按🔍重新進行測驗"])))
+        
         delegate?.reload(dataSource: dataSource)
     }
 }

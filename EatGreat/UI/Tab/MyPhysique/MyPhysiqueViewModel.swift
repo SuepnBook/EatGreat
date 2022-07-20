@@ -96,6 +96,9 @@ extension MyPhysiqueViewModel {
                 explains.append(.insertLinks(links))
             }
             
+            explains.append(.description(.init(title: "",
+                                               subTitles: ["請點下方改善計畫，搭上減重快車"])))
+            
             result.append(.detail(type: .explain(explains: explains)))
         }
         

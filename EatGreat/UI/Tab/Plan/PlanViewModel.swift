@@ -44,8 +44,8 @@ extension PlanViewModel {
             if let height = UserDefaultManager.height {
                 subTitles = subTitles
                     .map({ title in
-                        let calcProteinx1 = Int(Float( height - 100 ) * 3.75 / 5)
-                        let calcProteinx2 = Int(Float( height - 100 ) * 3.75 / 5 * 2)
+                        let calcProteinx1 = Int(Float( height - 110 ) * 3.75 / 5)
+                        let calcProteinx2 = Int(Float( height - 110 ) * 3.75 / 5 * 2)
                         return title.replacingOccurrences(of: "$height",
                                                    with: "\(height)")
                         .replacingOccurrences(of: "$calcProteinx1",
